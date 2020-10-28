@@ -20,7 +20,7 @@ db.prepare(`
 db.prepare(`
   INSERT INTO scene(id, url)
   VALUES(?, ?)
-`).run("test", "https://www.youtube.com/watch?v=r7VOaxErJ3k");
+`).run("dreameaters-prologue", "dreameaters-prologue.mp3");
 
 const insertUserStmt = db.prepare(`
   INSERT INTO user(id, access_token, is_patron, last_checked)

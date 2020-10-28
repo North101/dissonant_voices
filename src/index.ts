@@ -67,9 +67,11 @@ app.get("/scene/:sceneId", checkToken, async (req: any, res) => {
 
   const sceneId = req.params.sceneId;
   const url = getSceneById(sceneId)?.url;
-  if (url) return res.redirect(url);
+  if (!url) return res.sendStatus(404);
 
-  return res.sendStatus(404);
+  res.set('content-type', 'audio/mp3');
+  res.set('accept-ranges', 'bytes');
+  res.sendFile(`/home/north101/dissonant_voices_audio/${url}`)
 });
 
 function checkToken(req: any, res: Response, next: NextFunction) {
