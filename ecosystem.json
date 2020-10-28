@@ -1,0 +1,21 @@
+{
+    "apps": [
+      {
+        "name": "Dissonant Voices",
+        "script": "dist/index.js",
+        "env_production": {
+          "NODE_ENV": "production"
+        }
+      }
+    ],
+    "deploy": {
+      "production": {
+        "user": "north101",
+        "host": ["178.62.44.148"],
+        "ref": "origin/master",
+        "repo": "https://github.com/North101/dissonant_voices.git",
+        "path": "/home/north101/dissonant_voices",
+        "post-deploy": "npm install && npm run build && pm2 startOrRestart ecosystem.json --env production"
+      }
+    }
+  }
