@@ -14,7 +14,7 @@ db.prepare(`
 db.prepare(`
   CREATE TABLE scene(
     id TEXT PRIMARY KEY,
-    url TEXT NOT NULL
+    filename TEXT NOT NULL
   )
 `).run();
 db.prepare(`
@@ -53,7 +53,7 @@ interface User {
 
 interface Scene {
   id: string;
-  url: string;
+  filename: string;
 }
 
 export function createUser(accessToken: AccessToken, isPatron: boolean) {
@@ -89,6 +89,6 @@ export function getSceneById(sceneId: string): Scene | null {
 
   return {
     id: result.id,
-    url: result.url,
+    filename: result.filename,
   }
 }

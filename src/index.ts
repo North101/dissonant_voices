@@ -1,6 +1,8 @@
 import * as dotenv from "dotenv";
 dotenv.config({ path: "./.env" });
 
+import fs from 'fs';
+import path from 'path';
 import express from "express";
 import { NextFunction, Request, Response } from "express-serve-static-core";
 import { AddressInfo } from "net";
@@ -25,6 +27,7 @@ export async function PatreonRedirect(
 
     const userId = createUser(accessToken, isPatron);
     const token = encodeAuthToken(userId, new Date(accessToken.token.expires_at).getDate());
+    res.set('content-type', 'application/json');
     res.send(
       JSON.stringify(
         {
@@ -53,7 +56,7 @@ const server = app.listen(PORT, async () => {
 });
 app.get("/oauth/authorize", PatreonAuthorize);
 app.get(process.env.REDIRECT_PATHNAME, PatreonRedirect);
-app.get("/scene/:sceneId", checkToken, async (req: any, res) => {
+app.get("/scene/:sceneId", checkAuthToken, async (req: any, res) => {
   const payload = decodeAuthToken(req.token);
   const user = getUserById(payload.user_id);
   if (!user) return res.sendStatus(403);
@@ -66,15 +69,20 @@ app.get("/scene/:sceneId", checkToken, async (req: any, res) => {
   }
 
   const sceneId = req.params.sceneId;
-  const url = getSceneById(sceneId)?.url;
-  if (!url) return res.sendStatus(404);
+  const scene = getSceneById(sceneId);
+  if (!scene) return res.sendStatus(404);
+
+  const filename = path.join(process.env.SCENE_DIR, scene.filename);
+  if (!path.isAbsolute(filename) || !fs.existsSync(filename)) {
+    return res.sendStatus(500);
+  }
 
   res.set('content-type', 'audio/mp3');
   res.set('accept-ranges', 'bytes');
-  res.sendFile(`${process.env.SCENE_DIR}/${url}`)
+  res.sendFile(filename);
 });
 
-function checkToken(req: any, res: Response, next: NextFunction) {
+function checkAuthToken(req: any, res: Response, next: NextFunction) {
   const header = req.headers.authorization;
   if (typeof header !== "undefined") {
     const bearer = header.split(" ");
