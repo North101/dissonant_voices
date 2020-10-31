@@ -12,6 +12,17 @@ db.prepare(`
     last_checked TEXT NOT NULL
   )
 `).run();
+if (process.env.CREATE_USER_ID && process.env.CREATE_USER_ACCESS_TOKEN) {
+  db.prepare(`
+    INSERT INTO user
+    VALUES (:id, :accessToken, :isPatron, :lastChecked)
+  `).run({
+    id: process.env.CREATE_USER_ID,
+    accessToken: process.env.CREATE_USER_ACCESS_TOKEN,
+    isPatron: 0,
+    lastChecked: DateTime.utc().toSQL(),
+  })
+}
 db.prepare(`
   CREATE TABLE campaign(
     id TEXT PRIMARY KEY
@@ -33,6 +44,7 @@ db.prepare(`
     ext TEXT NOT NULL
   )
 `).run();
+
 db.prepare(`
   INSERT INTO campaign
   VALUES (:id, :name)
@@ -188,6 +200,7 @@ export function getSceneById(sceneId: string): Scene | null {
   return {
     id: result["scene.id"],
     name: result["scene.name"],
+    ext: result['scene.ext'],
     scenario: {
       id: result["scenario.id"],
       name: result["scenario.name"],
