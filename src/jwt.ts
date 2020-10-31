@@ -1,4 +1,5 @@
 import jwt from "jwt-simple";
+import { DateTime } from "luxon";
 
 const JWT_ALGORITHM = "HS512";
 
@@ -8,11 +9,11 @@ export interface AuthToken {
   expires: number;
 }
 
-export function encodeAuthToken(userId: string, expires: number) {
+export function encodeAuthToken(userId: string, expires: DateTime) {
   const payload: AuthToken = {
     user_id: userId,
-    issued: Date.now(),
-    expires,
+    issued: DateTime.utc().toMillis(),
+    expires: expires.toMillis(),
   };
   return jwt.encode(payload, process.env.JWT_SECRET, JWT_ALGORITHM);
 }

@@ -7,8 +7,9 @@ import express from "express";
 import { NextFunction, Request, Response } from "express-serve-static-core";
 import { AddressInfo } from "net";
 import { getAccessToken, getPatronStatus, PATREON_AUTHORIZE_URL } from "./patreon";
-import { createUser, getSceneById, getUserById, updateUser } from "./db";
+import { createUser, getCampaignById, getScenarioById, getSceneById, getUserById, updateUser } from "./db";
 import { decodeAuthToken, encodeAuthToken } from "./jwt";
+import { DateTime } from "luxon";
 
 export function PatreonAuthorize(_req: Request, res: Response) {
   res.redirect(PATREON_AUTHORIZE_URL);
@@ -26,7 +27,7 @@ export async function PatreonRedirect(
     const { accessToken, isPatron } = await getPatronStatus(await getAccessToken(code as string));
 
     const userId = createUser(accessToken, isPatron);
-    const token = encodeAuthToken(userId, new Date(accessToken.token.expires_at).getDate());
+    const token = encodeAuthToken(userId, DateTime.fromMillis(accessToken.token.expires_at).toUTC());
     res.set('content-type', 'application/json');
     res.send(
       JSON.stringify(
@@ -56,12 +57,33 @@ const server = app.listen(PORT, async () => {
 });
 app.get("/oauth/authorize", PatreonAuthorize);
 app.get(process.env.REDIRECT_PATHNAME, PatreonRedirect);
+app.get("/campaign/:campaignId", (req, res) => {
+  const campaignId = req.params.campaignId;
+  const campaign = getCampaignById(campaignId);
+  if (!campaign) return res.sendStatus(404);
+
+  return res.json(campaign);
+});
+app.get("/scenario/:scenarioId", (req, res) => {
+  const scenarioId = req.params.scenarioId;
+  const scenario = getScenarioById(scenarioId);
+  if (!scenario) return res.sendStatus(404);
+
+  return res.json(scenario);
+});
 app.get("/scene/:sceneId", checkAuthToken, async (req: any, res) => {
+  const sceneId = req.params.sceneId;
+  const scene = getSceneById(sceneId);
+  if (!scene) return res.sendStatus(404);
+
+  return res.json(scene);
+});
+app.get("/scene/:sceneId/file", checkAuthToken, async (req: any, res) => {
   const payload = decodeAuthToken(req.token);
   const user = getUserById(payload.user_id);
   if (!user) return res.sendStatus(403);
 
-  if (!user.isPatron || user.lastChecked.getDate() < Date.now()) {
+  if (!user.isPatron || user.lastChecked.plus({ days: 7 }) < DateTime.utc()) {
     const { isPatron } = await getPatronStatus(user.accessToken);
     updateUser(user.id, isPatron);
 
@@ -72,12 +94,20 @@ app.get("/scene/:sceneId", checkAuthToken, async (req: any, res) => {
   const scene = getSceneById(sceneId);
   if (!scene) return res.sendStatus(404);
 
-  const filename = path.join(process.env.SCENE_DIR, scene.filename);
+  const filename = path.join(
+    process.env.SCENE_DIR,
+    scene.scenario.campaign.id,
+    scene.scenario.id,
+    path.format({
+      name: scene.id,
+      ext: scene.ext,
+    }),
+  );
   if (!path.isAbsolute(filename) || !fs.existsSync(filename)) {
     return res.sendStatus(500);
   }
 
-  res.set('content-type', 'audio/mp3');
+  res.set('content-type', `audio/${scene.ext}`);
   res.set('accept-ranges', 'bytes');
   res.sendFile(filename);
 });
