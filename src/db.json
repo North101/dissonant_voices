@@ -1053,49 +1053,634 @@
     "name": "The Dream-Eaters",
     "scenarios": [
       {
-        "id": "setup",
-        "name": "Campaign Setup",
-        "scenes": []
+        "id": "prologue",
+        "name": "prologue",
+        "scenes": [
+          {
+            "id": "prologue",
+            "name": "Prologue"
+          }
+        ]
       },
       {
         "id": "beyond_the_gates_of_sleep",
         "name": "Beyond the Gates of Sleep",
-        "scenes": []
+        "scenes": [
+          {
+            "id": "intro",
+            "name": "Intro"
+          },
+          {
+            "id": "guardian_dream",
+            "name": "Guardian dream"
+          },
+          {
+            "id": "seeker_dream",
+            "name": "Seeker dream"
+          },
+          {
+            "id": "rogue_dream",
+            "name": "Rogue dream"
+          },
+          {
+            "id": "mystic_dream",
+            "name": "Mystic dream"
+          },
+          {
+            "id": "survivor_dream",
+            "name": "Survivor dream"
+          },
+          {
+            "id": "criminal_dream",
+            "name": "Criminal dream"
+          },
+          {
+            "id": "drifter_dream",
+            "name": "Drifter dream"
+          },
+          {
+            "id": "hunter_dream",
+            "name": "Hunter dream"
+          },
+          {
+            "id": "medic_or_assistant_dream",
+            "name": "Medic or Assistant dream"
+          },
+          {
+            "id": "miskatonic_or_scholar_dream",
+            "name": "Miskatonic or Scholar dream"
+          },
+          {
+            "id": "veteran_dream",
+            "name": "Veteran dream"
+          },
+          {
+            "id": "wayfarer_dream",
+            "name": "Wayfarer dream"
+          },
+          {
+            "id": "neutral_dream_1",
+            "name": "Neutral dream 1"
+          },
+          {
+            "id": "neutral_dream_2",
+            "name": "Neutral dream 2"
+          },
+          {
+            "id": "no_resolution",
+            "name": "No Resolution"
+          },
+          {
+            "id": "resolution_1",
+            "name": "Resolution 1"
+          },
+          {
+            "id": "resolution_2",
+            "name": "Resolution 2"
+          }
+        ]
       },
       {
         "id": "waking_nightmare",
-        "name": "Waking Nightmare",
-        "scenes": []
+        "name": "waking_nightmare",
+        "scenes": [
+          {
+            "id": "intro_1",
+            "name": "Intro 1"
+          },
+          {
+            "id": "intro_2",
+            "name": "Intro 2"
+          },
+          {
+            "id": "intro_3",
+            "name": "Intro 3"
+          },
+          {
+            "id": "no_resolution_resigned",
+            "name": "No Resolution (Resigned)"
+          },
+          {
+            "id": "no_resolution_defeated",
+            "name": "No Resolution (Defeated)"
+          },
+          {
+            "id": "resolution_1",
+            "name": "Resolution 1"
+          },
+          {
+            "id": "resolution_2",
+            "name": "Resolution 2"
+          },
+          {
+            "id": "resolution_3",
+            "name": "Resolution 3"
+          },
+          {
+            "id": "resolution_4",
+            "name": "Resolution 4"
+          },
+          {
+            "id": "resolution_5",
+            "name": "Resolution 5"
+          }
+        ]
+      },
+      {
+        "id": "interlude_1",
+        "name": "Interlude 1",
+        "scenes": [
+          {
+            "id": "the_black_cat",
+            "name": "The Black Cat"
+          },
+          {
+            "id": "the_black_cat_1",
+            "name": "The Black Cat 1"
+          },
+          {
+            "id": "the_black_cat_2",
+            "name": "The Black Cat 2"
+          },
+          {
+            "id": "the_black_cat_3",
+            "name": "The Black Cat 3"
+          },
+          {
+            "id": "no_dream_quest_campaign",
+            "name": "No Dream Quest Campaign"
+          },
+          {
+            "id": "cat_shared_knowledge_of_the_dreamlands",
+            "name": "Cat Shared Knowledge of the Dreamlands"
+          },
+          {
+            "id": "cat_delivered_news_of_your_plight",
+            "name": "Cat Delivered News of Your Plight"
+          },
+          {
+            "id": "cat_warned_the_others",
+            "name": "Cat Warned the Others"
+          },
+          {
+            "id": "okay_fine",
+            "name": "Okay, Fine"
+          },
+          {
+            "id": "end",
+            "name": "End"
+          }
+        ]
       },
       {
         "id": "the_search_for_kadath",
         "name": "The Search for Kadath",
-        "scenes": []
+        "scenes": [
+          {
+            "id": "intro_1",
+            "name": "Intro 1"
+          },
+          {
+            "id": "intro_2",
+            "name": "Intro 2"
+          },
+          {
+            "id": "intro_3",
+            "name": "Intro 3"
+          },
+          {
+            "id": "intro_4",
+            "name": "Intro 4"
+          },
+          {
+            "id": "intro_5",
+            "name": "Intro 5"
+          },
+          {
+            "id": "intro_6",
+            "name": "Intro 6"
+          },
+          {
+            "id": "intro_7",
+            "name": "Intro 7"
+          },
+          {
+            "id": "intro_8",
+            "name": "Intro 8"
+          },
+          {
+            "id": "intro_9",
+            "name": "Intro 9"
+          },
+          {
+            "id": "intro_10",
+            "name": "Intro 10"
+          },
+          {
+            "id": "intro_11",
+            "name": "Intro 11"
+          },
+          {
+            "id": "resolutions",
+            "name": "Resolutions"
+          },
+          {
+            "id": "investigator_defeat",
+            "name": "Investigator defeat"
+          },
+          {
+            "id": "resolution_1",
+            "name": "Resolution 1"
+          },
+          {
+            "id": "resolution_2",
+            "name": "Resolution 2"
+          }
+        ]
       },
       {
         "id": "a_thousand_shapes_of_horror",
         "name": "A Thousand Shapes of Horror",
-        "scenes": []
+        "scenes": [
+          {
+            "id": "intro_1",
+            "name": "Intro 1"
+          },
+          {
+            "id": "intro_2",
+            "name": "Intro 2"
+          },
+          {
+            "id": "intro_3",
+            "name": "Intro 3"
+          },
+          {
+            "id": "intro_4",
+            "name": "Intro 4"
+          },
+          {
+            "id": "no_resolution",
+            "name": "No Resolution"
+          },
+          {
+            "id": "resolution_1",
+            "name": "Resolution 1"
+          },
+          {
+            "id": "resolution_2",
+            "name": "Resolution 2"
+          },
+          {
+            "id": "resolution_3",
+            "name": "Resolution 3"
+          },
+          {
+            "id": "resolution_4",
+            "name": "Resolution 4"
+          }
+        ]
+      },
+      {
+        "id": "interlude_2",
+        "name": "Interlude 2",
+        "scenes": [
+          {
+            "id": "the_oneironauts_1",
+            "name": "The Oneironauts 1"
+          },
+          {
+            "id": "if_randolph_didnt_survive_cat_has_a_hunch",
+            "name": "If Randolph didn't survive, Cat has a hunch"
+          },
+          {
+            "id": "if_you_asked_for_it",
+            "name": "If you asked for it"
+          },
+          {
+            "id": "the_oneironauts_1_continued.",
+            "name": "The Oneironauts 1, continued."
+          },
+          {
+            "id": "the_oneironauts_2",
+            "name": "The Oneironauts 2"
+          },
+          {
+            "id": "if_someone_was_not_captured",
+            "name": "If someone was not captured"
+          },
+          {
+            "id": "if_everyone_was_captured",
+            "name": "If everyone was captured"
+          },
+          {
+            "id": "if_the_cat_has_a_hunch_and_randolph_eluded_capture",
+            "name": "If the cat has a hunch, and Randolph eluded capture"
+          },
+          {
+            "id": "the_oneironauts_2_continued.",
+            "name": "The Oneironauts 2, continued."
+          },
+          {
+            "id": "if_the_cat_requested_aid",
+            "name": "If the cat requested aid"
+          },
+          {
+            "id": "if_the_cat_warned_the_others",
+            "name": "If the cat warned the others"
+          },
+          {
+            "id": "if_the_cat_shared_knowledge_of_the_underworld",
+            "name": "If the cat shared knowledge of the Underworld"
+          }
+        ]
       },
       {
         "id": "dark_side_of_the_moon",
         "name": "Dark Side of the Moon",
-        "scenes": []
+        "scenes": [
+          {
+            "id": "intro_1",
+            "name": "Intro 1"
+          },
+          {
+            "id": "intro_2",
+            "name": "Intro 2"
+          },
+          {
+            "id": "no_resolution",
+            "name": "No resolution"
+          },
+          {
+            "id": "resolution_1",
+            "name": "Resolution 1"
+          }
+        ]
       },
       {
         "id": "point_of_no_return",
         "name": "Point of No Return",
-        "scenes": []
+        "scenes": [
+          {
+            "id": "intro_1",
+            "name": "Intro 1"
+          },
+          {
+            "id": "intro_2",
+            "name": "Intro 2"
+          },
+          {
+            "id": "no_resolution",
+            "name": "No resolution"
+          },
+          {
+            "id": "resolution_1",
+            "name": "Resolution 1"
+          },
+          {
+            "id": "resolution_2",
+            "name": "Resolution 2"
+          }
+        ]
+      },
+      {
+        "id": "interlude_3",
+        "name": "Interlude 3",
+        "scenes": [
+          {
+            "id": "the_great_ones_1",
+            "name": "The Great Ones 1"
+          },
+          {
+            "id": "if_the_dreamers_grow_weaker",
+            "name": "If the Dreamers grow weaker"
+          },
+          {
+            "id": "if_you_asked_for_it",
+            "name": "If you asked for it"
+          },
+          {
+            "id": "if_randolph_didnt_survive_the_cat_is_searching_for_the_truth",
+            "name": "If Randolph didn't survive, the cat is searching for the truth"
+          },
+          {
+            "id": "the_great_ones_1_continued.",
+            "name": "The Great Ones 1, continued."
+          },
+          {
+            "id": "the_great_ones_2",
+            "name": "The Great Ones 2"
+          },
+          {
+            "id": "if_the_investigators_possess_the_silver_key",
+            "name": "If the investigators possess the Silver Key"
+          },
+          {
+            "id": "if_the_cat_is_searching_for_the_truth",
+            "name": "If the cat is searching for the truth"
+          },
+          {
+            "id": "the_great_ones_2_continued.",
+            "name": "The Great Ones 2, continued."
+          },
+          {
+            "id": "if_the_cat_spoke_of_nyarlathotep",
+            "name": "If the cat spoke of Nyarlathotep"
+          },
+          {
+            "id": "if_the_cat_spoke_of_atlachnacha",
+            "name": "If the cat spoke of Atlach-Nacha"
+          }
+        ]
       },
       {
         "id": "where_the_gods_dwell",
         "name": "Where the Gods Dwell",
-        "scenes": []
+        "scenes": [
+          {
+            "id": "prologue",
+            "name": "Prologue"
+          },
+          {
+            "id": "intro_1",
+            "name": "Intro 1"
+          },
+          {
+            "id": "intro_2",
+            "name": "Intro 2"
+          },
+          {
+            "id": "grand_design_1",
+            "name": "Grand Design 1"
+          },
+          {
+            "id": "grand_design_2",
+            "name": "Grand Design 2"
+          },
+          {
+            "id": "grand_design_3",
+            "name": "Grand Design 3"
+          },
+          {
+            "id": "grand_design_4",
+            "name": "Grand Design 4"
+          },
+          {
+            "id": "grand_design_5",
+            "name": "Grand Design 5"
+          },
+          {
+            "id": "no_resolution",
+            "name": "No Resolution"
+          },
+          {
+            "id": "resolution_1",
+            "name": "Resolution 1"
+          },
+          {
+            "id": "resolution_2",
+            "name": "Resolution 2"
+          },
+          {
+            "id": "resolution_3",
+            "name": "Resolution 3"
+          },
+          {
+            "id": "resolution_4",
+            "name": "Resolution 4"
+          },
+          {
+            "id": "resolution_5",
+            "name": "Resolution 5"
+          }
+        ]
       },
       {
         "id": "weaver_of_the_cosmos",
         "name": "Weaver of the Cosmos",
-        "scenes": []
+        "scenes": [
+          {
+            "id": "intro",
+            "name": "Intro"
+          },
+          {
+            "id": "the_spider_queen_1",
+            "name": "The Spider Queen 1"
+          },
+          {
+            "id": "the_spider_queen_2",
+            "name": "The Spider Queen 2"
+          },
+          {
+            "id": "the_spider_queen_3",
+            "name": "The Spider Queen 3"
+          },
+          {
+            "id": "the_spider_queen_4",
+            "name": "The Spider Queen 4"
+          },
+          {
+            "id": "no_resolution",
+            "name": "No Resolution"
+          },
+          {
+            "id": "resolution_1",
+            "name": "Resolution 1"
+          },
+          {
+            "id": "resolution_2",
+            "name": "Resolution 2"
+          },
+          {
+            "id": "resolution_3",
+            "name": "Resolution 3"
+          },
+          {
+            "id": "resolution_4",
+            "name": "Resolution 4"
+          },
+          {
+            "id": "resolution_5",
+            "name": "Resolution 5"
+          }
+        ]
+      },
+      {
+        "id": "epilogue",
+        "name": "Epilogue",
+        "scenes": [
+          {
+            "id": "epilogue",
+            "name": "Epilogue"
+          },
+          {
+            "id": "epilogue_1",
+            "name": "Epilogue 1"
+          },
+          {
+            "id": "epilogue_2",
+            "name": "Epilogue 2"
+          },
+          {
+            "id": "epilogue_3",
+            "name": "Epilogue 3"
+          },
+          {
+            "id": "epilogue_4",
+            "name": "Epilogue 4"
+          },
+          {
+            "id": "epilogue_5",
+            "name": "Epilogue 5"
+          },
+          {
+            "id": "epilogue_6",
+            "name": "Epilogue 6"
+          },
+          {
+            "id": "epilogue_7",
+            "name": "Epilogue 7"
+          },
+          {
+            "id": "epilogue_8",
+            "name": "Epilogue 8"
+          },
+          {
+            "id": "epilogue_9",
+            "name": "Epilogue 9"
+          },
+          {
+            "id": "epilogue_10",
+            "name": "Epilogue 10"
+          },
+          {
+            "id": "epilogue_11",
+            "name": "Epilogue 11"
+          },
+          {
+            "id": "epilogue_12",
+            "name": "Epilogue 12"
+          },
+          {
+            "id": "epilogue_13",
+            "name": "Epilogue 13"
+          },
+          {
+            "id": "epilogue_14",
+            "name": "Epilogue 14"
+          },
+          {
+            "id": "epilogue_15",
+            "name": "Epilogue 15"
+          },
+          {
+            "id": "epilogue_16",
+            "name": "Epilogue 16"
+          },
+          {
+            "id": "someone_has_broken_the_law_of_ulthar",
+            "name": "Someone has broken the Law of Ulthar"
+          }
+        ]
       }
     ]
   },
