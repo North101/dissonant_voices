@@ -104,12 +104,189 @@
   {
     "id": "the_dunwich_legacy",
     "name": "The Dunwich Legacy",
-    "scenarios": []
+    "scenarios": [
+      {
+        "id": "prologue",
+        "name": "Prologue",
+        "scenes": [
+          {
+            "id": "prologue",
+            "name": "Prologue"
+          }
+        ]
+      },
+      {
+        "id": "extracurricular_activity",
+        "name": "Extracurricular Activity",
+        "scenes": [
+          {
+            "id": "intro",
+            "name": "Intro"
+          },
+          {
+            "id": "no_resolution",
+            "name": "No Resolution"
+          },
+          {
+            "id": "resolution_1",
+            "name": "Resolution 1"
+          },
+          {
+            "id": "resolution_2",
+            "name": "Resolution 2"
+          },
+          {
+            "id": "resolution_3",
+            "name": "Resolution 3"
+          }
+        ]
+      },
+      {
+        "id": "the_house_always_wins",
+        "name": "The House Always Wins",
+        "scenes": [
+          {
+            "id": "intro",
+            "name": "Intro"
+          },
+          {
+            "id": "resolution_1",
+            "name": "Resolution 1"
+          },
+          {
+            "id": "resolution_2",
+            "name": "Resolution 2"
+          },
+          {
+            "id": "resolution_3",
+            "name": "Resolution 3"
+          },
+          {
+            "id": "resolution_4",
+            "name": "Resolution 4"
+          }
+        ]
+      },
+      {
+        "id": "interlude_1",
+        "name": "Interlude 1",
+        "scenes": [
+          {
+            "id": "intro",
+            "name": "Intro"
+          },
+          {
+            "id": "armitages_fate_1",
+            "name": "Armitage's Fate 1"
+          },
+          {
+            "id": "armitages_fate_2",
+            "name": "Armitage's Fate 2"
+          }
+        ]
+      },
+      {
+        "id": "the_miskatonic_museum",
+        "name": "The Miskatonic Museum",
+        "scenes": [
+          {
+            "id": "intro",
+            "name": "Intro"
+          },
+          {
+            "id": "intro_1",
+            "name": "Intro 1"
+          },
+          {
+            "id": "intro_2",
+            "name": "Intro 2"
+          },
+          {
+            "id": "no_resolution",
+            "name": "No Resolution"
+          },
+          {
+            "id": "resolution_1",
+            "name": "Resolution 1"
+          },
+          {
+            "id": "resolution_2",
+            "name": "Resolution 2"
+          }
+        ]
+      },
+      {
+        "id": "essex_county_express",
+        "name": "Essex County Express",
+        "scenes": []
+      },
+      {
+        "id": "blood_on_the_altar",
+        "name": "Blood on the Altar",
+        "scenes": []
+      },
+      {
+        "id": "undimensioned_and_unseen",
+        "name": "Undimensioned and Unseen",
+        "scenes": []
+      },
+      {
+        "id": "where_doom_awaits",
+        "name": "Where Doom Awaits",
+        "scenes": []
+      },
+      {
+        "id": "lost_in_time_and_space",
+        "name": "Lost in Time and Space",
+        "scenes": []
+      }
+    ]
   },
   {
     "id": "the_path_to_carcosa",
     "name": "The Path to Carcosa",
-    "scenarios": []
+    "scenarios": [
+      {
+        "id": "curtain_call",
+        "name": "Curtain Call",
+        "scenes": []
+      },
+      {
+        "id": "the_last_king",
+        "name": "The Last King",
+        "scenes": []
+      },
+      {
+        "id": "echoes_of_the_past",
+        "name": "Echoes of the Past",
+        "scenes": []
+      },
+      {
+        "id": "the_unspeakable_oath",
+        "name": "The Unspeakable Oath",
+        "scenes": []
+      },
+      {
+        "id": "a_phantom_of_truth",
+        "name": "A Phantom of Truth",
+        "scenes": []
+      },
+      {
+        "id": "the_pallid_mask",
+        "name": "The Pallid Mask",
+        "scenes": []
+      },
+      {
+        "id": "black_stars_rise",
+        "name": "Black Stars Rise",
+        "scenes": []
+      },
+      {
+        "id": "dim_carcosa",
+        "name": "Dim Carcosa",
+        "scenes": []
+      }
+    ]
   },
   {
     "id": "the_forgotten_age",
@@ -662,19 +839,13 @@
     "name": "The Circle Undone",
     "scenarios": [
       {
-        "id": "setup",
-        "name": "Campaign Setup",
+        "id": "disappearance_at_the_twilight_estate",
+        "name": "Disappearance at the Twilight Estate",
         "scenes": [
           {
             "id": "prologue",
             "name": "Prologue"
-          }
-        ]
-      },
-      {
-        "id": "disappearance_at_the_twilight_estate",
-        "name": "Disappearance at the Twilight Estate",
-        "scenes": [
+          },
           {
             "id": "intro",
             "name": "Intro"
@@ -844,6 +1015,113 @@
             "name": "If You Are Being Hunted"
           }
         ]
+      },
+      {
+        "id": "the_secret_name",
+        "name": "The Secret Name",
+        "scenes": []
+      },
+      {
+        "id": "the_wages_of_sin",
+        "name": "The Wages of Sin",
+        "scenes": []
+      },
+      {
+        "id": "for_the_greater_good",
+        "name": "For the Greater Good",
+        "scenes": []
+      },
+      {
+        "id": "union_and_disillusion",
+        "name": "Union and Disillusion",
+        "scenes": []
+      },
+      {
+        "id": "in_the_clutches_of_chaos",
+        "name": "In the Clutches of Chaos",
+        "scenes": []
+      },
+      {
+        "id": "before_the_black_throne",
+        "name": "Before the Black Throne",
+        "scenes": []
+      }
+    ]
+  },
+  {
+    "id": "the_dreameaters",
+    "name": "The Dream-Eaters",
+    "scenarios": [
+      {
+        "id": "setup",
+        "name": "Campaign Setup",
+        "scenes": []
+      },
+      {
+        "id": "beyond_the_gates_of_sleep",
+        "name": "Beyond the Gates of Sleep",
+        "scenes": []
+      },
+      {
+        "id": "waking_nightmare",
+        "name": "Waking Nightmare",
+        "scenes": []
+      },
+      {
+        "id": "the_search_for_kadath",
+        "name": "The Search for Kadath",
+        "scenes": []
+      },
+      {
+        "id": "a_thousand_shapes_of_horror",
+        "name": "A Thousand Shapes of Horror",
+        "scenes": []
+      },
+      {
+        "id": "dark_side_of_the_moon",
+        "name": "Dark Side of the Moon",
+        "scenes": []
+      },
+      {
+        "id": "point_of_no_return",
+        "name": "Point of No Return",
+        "scenes": []
+      },
+      {
+        "id": "where_the_gods_dwell",
+        "name": "Where the Gods Dwell",
+        "scenes": []
+      },
+      {
+        "id": "weaver_of_the_cosmos",
+        "name": "Weaver of the Cosmos",
+        "scenes": []
+      }
+    ]
+  },
+  {
+    "id": "the_innsmouth_conspiricy",
+    "name": "The Innsmouth Conspiricy",
+    "scenarios": [
+      {
+        "id": "setup",
+        "name": "Campaign Setup",
+        "scenes": []
+      },
+      {
+        "id": "the_pit_of_despair",
+        "name": "The Pit of Despair",
+        "scenes": []
+      },
+      {
+        "id": "the_vanishing_of_elina_harper",
+        "name": "The Vanishing of Elina Harper",
+        "scenes": []
+      },
+      {
+        "id": "in_too_deep",
+        "name": "In Too Deep",
+        "scenes": []
       }
     ]
   }
