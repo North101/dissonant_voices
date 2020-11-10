@@ -1,3 +1,4 @@
+import config from "../config";
 import SqliteDB from "../db";
 import CampaignService from "../services/campaign";
 import JwtService from "../services/jwt";
@@ -16,6 +17,7 @@ export interface Services {
 }
 
 export default ({ db }: { db: SqliteDB }): Services => {
+  console.log(new JwtService().encodeAdminToken(config.adminId))
   return {
     campaign: new CampaignService(db),
     scenario: new ScenarioService(db),

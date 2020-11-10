@@ -7,6 +7,11 @@ export interface AuthToken {
   issued: number;
 }
 
+export interface AdminToken {
+  admin_id: string;
+  issued: number;
+}
+
 export default class JwtService {
   encodeAuthToken(userId: string) {
     const payload: AuthToken = {
@@ -16,7 +21,15 @@ export default class JwtService {
     return jwt.encode(payload, config.jwt.secret, config.jwt.algorithm);
   }
 
-  decodeAuthToken(token: string) {
+  decodeToken(token: string) {
     return jwt.decode(token, config.jwt.secret, false, config.jwt.algorithm);
+  }
+
+  encodeAdminToken(adminId: string) {
+    const payload: AdminToken = {
+      admin_id: adminId,
+      issued: DateTime.utc().toMillis(),
+    };
+    return jwt.encode(payload, config.jwt.secret, config.jwt.algorithm);
   }
 }

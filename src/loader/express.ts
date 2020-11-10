@@ -1,5 +1,6 @@
 import express, { NextFunction, Response } from "express";
 import { DateTime } from "luxon";
+import config from "../config";
 
 import { Services } from "./services";
 
@@ -85,13 +86,13 @@ export default async ({
     async (req: any, res) => {
       let payload;
       try {
-        payload = services.jwt.decodeAuthToken(req.token);
+        payload = services.jwt.decodeToken(req.token);
       } catch (e) {
         console.log(e);
         return res.sendStatus(400).end();
       }
 
-      if (payload.is_admin !== true) {
+      if (payload.admin_id !== config.adminId) {
         const user = services.user.getUserById(payload.user_id);
         if (user === null) return res.sendStatus(403).end();
 

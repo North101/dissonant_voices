@@ -2,6 +2,7 @@ import * as dotenv from "dotenv";
 import { from } from "env-var";
 import path from "path";
 import fs from "fs";
+import { validate } from 'uuid';
 
 if (process.env.NODE_ENV === "production") {
   dotenv.config({ path: `${process.env.HOME}/dissonant_voices.env` });
@@ -36,10 +37,18 @@ const env = from(process.env, {
     }
     return pathString;
   },
+  asUUID: (value) => {
+    if (!validate(value)) {
+      throw Error(value);
+    }
+
+    return value;
+  },
 });
 
 const config = {
   env: env.get("NODE_ENV").required().asEnum(["production", "staging"]),
+  adminId: env.get("ADMIN_ID").required().asUUID(),
   db: {
     path: env.get("DB_PATH").asPath({ isAbsolute: true, isFile: true, }),
   },
