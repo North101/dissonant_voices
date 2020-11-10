@@ -1,6 +1,5 @@
 import express, { NextFunction, Response } from "express";
 import { DateTime } from "luxon";
-import { format as formatUrl } from "url";
 
 import { Services } from "./services";
 
@@ -92,22 +91,24 @@ export default async ({
         return res.sendStatus(400).end();
       }
 
-      const user = services.user.getUserById(payload.user_id);
-      if (user === null) return res.sendStatus(403).end();
+      if (payload.is_admin !== true) {
+        const user = services.user.getUserById(payload.user_id);
+        if (user === null) return res.sendStatus(403).end();
 
-      let accessToken = services.patreon.client.createToken(user.token);
-      if (
-        accessToken.expired() ||
-        !user.isPatron ||
-        user.lastChecked.plus({ days: 1 }) < DateTime.utc()
-      ) {
-        if (accessToken.expired()) {
-          accessToken = await accessToken.refresh();
+        let accessToken = services.patreon.client.createToken(user.token);
+        if (
+          accessToken.expired() ||
+          !user.isPatron ||
+          user.lastChecked.plus({ days: 1 }) < DateTime.utc()
+        ) {
+          if (accessToken.expired()) {
+            accessToken = await accessToken.refresh();
+          }
+          const isPatron = await services.patreon.getPatronStatus(accessToken);
+          services.user.updateUser(user.id, accessToken.token, isPatron);
+
+          if (!isPatron) return res.sendStatus(403).end();
         }
-        const isPatron = await services.patreon.getPatronStatus(accessToken);
-        services.user.updateUser(user.id, accessToken.token, isPatron);
-
-        if (!isPatron) return res.sendStatus(403).end();
       }
 
       const sceneId = req.params.sceneId;
