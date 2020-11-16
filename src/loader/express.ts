@@ -1,6 +1,7 @@
 import express, { NextFunction, Response } from "express";
 import { DateTime } from "luxon";
 import config from "../config";
+import url from 'url';
 
 import { Services } from "./services";
 
@@ -16,8 +17,14 @@ export default async ({
     const { state } = req.query;
     res.redirect(services.patreon.getPatreonRedirectUrl(state as string));
   });
-  app.get("/redirect", async (_req, res) => {
-    return res.sendStatus(200).end();
+  app.get("/redirect", async (req, res) => {
+    const parsedUrl = url.parse(req.url, true);
+    return res.redirect(url.format({
+      protocol: 'dissonantvoices',
+      slashes: true,
+      pathname: 'auth/redirect',
+      query: parsedUrl.query,
+    }));
   });
   app.post("/token", async (req, res) => {
     const code = req.body.code;
