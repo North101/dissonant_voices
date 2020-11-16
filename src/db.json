@@ -293,8 +293,8 @@
     "name": "The Forgotten Age",
     "scenarios": [
       {
-        "id": "setup",
-        "name": "Campaign Setup",
+        "id": "prologue",
+        "name": "Prologue",
         "scenes": [
           {
             "id": "prologue",
@@ -485,8 +485,8 @@
         "name": "The Boundary Beyond",
         "scenes": [
           {
-            "id": "introduction",
-            "name": "Introduction"
+            "id": "intro_1",
+            "name": "Intro 1"
           },
           {
             "id": "ichtaca_section",
@@ -533,8 +533,8 @@
             "name": "Out of Gas"
           },
           {
-            "id": "introduction_continued",
-            "name": "Introduction Continued"
+            "id": "intro_2",
+            "name": "Intro 2"
           },
           {
             "id": "no_resolution",
@@ -580,7 +580,7 @@
           },
           {
             "id": "low_on_rations",
-            "name": "Low pn Rations"
+            "name": "Low on Rations"
           },
           {
             "id": "medicine_section",
@@ -614,7 +614,7 @@
       },
       {
         "id": "heart_of_the_elders_part_1",
-        "name": "Heart of the Elders Part 1",
+        "name": "Heart of the Elders, Part 1",
         "scenes": [
           {
             "id": "intro_1",
@@ -644,7 +644,7 @@
       },
       {
         "id": "heart_of_the_elders_part_2",
-        "name": "Heart of the Elders Part 2",
+        "name": "Heart of the Elders, Part 2",
         "scenes": [
           {
             "id": "intro",
@@ -750,7 +750,7 @@
       },
       {
         "id": "shattered_aeons",
-        "name": "shattered_aeons",
+        "name": "Shattered Aeons",
         "scenes": [
           {
             "id": "intro",
@@ -799,7 +799,13 @@
           {
             "id": "resolution_5",
             "name": "Resolution 5"
-          },
+          }
+        ]
+      },
+      {
+        "id": "epilogue",
+        "name": "Epilogue",
+        "scenes": [
           {
             "id": "epilogue",
             "name": "Epilogue"
