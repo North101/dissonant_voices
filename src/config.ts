@@ -85,7 +85,7 @@ const config = {
       .required()
       .asPath({ isAbsolute: true, isDirectory: true, exists: true }),
     verifySceneAudioExists: env
-      .get("DB_VERIFY_AUDIO_EXISTS")
+      .get("VERIFY_AUDIO_ASSETS_EXIST")
       .default("false")
       .asBool(),
   },
