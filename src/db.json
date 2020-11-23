@@ -138,6 +138,10 @@
           {
             "id": "resolution_3",
             "name": "Resolution 3"
+          },
+          {
+            "id": "resolution_4",
+            "name": "Resolution 4"
           }
         ]
       },
@@ -148,6 +152,10 @@
           {
             "id": "intro",
             "name": "Intro"
+          },
+          {
+            "id": "no_resolution",
+            "name": "No Resolution"
           },
           {
             "id": "resolution_1",
@@ -880,7 +888,7 @@
       },
       {
         "id": "the_witching_hour",
-        "name": "the_witching_hour",
+        "name": "The Witching Hour",
         "scenes": [
           {
             "id": "intro_1",
@@ -921,8 +929,8 @@
         ]
       },
       {
-        "id": "at_deaths_door",
-        "name": "at_deaths_door",
+        "id": "at_deaths_doorstep",
+        "name": "At Death's Doorstep",
         "scenes": [
           {
             "id": "intro",
@@ -974,7 +982,7 @@
       },
       {
         "id": "interlude_2",
-        "name": "interlude_2",
+        "name": "Interlude 2",
         "scenes": [
           {
             "id": "the_price_of_progress",
@@ -1060,7 +1068,7 @@
     "scenarios": [
       {
         "id": "prologue",
-        "name": "prologue",
+        "name": "Prologue",
         "scenes": [
           {
             "id": "prologue",
