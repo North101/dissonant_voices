@@ -933,6 +933,10 @@
         "name": "At Death's Doorstep",
         "scenes": [
           {
+            "id": "intro_article",
+            "name": "Intro Article"
+          },
+          {
             "id": "intro",
             "name": "Intro"
           },
