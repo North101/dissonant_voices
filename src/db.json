@@ -1037,17 +1037,170 @@
       {
         "id": "the_secret_name",
         "name": "The Secret Name",
-        "scenes": []
+        "scenes": [
+          {
+            "id": "intro",
+            "name": "Intro"
+          },
+          {
+            "id": "intro_1",
+            "name": "Intro 1"
+          },
+          {
+            "id": "intro_2",
+            "name": "Intro 2"
+          },
+          {
+            "id": "intro_3",
+            "name": "Intro 3"
+          },
+          {
+            "id": "intro_4",
+            "name": "Intro 4"
+          },
+          {
+            "id": "intro_5",
+            "name": "Intro 5"
+          },
+          {
+            "id": "intro_6",
+            "name": "Intro 6"
+          },
+          {
+            "id": "no_resolution",
+            "name": "No Resolution"
+          },
+          {
+            "id": "resolution_1",
+            "name": "Resolution 1"
+          },
+          {
+            "id": "resolution_2",
+            "name": "Resolution 2"
+          }
+        ]
       },
       {
         "id": "the_wages_of_sin",
         "name": "The Wages of Sin",
-        "scenes": []
+        "scenes": [
+          {
+            "id": "intro",
+            "name": "Intro"
+          },
+          {
+            "id": "no_resolution",
+            "name": "No Resolution"
+          },
+          {
+            "id": "resolution_1",
+            "name": "Resolution 1"
+          },
+          {
+            "id": "resolution_2",
+            "name": "Resolution 2"
+          }
+        ]
       },
       {
         "id": "for_the_greater_good",
         "name": "For the Greater Good",
-        "scenes": []
+        "scenes": [
+          {
+            "id": "intro_1",
+            "name": "Intro 1"
+          },
+          {
+            "id": "intro_2",
+            "name": "Intro 2"
+          },
+          {
+            "id": "deceiving_the_lodge",
+            "name": "Deceiving the Lodge"
+          },
+          {
+            "id": "intro_3",
+            "name": "Intro 3"
+          },
+          {
+            "id": "intro_4",
+            "name": "Intro 4"
+          },
+          {
+            "id": "intro_5",
+            "name": "Intro 5"
+          },
+          {
+            "id": "no_resolution",
+            "name": "No Resolution"
+          },
+          {
+            "id": "resolution_1",
+            "name": "Resolution 1"
+          },
+          {
+            "id": "resolution_2",
+            "name": "Resolution 2"
+          },
+          {
+            "id": "resolution_3",
+            "name": "Resolution 3"
+          }
+        ]
+      },
+      {
+        "id": "interlude_3",
+        "name": "Interlude 3",
+        "scenes": [
+          {
+            "id": "the_inner_circle_1",
+            "name": "The Inner Circle 1"
+          },
+          {
+            "id": "the_inner_circle_2",
+            "name": "The Inner Circle 2"
+          },
+          {
+            "id": "the_inner_circle_3",
+            "name": "The Inner Circle 3"
+          },
+          {
+            "id": "the_inner_circle_4",
+            "name": "The Inner Circle 4"
+          },
+          {
+            "id": "what_is_the_creature",
+            "name": "What is the Creature?"
+          },
+          {
+            "id": "what_do_you_want_with_the_creature",
+            "name": "What do you want with the Creature?"
+          },
+          {
+            "id": "what_do_the_witches_want_with_the_creature",
+            "name": "What do the witches want with the Creature?"
+          },
+          {
+            "id": "did_you_know_about_the_creature_before_the_charity_gala",
+            "name": "Did you know about the Creature before the charity gala?"
+          },
+          {
+            "id": "where_are_the_four_missing_people_from_the_charity_gala",
+            "name": "Where are the four missing people from the charity gala?"
+          },
+          {
+            "id": "why_are_you_looking_at_me_like_that",
+            "name": "Why are you looking at me like that?"
+          },
+          {
+            "id": "the_inner_circle_5",
+            "name": "The Inner Circle 5"
+          },
+          {
+            "id": "the_inner_circle_6",
+            "name": "The Inner Circle 6"
+          }
+        ]
       },
       {
         "id": "union_and_disillusion",
