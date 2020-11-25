@@ -19,8 +19,7 @@ export default () => {
   const { db, exists } = initDatabase(config.db.path ?? ":memory:");
   if (db.memory || !exists) {
     // create user table
-    db.prepare(
-      `
+    db.prepare(`
       CREATE TABLE user(
         id TEXT PRIMARY KEY,
         token TEXT NOT NULL,
@@ -28,45 +27,42 @@ export default () => {
         created TEXT NOT NULL,
         last_checked TEXT NOT NULL
       )
-    `
-    ).run();
-
-    // create campaign table
-    db.prepare(
-      `
-      CREATE TABLE campaign(
-        id TEXT PRIMARY KEY,
-        name TEXT NOT NULL,
-        "index" INT NOT NULL
-      )
-    `
-    ).run();
-
-    // create scenario table
-    db.prepare(
-      `
-      CREATE TABLE scenario(
-        id TEXT PRIMARY KEY,
-        campaign_id TEXT NOT NULL,
-        name TEXT NOT NULL,
-        "index" INT NOT NULL
-      )
-    `
-    ).run();
-
-    // create scene table
-    db.prepare(
-      `
-      CREATE TABLE scene(
-        id TEXT PRIMARY KEY,
-        scenario_id TEXT NOT NULL,
-        name TEXT NOT NULL,
-        ext TEXT NOT NULL,
-        "index" INT NOT NULL
-      )
-    `
-    ).run();
+    `).run();
+  } else {
+    db.prepare(`DROP TABLE campaign`).run();
+    db.prepare(`DROP TABLE scenario`).run();
+    db.prepare(`DROP TABLE scene`).run();
   }
+
+  // create campaign table
+  db.prepare(`
+    CREATE TABLE campaign(
+      id TEXT PRIMARY KEY,
+      name TEXT NOT NULL,
+      "index" INT NOT NULL
+    )
+  `).run();
+
+  // create scenario table
+  db.prepare(`
+    CREATE TABLE scenario(
+      id TEXT PRIMARY KEY,
+      campaign_id TEXT NOT NULL,
+      name TEXT NOT NULL,
+      "index" INT NOT NULL
+    )
+  `).run();
+
+  // create scene table
+  db.prepare(`
+    CREATE TABLE scene(
+      id TEXT PRIMARY KEY,
+      scenario_id TEXT NOT NULL,
+      name TEXT NOT NULL,
+      ext TEXT NOT NULL,
+      "index" INT NOT NULL
+    )
+  `).run();
 
   const sqliteDB = new SqliteDB(db);
   for (const [campaignIndex, campaign] of dbData.entries()) {

@@ -30,9 +30,9 @@ const env = from(process.env, {
       throw new Error(`${pathString} is not absolute`);
     } else if (exists && !fs.existsSync(pathString)) {
       throw new Error(`${pathString} doesn't exist`);
-    } else if (isDirectory && !fs.lstatSync(pathString).isDirectory()) {
+    } else if (isDirectory && !fs.existsSync(pathString) && !fs.lstatSync(pathString).isDirectory()) {
       throw new Error(`${pathString} isn't a directory`);
-    } else if (isFile && !fs.lstatSync(pathString).isFile()) {
+    } else if (exists && isFile && !fs.existsSync(pathString) && !fs.lstatSync(pathString).isFile()) {
       throw new Error(`${pathString} isn't a file`);
     }
     return pathString;
