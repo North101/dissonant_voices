@@ -255,14 +255,88 @@
     "name": "The Path to Carcosa",
     "scenarios": [
       {
+        "id": "prologue",
+        "name": "Prologue",
+        "scenes": [
+          {
+            "id": "prologue",
+            "name": "Prologue"
+          },
+          {
+            "id": "lola_prologue",
+            "name": "Lola Prologue"
+          }
+        ]
+      },
+      {
         "id": "curtain_call",
         "name": "Curtain Call",
-        "scenes": []
+        "scenes": [
+          {
+            "id": "intro",
+            "name": "Intro"
+          },
+          {
+            "id": "no_resolution",
+            "name": "No Resolution"
+          },
+          {
+            "id": "resolution_1",
+            "name": "Resolution 1"
+          },
+          {
+            "id": "resolution_2",
+            "name": "Resolution 2"
+          }
+        ]
       },
       {
         "id": "the_last_king",
         "name": "The Last King",
-        "scenes": []
+        "scenes": [
+          {
+            "id": "intro",
+            "name": "Intro"
+          },
+          {
+            "id": "resolutions",
+            "name": "Resolutions"
+          },
+          {
+            "id": "resolution_1",
+            "name": "Resolution 1"
+          },
+          {
+            "id": "resolution_2",
+            "name": "Resolution 2"
+          },
+          {
+            "id": "resolution_3",
+            "name": "Resolution 3"
+          }
+        ]
+      },
+      {
+        "id": "interlude_1",
+        "name": "interlude_1",
+        "scenes": [
+          {
+            "id": "intro",
+            "name": "Intro"
+          },
+          {
+            "id": "lunacys_reward_1",
+            "name": "Lunacy's Reward 1"
+          },
+          {
+            "id": "lunacys_reward_2",
+            "name": "Lunacy's Reward 2"
+          },
+          {
+            "id": "lunacys_reward_3",
+            "name": "Lunacy's Reward 3"
+          }
+        ]
       },
       {
         "id": "echoes_of_the_past",
