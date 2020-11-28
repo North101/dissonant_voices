@@ -36,9 +36,8 @@ export default class SceneService {
       config.assets.sceneAudioPath,
       `${scene.id}.${scene.ext}`
     );
-    console.log(filepath);
     if (!path.isAbsolute(filepath) || !fs.existsSync(filepath)) {
-      throw Error();
+      throw Error(`${filepath} not found`);
     }
 
     return filepath;

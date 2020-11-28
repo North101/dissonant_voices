@@ -97,7 +97,11 @@ export default () => {
       const sceneService = new SceneService(sqliteDB);
       const scenes = sceneService.listScene();
       for (const scene of scenes) {
-        sceneService.getSceneFilepath(scene);
+        try {
+          sceneService.getSceneFilepath(scene);
+        } catch (e) {
+          console.log(e);
+        }
       }
     }
   }
