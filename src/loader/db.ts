@@ -91,17 +91,17 @@ export default () => {
         });
       }
     }
+  }
 
-    if (config.assets.verifySceneAudioExists) {
-      console.log('verifySceneAudioExists');
-      const sceneService = new SceneService(sqliteDB);
-      const scenes = sceneService.listScene();
-      for (const scene of scenes) {
-        try {
-          sceneService.getSceneFilepath(scene);
-        } catch (e) {
-          console.log(e);
-        }
+  if (config.assets.verifySceneAudioExists) {
+    console.log('verifySceneAudioExists');
+    const sceneService = new SceneService(sqliteDB);
+    const scenes = sceneService.listScene();
+    for (const scene of scenes) {
+      try {
+        sceneService.getSceneFilepath(scene);
+      } catch (e) {
+        console.log(e);
       }
     }
   }
