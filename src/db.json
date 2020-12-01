@@ -226,7 +226,28 @@
       {
         "id": "essex_county_express",
         "name": "Essex County Express",
-        "scenes": []
+        "scenes": [
+          {
+            "id": "intro",
+            "name": "Intro"
+          },
+          {
+            "id": "resolutions",
+            "name": "Resolutions"
+          },
+          {
+            "id": "investigator_defeat",
+            "name": "Investigator Defeat"
+          },
+          {
+            "id": "resolution_1",
+            "name": "Resolution 1"
+          },
+          {
+            "id": "resolution_2",
+            "name": "Resolution 2"
+          }
+        ]
       },
       {
         "id": "blood_on_the_altar",
