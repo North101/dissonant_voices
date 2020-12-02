@@ -1375,12 +1375,153 @@
       {
         "id": "in_the_clutches_of_chaos",
         "name": "In the Clutches of Chaos",
-        "scenes": []
+        "scenes": [
+          {
+            "id": "intro_1",
+            "name": "Intro 1"
+          },
+          {
+            "id": "intro_2",
+            "name": "Intro 2"
+          },
+          {
+            "id": "intro_3",
+            "name": "Intro 3"
+          },
+          {
+            "id": "intro_4",
+            "name": "Intro 4"
+          },
+          {
+            "id": "no_resolution",
+            "name": "No Resolution"
+          },
+          {
+            "id": "resolution_1",
+            "name": "Resolution 1"
+          },
+          {
+            "id": "resolution_2",
+            "name": "Resolution 2"
+          },
+          {
+            "id": "resolution_3",
+            "name": "Resolution 3"
+          },
+          {
+            "id": "resolution_4",
+            "name": "Resolution 4"
+          }
+        ]
+      },{
+        "id": "interlude_4",
+        "name": "Interlude 4",
+        "scenes": [
+          {
+            "id": "twist_of_fate_1",
+            "name": "Twist of Fate 1"
+          },
+          {
+            "id": "if_you_accepted_your_fate",
+            "name": "If you accepted your fate"
+          },
+          {
+            "id": "asked_annette_for_assistance",
+            "name": "Asked Annette for assistance"
+          },
+          {
+            "id": "asked_sanford_for_assistance",
+            "name": "Asked Sanford for assistance"
+          },
+          {
+            "id": "2_or_fewer_mementos_discovered",
+            "name": "2 or fewer Mementos discovered"
+          },
+          {
+            "id": "3_5_mementos_discovered",
+            "name": "3-5 Mementos discovered"
+          },
+          {
+            "id": "6_or_more_mementos_discovered",
+            "name": "6 or more Mementos discovered"
+          },
+          {
+            "id": "has_the_black_book",
+            "name": "Has The Black Book"
+          },
+          {
+            "id": "if_doom_draws_ever_closer",
+            "name": "If doom draws ever closer"
+          },
+          {
+            "id": "twist_of_fate_2",
+            "name": "Twist of Fate 2"
+          }
+        ]
       },
       {
         "id": "before_the_black_throne",
         "name": "Before the Black Throne",
-        "scenes": []
+        "scenes": [
+          {
+            "id": "intro",
+            "name": "Intro"
+          },
+          {
+            "id": "resolutions",
+            "name": "Resolutions"
+          },
+          {
+            "id": "resolution_1",
+            "name": "Resolution 1"
+          },
+          {
+            "id": "resolution_2",
+            "name": "Resolution 2"
+          },
+          {
+            "id": "resolution_3",
+            "name": "Resolution 3"
+          },
+          {
+            "id": "resolution_4",
+            "name": "Resolution 4"
+          },
+          {
+            "id": "resolution_5",
+            "name": "Resolution 5"
+          }
+        ]
+      },
+      {
+        "id": "epilogue",
+        "name": "Epilogue",
+        "scenes": [
+          {
+            "id": "epilogue",
+            "name": "Epilogue"
+          },
+          {
+            "id": "arrested_anette",
+            "name": "Arrested Anette"
+          },
+          {
+            "id": "assumed_control_of_the_silver_twilight_lodge",
+            "name": "Assumed control of The Silver Twilight Lodge"
+          },
+          {
+            "id": "survived_the_watchers_embrace",
+            "name": "Survived the Watcher's embrace"
+          },
+          {
+            "id": "signed_the_black_book_of_azathoth",
+            "name": "Signed the Black Book of Azathoth"
+          },
+          {
+            "id": "you_are_being_hunted",
+            "name": "You are being hunted"
+          }
+        ]
       }
     ]
   },
