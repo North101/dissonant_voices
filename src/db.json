@@ -339,7 +339,7 @@
       },
       {
         "id": "interlude_1",
-        "name": "interlude_1",
+        "name": "Interlude 1",
         "scenes": [
           {
             "id": "intro",
@@ -396,7 +396,73 @@
       {
         "id": "the_unspeakable_oath",
         "name": "The Unspeakable Oath",
-        "scenes": []
+        "scenes": [
+          {
+            "id": "intro",
+            "name": "Intro"
+          },
+          {
+            "id": "intro_1",
+            "name": "Intro 1"
+          },
+          {
+            "id": "intro_2",
+            "name": "Intro 2"
+          },
+          {
+            "id": "intro_3",
+            "name": "Intro 3"
+          },
+          {
+            "id": "constances_information",
+            "name": "Constance's Information"
+          },
+          {
+            "id": "investigator_defeat",
+            "name": "Investigator Defeat"
+          },
+          {
+            "id": "resolution_1",
+            "name": "Resolution 1"
+          },
+          {
+            "id": "resolution_2",
+            "name": "Resolution 2"
+          },
+          {
+            "id": "resolution_3",
+            "name": "Resolution 3"
+          }
+        ]
+      },{
+        "id": "interlude_2",
+        "name": "Interlude 2",
+        "scenes": [
+          {
+            "id": "intro",
+            "name": "Intro"
+          },
+          {
+            "id": "daniel_survived",
+            "name": "Daniel Survived"
+          },
+          {
+            "id": "daniel_did_not_survive",
+            "name": "Daniel Did Not Survive"
+          },
+          {
+            "id": "daniel_was_possessed",
+            "name": "Daniel Was Possessed"
+          },
+          {
+            "id": "ignore_the_warning",
+            "name": "Ignore the Warning"
+          },
+          {
+            "id": "heed_the_warning",
+            "name": "Heed the Warning"
+          }
+        ]
       },
       {
         "id": "a_phantom_of_truth",
@@ -1468,8 +1534,8 @@
             "name": "Intro"
           },
           {
-            "id": "resolutions",
-            "name": "Resolutions"
+            "id": "investigator_defeat",
+            "name": "Investigator Defeat"
           },
           {
             "id": "resolution_1",
