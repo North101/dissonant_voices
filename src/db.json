@@ -252,7 +252,58 @@
       {
         "id": "blood_on_the_altar",
         "name": "Blood on the Altar",
-        "scenes": []
+        "scenes": [
+          {
+            "id": "intro",
+            "name": "Intro"
+          },
+          {
+            "id": "no_resolution",
+            "name": "No Resolution"
+          },
+          {
+            "id": "resolution_1",
+            "name": "Resolution 1"
+          },
+          {
+            "id": "resolution_2",
+            "name": "Resolution 2"
+          },
+          {
+            "id": "resolution_3",
+            "name": "Resolution 3"
+          }
+        ]
+      },
+      {
+        "id": "interlude_2",
+        "name": "Interlude 2",
+        "scenes": [
+          {
+            "id": "intro",
+            "name": "Intro"
+          },
+          {
+            "id": "dr_henry_armitage",
+            "name": "Dr. Henry Armitage"
+          },
+          {
+            "id": "professor_warren_rice",
+            "name": "Professor Warren Rice"
+          },
+          {
+            "id": "dr_francis_morgan",
+            "name": "Dr. Francis Morgan"
+          },
+          {
+            "id": "zebulon_whately",
+            "name": "Zebulon Whately"
+          },
+          {
+            "id": "earl_sawyer",
+            "name": "Earl Sawyer"
+          }
+        ]
       },
       {
         "id": "undimensioned_and_unseen",
@@ -467,7 +518,92 @@
       {
         "id": "a_phantom_of_truth",
         "name": "A Phantom of Truth",
-        "scenes": []
+        "scenes": [
+          {
+            "id": "intro_1",
+            "name": "Intro 1"
+          },
+          {
+            "id": "intro_2",
+            "name": "Intro 2"
+          },
+          {
+            "id": "dream_5",
+            "name": "Dream 5"
+          },
+          {
+            "id": "dream_4",
+            "name": "Dream 4"
+          },
+          {
+            "id": "dream_8",
+            "name": "Dream 8"
+          },
+          {
+            "id": "dream_12",
+            "name": "Dream 12"
+          },
+          {
+            "id": "dream_2",
+            "name": "Dream 2"
+          },
+          {
+            "id": "dream_9",
+            "name": "Dream 9"
+          },
+          {
+            "id": "dream_1",
+            "name": "Dream 1"
+          },
+          {
+            "id": "dream_7",
+            "name": "Dream 7"
+          },
+          {
+            "id": "dream_10",
+            "name": "Dream 10"
+          },
+          {
+            "id": "dream_3",
+            "name": "Dream 3"
+          },
+          {
+            "id": "dream_13",
+            "name": "Dream 13"
+          },
+          {
+            "id": "dream_6",
+            "name": "Dream 6"
+          },
+          {
+            "id": "dream_11",
+            "name": "Dream 11"
+          },
+          {
+            "id": "awakening",
+            "name": "Awakening"
+          },
+          {
+            "id": "jordans_information",
+            "name": "Jordan's Information"
+          },
+          {
+            "id": "no_resolution",
+            "name": "No Resolution"
+          },
+          {
+            "id": "resolution_1",
+            "name": "Resolution 1"
+          },
+          {
+            "id": "resolution_2",
+            "name": "Resolution 2"
+          },
+          {
+            "id": "resolution_3",
+            "name": "Resolution 3"
+          }
+        ]
       },
       {
         "id": "the_pallid_mask",
@@ -477,7 +613,32 @@
       {
         "id": "black_stars_rise",
         "name": "Black Stars Rise",
-        "scenes": []
+        "scenes": [
+          {
+            "id": "intro",
+            "name": "Intro"
+          },
+          {
+            "id": "ashleighs_information",
+            "name": "Ashleigh's Information"
+          },
+          {
+            "id": "no_resolution",
+            "name": "No Resolution"
+          },
+          {
+            "id": "resolution_1",
+            "name": "Resolution 1"
+          },
+          {
+            "id": "resolution_2",
+            "name": "Resolution 2"
+          },
+          {
+            "id": "resolution_3",
+            "name": "Resolution 3"
+          }
+        ]
       },
       {
         "id": "dim_carcosa",
