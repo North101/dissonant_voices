@@ -308,7 +308,32 @@
       {
         "id": "undimensioned_and_unseen",
         "name": "Undimensioned and Unseen",
-        "scenes": []
+        "scenes": [
+          {
+            "id": "intro",
+            "name": "Intro"
+          },
+          {
+            "id": "part_1",
+            "name": "Part 1"
+          },
+          {
+            "id": "part_2",
+            "name": "Part 2"
+          },
+          {
+            "id": "no_resolution",
+            "name": "No Resolution"
+          },
+          {
+            "id": "resolution_1",
+            "name": "Resolution 1"
+          },
+          {
+            "id": "resolution_2",
+            "name": "Resolution 2"
+          }
+        ]
       },
       {
         "id": "where_doom_awaits",
