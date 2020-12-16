@@ -338,12 +338,80 @@
       {
         "id": "where_doom_awaits",
         "name": "Where Doom Awaits",
-        "scenes": []
+        "scenes": [
+          {
+            "id": "intro",
+            "name": "Intro"
+          },
+          {
+            "id": "part_1",
+            "name": "Part 1"
+          },
+          {
+            "id": "resolutions",
+            "name": "Resolutions"
+          },
+          {
+            "id": "resolution_1",
+            "name": "Resolution 1"
+          },
+          {
+            "id": "resolution_2",
+            "name": "Resolution 2"
+          }
+        ]
       },
       {
         "id": "lost_in_time_and_space",
         "name": "Lost in Time and Space",
-        "scenes": []
+        "scenes": [
+          {
+            "id": "intro",
+            "name": "Intro"
+          },
+          {
+            "id": "resolutions",
+            "name": "Resolutions"
+          },
+          {
+            "id": "no_resolution",
+            "name": "No Resolution"
+          },
+          {
+            "id": "resolution_1",
+            "name": "Resolution 1"
+          },
+          {
+            "id": "resolution_2",
+            "name": "Resolution 2"
+          },
+          {
+            "id": "resolution_3",
+            "name": "Resolution 3"
+          },
+          {
+            "id": "resolution_4",
+            "name": "Resolution 4"
+          }
+        ]
+      },
+      {
+        "id": "epilogue",
+        "name": "Epilogue",
+        "scenes": [
+          {
+            "id": "epilogue",
+            "name": "Epilogue"
+          },
+          {
+            "id": "epilogue_1",
+            "name": "Epilogue 1"
+          },
+          {
+            "id": "epilogue_2",
+            "name": "Epilogue 2"
+          }
+        ]
       }
     ]
   },
@@ -668,7 +736,54 @@
       {
         "id": "dim_carcosa",
         "name": "Dim Carcosa",
-        "scenes": []
+        "scenes": [
+          {
+            "id": "intro",
+            "name": "Intro"
+          },
+          {
+            "id": "intro_1",
+            "name": "Intro 1"
+          },
+          {
+            "id": "intro_2",
+            "name": "Intro 2"
+          },
+          {
+            "id": "no_resolution",
+            "name": "No Resolution"
+          },
+          {
+            "id": "resolution_1",
+            "name": "Resolution 1"
+          },
+          {
+            "id": "resolution_2",
+            "name": "Resolution 2"
+          },
+          {
+            "id": "resolution_3",
+            "name": "Resolution 3"
+          },
+          {
+            "id": "resolution_4",
+            "name": "Resolution 4"
+          },
+          {
+            "id": "resolution_5",
+            "name": "Resolution 5"
+          }
+        ]
+      },
+      {
+        "id": "epilogue",
+        "name": "Epilogue",
+        "scenes": [
+          {
+            "id": "possessed",
+            "name": "Possessed"
+          }
+        ]
       }
     ]
   },
