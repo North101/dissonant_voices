@@ -1277,6 +1277,110 @@
         ]
       },
       {
+        "id": "the_depths_of_yoth",
+        "name": "The Depths of Yoth",
+        "scenes": [
+          {
+            "id": "intro_1",
+            "name": "Intro 1"
+          },
+          {
+            "id": "intro_2",
+            "name": "Intro 2"
+          },
+          {
+            "id": "intro_3",
+            "name": "Intro 3"
+          },
+          {
+            "id": "intro_4",
+            "name": "Intro 4"
+          },
+          {
+            "id": "intro_5",
+            "name": "Intro 5"
+          },
+          {
+            "id": "intro_6",
+            "name": "Intro 6"
+          },
+          {
+            "id": "intro_7",
+            "name": "Intro 7"
+          },
+          {
+            "id": "intro_8",
+            "name": "Intro 8"
+          },
+          {
+            "id": "resolution_1",
+            "name": "Resolution 1"
+          },
+          {
+            "id": "resolution_2",
+            "name": "Resolution 2"
+          }
+        ]
+      },
+      {
+        "id": "interlude_5",
+        "name": "Interlude 5",
+        "scenes": [
+          {
+            "id": "intro",
+            "name": "Intro"
+          },
+          {
+            "id": "the_darkness_1",
+            "name": "The Darkness 1"
+          },
+          {
+            "id": "the_darkness_2",
+            "name": "The Darkness 2"
+          },
+          {
+            "id": "relic_section",
+            "name": "Relic Section"
+          },
+          {
+            "id": "arcane_thrumming",
+            "name": "Arcane Thrumming"
+          },
+          {
+            "id": "growing_concern",
+            "name": "Growing Concern"
+          },
+          {
+            "id": "final_dawning",
+            "name": "Final Dawning"
+          },
+          {
+            "id": "torches_section",
+            "name": "Torches Section"
+          },
+          {
+            "id": "torchlight",
+            "name": "Torchlight"
+          },
+          {
+            "id": "the_abyss",
+            "name": "The Abyss"
+          },
+          {
+            "id": "map_section",
+            "name": "Map Section"
+          },
+          {
+            "id": "reading_signs",
+            "name": "Reading Signs"
+          },
+          {
+            "id": "final_section",
+            "name": "Final Section"
+          }
+        ]
+      },
+      {
         "id": "shattered_aeons",
         "name": "Shattered Aeons",
         "scenes": [
