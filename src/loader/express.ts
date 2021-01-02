@@ -1,9 +1,10 @@
 import express, { NextFunction, Response } from "express";
+import asyncHandler from 'express-async-handler';
 import { DateTime } from "luxon";
-import config from "../config";
 import url from 'url';
-
+import config from "../config";
 import { Services } from "./services";
+
 
 export default async ({
   app,
@@ -17,7 +18,7 @@ export default async ({
     const { state } = req.query;
     res.redirect(services.patreon.getPatreonRedirectUrl(state as string));
   });
-  app.get("/redirect", async (req, res) => {
+  app.get("/redirect", asyncHandler(async (req, res) => {
     const parsedUrl = url.parse(req.url, true);
     return res.redirect(url.format({
       protocol: 'dissonantvoices',
@@ -25,15 +26,15 @@ export default async ({
       pathname: 'auth/redirect',
       query: parsedUrl.query,
     }));
-  });
-  app.post("/token", async (req, res) => {
+  }));
+  app.post("/token", asyncHandler(async (req, res) => {
     const code = req.body.code;
     const accessToken = await services.patreon.getAccessToken(code as string);
     const isPatron = await services.patreon.getPatronStatus(accessToken);
     const userId = services.user.createUser(accessToken.token, isPatron);
 
     return res.send(services.jwt.encodeAuthToken(userId)).end();
-  });
+  }));
   app.get("/api/campaign", (_req, res) => {
     return res.json(services.campaign.listCampaign()).end();
   });
@@ -80,17 +81,17 @@ export default async ({
   app.get("/api/scene", (_req, res) => {
     return res.json(services.scene.listScene()).end();
   });
-  app.get("/api/scene/:sceneId", checkAuthToken, async (req: any, res) => {
+  app.get("/api/scene/:sceneId", checkAuthToken, asyncHandler(async (req: any, res) => {
     const sceneId = req.params.sceneId;
     const scene = services.scene.getSceneById(sceneId);
     if (scene === null) return res.sendStatus(404).end();
 
     return res.json(scene).end();
-  });
+  }));
   app.get(
     "/api/scene/:sceneId/listen",
     checkAuthToken,
-    async (req: any, res) => {
+    asyncHandler(async (req: any, res) => {
       let payload;
       try {
         payload = services.jwt.decodeToken(req.token);
@@ -127,8 +128,9 @@ export default async ({
       res.set("content-type", `audio/${scene.ext}`);
       res.set("accept-ranges", "bytes");
       res.sendFile(filepath);
+      return res;
     }
-  );
+  ));
 
   function checkAuthToken(req: any, res: Response, next: NextFunction) {
     const header = req.headers.authorization;

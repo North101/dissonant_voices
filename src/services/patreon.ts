@@ -1,6 +1,7 @@
-import { AccessToken, AuthorizationCode, ModuleOptions, Token } from "simple-oauth2";
-import { format as formatUrl } from "url";
+import { AccessToken, AuthorizationCode, ModuleOptions } from "simple-oauth2";
 import { PatreonRequest, Endpoints, Schemas } from "patreon-ts";
+import { CreatePatreonTokenFromOAuthToken } from "patreon-ts/dist/types";
+
 import config from "../config";
 
 interface UserMembership {
@@ -59,7 +60,7 @@ export default class PatreonService {
   }
 
   async getPatronStatus(accessToken: AccessToken) {
-    const UserQueryObject: Schemas.User = new Schemas.User({
+    const UserQueryObject = new Schemas.UserSchema({
       relationships: {
         memberships: Schemas.user_constants.relationships?.memberships,
         "memberships.campaign": "memberships.campaign",
@@ -75,7 +76,7 @@ export default class PatreonService {
     );
 
     const result: UserMembership = JSON.parse(
-      await PatreonRequest(accessToken, query)
+      await PatreonRequest(CreatePatreonTokenFromOAuthToken(accessToken), query)
     );
     const isPatron = result.included.some(
       (rel) =>
