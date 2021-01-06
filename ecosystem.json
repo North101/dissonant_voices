@@ -15,7 +15,7 @@
         "ref": "origin/master",
         "repo": "https://github.com/North101/dissonant_voices.git",
         "path": "/home/north101/dissonant_voices",
-        "post-deploy": "npm install && npm run build && pm2 startOrRestart ecosystem.json --env production"
+        "post-deploy": "yarn install && yarn run build && pm2 startOrRestart ecosystem.json --env production"
       }
     }
   }
