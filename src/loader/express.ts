@@ -1,6 +1,7 @@
 import express, { NextFunction, Response } from "express";
 import asyncHandler from 'express-async-handler';
 import { DateTime } from "luxon";
+import { AccessToken } from "simple-oauth2";
 import url from 'url';
 import config from "../config";
 import { Services } from "./services";
@@ -29,7 +30,14 @@ export default async ({
   }));
   app.post("/token", asyncHandler(async (req, res) => {
     const code = req.body.code;
-    const accessToken = await services.patreon.getAccessToken(code as string);
+    let accessToken: AccessToken;
+    try {
+      accessToken = await services.patreon.getAccessToken(code as string);
+    } catch (e) {
+      return res.status(401).json({
+        message: 'Invalid code',
+      })
+    }
     const isPatron = await services.patreon.getPatronStatus(accessToken);
     const userId = services.user.createUser(accessToken.token, isPatron);
 
@@ -125,10 +133,10 @@ export default async ({
       if (scene === null) return res.sendStatus(404).end();
 
       const filepath = services.scene.getSceneFilepath(scene);
-      res.set("content-type", `audio/${scene.ext}`);
-      res.set("accept-ranges", "bytes");
-      res.sendFile(filepath);
-      return res;
+      return res
+        .set("content-type", `audio/${scene.ext}`)
+        .set("accept-ranges", "bytes")
+        .sendFile(filepath);
     }
   ));
 
