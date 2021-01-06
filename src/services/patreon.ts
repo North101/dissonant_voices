@@ -5,6 +5,15 @@ import { CreatePatreonTokenFromOAuthToken } from "patreon-ts/dist/types";
 import config from "../config";
 
 interface UserMembership {
+  data: {
+    relationships: {
+      campaign?: {
+        data: {
+          id: string;
+        };
+      };
+    };
+  };
   included: {
     id: string;
     type: string;
@@ -22,7 +31,7 @@ interface UserMembership {
   }[];
 }
 
-const PATREON_CREDENTIALS: ModuleOptions = {
+const PATREON_CREDENTIALS: ModuleOptions<"patreon"> = {
   client: {
     id: config.patreon.clientId,
     secret: config.patreon.clientSecret,
@@ -36,11 +45,11 @@ const PATREON_CREDENTIALS: ModuleOptions = {
 
 export default class PatreonService {
   client: AuthorizationCode<"patreon">;
-  scope = ["identity", "identity.memberships"];
+  scope = ["identity", "identity.memberships", "campaigns"];
 
   constructor() {
     // Build the OAuth2 client.
-    this.client = new AuthorizationCode(PATREON_CREDENTIALS);
+    this.client = new AuthorizationCode<"patreon">(PATREON_CREDENTIALS);
   }
 
   getPatreonRedirectUrl(state: string) {
@@ -64,6 +73,7 @@ export default class PatreonService {
       relationships: {
         memberships: Schemas.user_constants.relationships?.memberships,
         "memberships.campaign": "memberships.campaign",
+        campaign: Schemas.user_constants.relationships.campaign,
       } as any,
     });
 
@@ -83,7 +93,7 @@ export default class PatreonService {
         rel.type === "member" &&
         rel.attributes.patron_status === "active_patron" &&
         rel.relationships.campaign.data.id === config.patreon.campaignId
-    );
+    ) || result.data.relationships.campaign?.data?.id === config.patreon.campaignId;
     return isPatron;
   }
 }
