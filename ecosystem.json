@@ -2,7 +2,8 @@
     "apps": [
       {
         "name": "Dissonant Voices",
-        "script": "server/dist/index.js",
+        "script": "dist/index.js",
+        "cwd": "server",
         "env_production": {
           "NODE_ENV": "production"
         }
