@@ -1,4 +1,7 @@
 {
     "private": true,
-    "workspaces": ["server", "client"]
+    "workspaces": {
+      "packages": ["server", "client"],
+      "nohoist": ["**/uuid", "**/uuid/**"]
+    }
   }
