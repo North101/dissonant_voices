@@ -170,8 +170,8 @@ export default async ({
     }
   }
 
-  app.use(express.static(path.join(process.cwd(), '..', '/node_modules/dissonant_voices_web/build/')));
+  app.use(express.static(path.join(process.cwd(), '/public/')));
   app.get('*', (req,res) =>{
-      res.sendFile(path.join(process.cwd(), '..', '/node_modules/dissonant_voices_web/build/index.html'));
+      res.sendFile(path.join(process.cwd(), '/public/index.html'));
   });
 };

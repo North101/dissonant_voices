@@ -3,7 +3,6 @@
       {
         "name": "Dissonant Voices",
         "script": "dist/index.js",
-        "cwd": "server",
         "env_production": {
           "NODE_ENV": "production"
         }
@@ -16,7 +15,7 @@
         "ref": "origin/master",
         "repo": "https://github.com/North101/dissonant_voices.git",
         "path": "/home/north101/dissonant_voices",
-        "post-deploy": "npm install && cd server && npm run build && cd .. && pm2 startOrRestart ecosystem.json --env production"
+        "post-deploy": "npm install && npm run build && pm2 startOrRestart ecosystem.json --env production"
       }
     }
   }
