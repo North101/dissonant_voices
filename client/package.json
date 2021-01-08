@@ -7,9 +7,7 @@
   "proxy": "http://localhost:9000",
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "install": "react-scripts build",
-    "rebuild": "react-scripts build"
+    "build": "react-scripts build"
   },
   "dependencies": {
     "cross-env": "5.0.5",
