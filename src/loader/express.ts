@@ -1,11 +1,12 @@
 import express, { NextFunction, Response } from "express";
+import cors from "cors";
 import asyncHandler from 'express-async-handler';
 import { DateTime } from "luxon";
 import { AccessToken } from "simple-oauth2";
 import url from 'url';
 import config from "../config";
 import { Services } from "./services";
-
+import cookieParser from 'cookie-parser';
 
 export default async ({
   app,
@@ -14,19 +15,26 @@ export default async ({
   app: express.Application;
   services: Services;
 }) => {
+  app.use(cors());
+  app.use(cookieParser());
   app.use(express.json());
   app.get("/authorize", (req, res) => {
-    const { state } = req.query;
-    res.redirect(services.patreon.getPatreonRedirectUrl(state as string));
+    const { state, mobile } = req.query;
+    return res.redirect(services.patreon.getPatreonRedirectUrl(state as string, mobile !== undefined));
   });
   app.get("/redirect", asyncHandler(async (req, res) => {
     const parsedUrl = url.parse(req.url, true);
-    return res.redirect(url.format({
-      protocol: 'dissonantvoices',
-      slashes: true,
-      pathname: 'auth/redirect',
-      query: parsedUrl.query,
-    }));
+    if (parsedUrl.query.mobile !== undefined) {
+      return res.redirect(url.format({
+        protocol: 'dissonantvoices',
+        slashes: true,
+        pathname: 'auth/redirect',
+        query: parsedUrl.query,
+      }));
+    }
+    return res.status(200).json({
+      "message": "success",
+    }).end();
   }));
   app.post("/token", asyncHandler(async (req, res) => {
     const code = req.body.code;
@@ -36,7 +44,7 @@ export default async ({
     } catch (e) {
       return res.status(401).json({
         message: 'Invalid code',
-      })
+      }).end();
     }
     const isPatron = await services.patreon.getPatronStatus(accessToken);
     const userId = services.user.createUser(accessToken.token, isPatron);
@@ -70,7 +78,7 @@ export default async ({
     return res.json(services.scene.listSceneByCampaignId(campaignId)).end();
   });
   app.get("/api/scenario", (_req, res) => {
-    return res.json(services.scenario.listScenario());
+    return res.json(services.scenario.listScenario()).end();
   });
   app.get("/api/scenario/:scenarioId", (req, res) => {
     const scenarioId = req.params.scenarioId;
@@ -89,7 +97,7 @@ export default async ({
   app.get("/api/scene", (_req, res) => {
     return res.json(services.scene.listScene()).end();
   });
-  app.get("/api/scene/:sceneId", checkAuthToken, asyncHandler(async (req: any, res) => {
+  app.get("/api/scene/:sceneId", asyncHandler(async (req: any, res) => {
     const sceneId = req.params.sceneId;
     const scene = services.scene.getSceneById(sceneId);
     if (scene === null) return res.sendStatus(404).end();
@@ -141,11 +149,15 @@ export default async ({
   ));
 
   function checkAuthToken(req: any, res: Response, next: NextFunction) {
-    const header = req.headers.authorization;
-    if (typeof header !== "undefined") {
-      const bearer = header.split(" ");
-      const token = bearer[1];
-
+    const { authorization } = req.headers;
+    let token: string;
+    if (authorization !== undefined) {
+      token = authorization.split(" ")[1];
+    } else {
+      token = req.cookies.token;
+    }
+  
+    if (token) {
       req.token = token;
       next();
     } else {

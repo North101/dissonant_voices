@@ -71,6 +71,7 @@ const config = {
       .default("/oauth2/authorize")
       .asString(),
     redirectUrl: env.get("PATREON_REDIRECT_URL").required().asString(),
+    redirectMobileUrl: env.get("PATREON_REDIRECT_MOBILE_URL").required().asString(),
     campaignId: env.get("PATREON_CAMPAIGN_ID").required().asString(),
   },
   jwt: {

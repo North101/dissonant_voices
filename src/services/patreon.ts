@@ -52,9 +52,9 @@ export default class PatreonService {
     this.client = new AuthorizationCode<"patreon">(PATREON_CREDENTIALS);
   }
 
-  getPatreonRedirectUrl(state: string) {
+  getPatreonRedirectUrl(state: string, mobile: boolean) {
     return this.client.authorizeURL({
-      redirect_uri: config.patreon.redirectUrl,
+      redirect_uri: mobile ? config.patreon.redirectMobileUrl : config.patreon.redirectUrl,
       scope: this.scope,
       state,
     });

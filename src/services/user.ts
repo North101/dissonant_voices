@@ -1,6 +1,6 @@
 import { DateTime } from "luxon";
 import { Token } from "simple-oauth2";
-import { v4 as uuidv4 } from "uuid";
+import * as uuid from "uuid";
 
 import SqliteDB from "../db";
 import { mapToUser, User } from "../models/user";
@@ -12,8 +12,11 @@ export default class UserService {
     this.db = db;
   }
 
-  createUser(token: Token, isPatron: boolean) {
-    const userId = uuidv4();
+  createUser(
+    token: Token,
+    isPatron: boolean,
+  ) {
+    const userId = uuid.v4();
     const now = DateTime.utc().toSQL();
     this.db.insertUserStmt.run({
       id: userId,
@@ -28,7 +31,7 @@ export default class UserService {
   updateUser(
     userId: string,
     token: Token,
-    isPatron: boolean
+    isPatron: boolean,
   ) {
     this.db.updateUserStmt.run({
       id: userId,
