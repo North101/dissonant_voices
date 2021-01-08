@@ -2,6 +2,7 @@ import express, { NextFunction, Response } from "express";
 import cors from "cors";
 import asyncHandler from 'express-async-handler';
 import { DateTime } from "luxon";
+import path from 'path';
 import { AccessToken } from "simple-oauth2";
 import url from 'url';
 import config from "../config";
@@ -18,30 +19,33 @@ export default async ({
   app.use(cors());
   app.use(cookieParser());
   app.use(express.json());
+
   app.get("/authorize", (req, res) => {
-    const { state, mobile } = req.query;
-    return res.redirect(services.patreon.getPatreonRedirectUrl(state as string, mobile !== undefined));
+    const { state, type } = req.query;
+    return res.redirect(services.patreon.getPatreonRedirectUrl(state as string, type as string));
   });
   app.get("/redirect", asyncHandler(async (req, res) => {
     const parsedUrl = url.parse(req.url, true);
-    if (parsedUrl.query.mobile !== undefined) {
-      return res.redirect(url.format({
-        protocol: 'dissonantvoices',
-        slashes: true,
-        pathname: 'auth/redirect',
-        query: parsedUrl.query,
-      }));
+    if (parsedUrl.query.type === 'web') {
+      return res.status(200).json({
+        message: "success",
+      }).end();
     }
-    return res.status(200).json({
-      "message": "success",
-    }).end();
+    return res.redirect(url.format({
+      protocol: 'dissonantvoices',
+      slashes: true,
+      pathname: 'auth/redirect',
+      query: parsedUrl.query,
+    }));
   }));
   app.post("/token", asyncHandler(async (req, res) => {
-    const code = req.body.code;
+    const { type } = req.query;
+    const { code } = req.body;
     let accessToken: AccessToken;
     try {
-      accessToken = await services.patreon.getAccessToken(code as string);
+      accessToken = await services.patreon.getAccessToken(code as string, type as string);
     } catch (e) {
+      console.error(e);
       return res.status(401).json({
         message: 'Invalid code',
       }).end();
@@ -112,7 +116,7 @@ export default async ({
       try {
         payload = services.jwt.decodeToken(req.token);
       } catch (e) {
-        console.log(e);
+        console.error(e);
         return res.sendStatus(400).end();
       }
 
@@ -165,4 +169,9 @@ export default async ({
       res.sendStatus(403).end();
     }
   }
+
+  app.use(express.static(path.join(process.cwd(), '/public/')));
+  app.get('*', (req,res) =>{
+      res.sendFile(path.join(process.cwd(), '/public/index.html'));
+  });
 };

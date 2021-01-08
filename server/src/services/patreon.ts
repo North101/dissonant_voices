@@ -52,17 +52,17 @@ export default class PatreonService {
     this.client = new AuthorizationCode<"patreon">(PATREON_CREDENTIALS);
   }
 
-  getPatreonRedirectUrl(state: string, mobile: boolean) {
+  getPatreonRedirectUrl(state: string, type: string) {
     return this.client.authorizeURL({
-      redirect_uri: mobile ? config.patreon.redirectMobileUrl : config.patreon.redirectUrl,
+      redirect_uri: config.patreon.redirectUrl + (type ? `?type=${type}` : '' ),
       scope: this.scope,
       state,
     });
   }
 
-  getAccessToken(code: string) {
+  getAccessToken(code: string, type: string) {
     return this.client.getToken({
-      redirect_uri: config.patreon.redirectUrl,
+      redirect_uri: config.patreon.redirectUrl + (type ? `?type=${type}` : '' ),
       scope: this.scope,
       code,
     });
