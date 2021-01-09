@@ -27,7 +27,7 @@ body {
   *zoom: 1;
 }
 .wrapper {
-  width: 600px;
+  max-width: 600px;
   margin: 50px auto;
   background: #fff;
   padding: 2em;
