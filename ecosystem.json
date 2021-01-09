@@ -1,8 +1,9 @@
 {
     "apps": [
       {
-        "name": "Dissonant Voices",
+        "name": "Dissonant Voices Beta",
         "script": "dist/index.js",
+        "cwd": "server",
         "env_production": {
           "NODE_ENV": "production"
         }
@@ -12,10 +13,10 @@
       "production": {
         "user": "north101",
         "host": ["north101.co.uk"],
-        "ref": "origin/master",
+        "ref": "origin/workspaces",
         "repo": "https://github.com/North101/dissonant_voices.git",
-        "path": "/home/north101/dissonant_voices",
-        "post-deploy": "npm install --only=dev && npm install && npm run build && pm2 startOrRestart ecosystem.json --env production"
+        "path": "/home/north101/dissonant_voices_beta",
+        "post-deploy": "yarn install && yarn --cwd server run build && pm2 startOrRestart ecosystem.json --env production"
       }
     }
   }
