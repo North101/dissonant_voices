@@ -7,8 +7,7 @@
   "proxy": "http://localhost:9000",
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "install": "react-scripts build"
+    "build": "react-scripts build"
   },
   "dependencies": {
     "react": "^17.0.1",
