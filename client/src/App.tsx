@@ -82,7 +82,7 @@ const CampaignListView = () => {
 
   let body;
   if (isLoading) {
-    body = <>Loading</>;
+    body = <></>;
   } else if (isError) {
     body = <>Error</>;
   } else {
@@ -143,7 +143,7 @@ const CampaignView = (props: CampaignProps) => {
 
   let body;
   if (isLoading) {
-    body = <>Loading</>;
+    body = <></>;
   } else if (isError || campaign === undefined) {
     body = <>Error</>;
   } else {
@@ -190,7 +190,7 @@ const ScenarioListView = ({ campaignId }: { campaignId: string }) => {
     fetchData();
   }, [campaignId]);
   if (isLoading) {
-    return <>Loading</>;
+    return <></>;
   } else if (isError) {
     return <>Error</>;
   }
@@ -245,7 +245,7 @@ const ScenarioView = (props: ScenarioProps) => {
 
   let body;
   if (isLoading) {
-    body = <>Loading</>;
+    body = <></>;
   } else if (isError || scenario === undefined) {
     body = <>Error</>;
   } else {
@@ -294,7 +294,7 @@ const SceneListView = ({ scenarioId }: { scenarioId: string }) => {
     fetchData();
   }, [scenarioId]);
   if (isLoading) {
-    return <>Loading</>;
+    return <></>;
   } else if (isError) {
     return <>Error</>;
   }
@@ -350,7 +350,7 @@ const SceneView = (props: SceneProps) => {
 
   let body;
   if (isLoading) {
-    body = <>Loading</>;
+    body = <></>;
   } else if (isError || scene === undefined) {
     body = <>Error</>;
   } else {
@@ -380,7 +380,7 @@ const LoginButton = () => {
   const token = useAuthToken();
 
   const onCode = async (code: string) => {
-    const result = await fetch(`/token`, {
+    const result = await fetch(`/token?type=web`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -404,7 +404,7 @@ const LoginButton = () => {
     return <>
       <OauthPopup
         title='Dissonant Voices'
-        url='//localhost:9000/authorize'
+        url='/authorize?type=web'
         width={500}
         height={500}
         onCode={onCode}
