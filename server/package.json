@@ -11,6 +11,7 @@
     "start": "ts-node ."
   },
   "dependencies": {
+    "dissonant_voices_web": "1.0.0",
     "@types/cookie-parser": "^1.4.2",
     "@types/cors": "^2.8.9",
     "@types/luxon": "^1.25.0",
