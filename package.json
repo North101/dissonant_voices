@@ -2,7 +2,7 @@
     "private": true,
     "workspaces": ["server", "client"],
     "scripts": {
-        "build": "yarn run build-server && build-client",
+        "build": "yarn run build-server && yarn run build-client",
         "build-server": "yarn --cwd server run build",
         "build-client": "yarn --cwd client run build && ln -sfn ../client/build/ server/public",
         "start": "yarn --cwd server run start"
