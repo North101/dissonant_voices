@@ -1,4 +1,7 @@
 {
     "private": true,
-    "workspaces": ["server", "client"]
+    "workspaces": ["server", "client"],
+    "scripts": {
+        "build": "yarn --cwd client run build && yarn --cwd server run build && ln -sfn ../client/build/ server/public"
+    }
 }

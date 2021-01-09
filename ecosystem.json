@@ -16,7 +16,7 @@
         "ref": "origin/workspaces",
         "repo": "https://github.com/North101/dissonant_voices.git",
         "path": "/home/north101/dissonant_voices_beta",
-        "post-deploy": "yarn install && yarn --cwd client run build && yarn --cwd server run build && ln -sfn ../client/build/ server/public && pm2 startOrRestart ecosystem.json --env production"
+        "post-deploy": "yarn install && yarn build && pm2 startOrRestart ecosystem.json --env production"
       }
     }
   }
