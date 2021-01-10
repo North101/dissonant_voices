@@ -13,9 +13,9 @@
       "production": {
         "user": "north101",
         "host": ["north101.co.uk"],
-        "ref": "origin/workspaces",
+        "ref": "origin/master",
         "repo": "https://github.com/North101/dissonant_voices.git",
-        "path": "/home/north101/dissonant_voices_beta",
+        "path": "/home/north101/dissonant_voices",
         "post-deploy": "yarn install && yarn build && pm2 startOrRestart ecosystem.json --env production"
       }
     }
