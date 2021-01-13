@@ -11,7 +11,7 @@ import {
 import { singletonHook } from 'react-singleton-hook';
 import { CookieSetOptions } from 'universal-cookie';
 
-let globalSetAuthToken = (name: string, value: any, options?: CookieSetOptions | undefined): void => {
+let globalSetAuthToken: (name: string, value: any, options?: CookieSetOptions | undefined) => void = () => {
   throw new Error('you must useAuthToken before setting its state');
 };
 
@@ -380,17 +380,18 @@ const LoginButton = () => {
   const token = useAuthToken();
 
   const onCode = async (code: string) => {
-    const result = await fetch(`/token?type=web`, {
+    const result = await fetch(`/api/token`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
+        client_id: 'web',
         code,
       }),
     });
-    const token = await result.text();
-    setAuthToken(token);
+    const data = await result.json();
+    setAuthToken(data.token);
   }
   const onClose = () => {}
 
@@ -401,20 +402,18 @@ const LoginButton = () => {
       window.close();
     }}>Logout</a>
   } else {
-    return <>
-      <OauthPopup
-        title='Dissonant Voices'
-        url='/authorize?type=web'
-        width={500}
-        height={500}
-        onCode={onCode}
-        onClose={onClose}
-      >
-        <a href='#login' onClick={(e) => {
-          e.preventDefault();
-        }}>Login</a>
-      </OauthPopup>
-    </>;
+    return <OauthPopup
+      title='Dissonant Voices'
+      url='/api/authorize?client_id=web'
+      width={500}
+      height={500}
+      onCode={onCode}
+      onClose={onClose}
+    >
+      <a href='#login' onClick={(e) => {
+        e.preventDefault();
+      }}>Login</a>
+    </OauthPopup>;
   }
 }
 

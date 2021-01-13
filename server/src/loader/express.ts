@@ -20,30 +20,32 @@ export default async ({
   app.use(cookieParser());
   app.use(express.json());
 
-  app.get("/authorize", (req, res) => {
-    const { state, type } = req.query;
-    return res.redirect(services.patreon.getPatreonRedirectUrl(state as string, type as string));
+  app.get("/api/authorize", (req, res) => {
+    const { state, client_id } = req.query;
+    return res.redirect(services.patreon.getPatreonRedirectUrl(state as string, client_id as string));
   });
-  app.get("/redirect", asyncHandler(async (req, res) => {
+  app.get("/api/redirect", asyncHandler(async (req, res) => {
     const parsedUrl = url.parse(req.url, true);
-    if (parsedUrl.query.type === 'web') {
-      return res.status(200).json({
-        message: "success",
-      }).end();
+    if (parsedUrl.query.client_id === 'arkhamcards') {
+      parsedUrl.query.access_token = parsedUrl.query.code;
+      delete parsedUrl.query.code;
+      return res.redirect(url.format({
+        protocol: 'arkhamcards',
+        slashes: true,
+        host: 'dissonantvoices',
+        pathname: 'redirect',
+        query: parsedUrl.query,
+      }));
     }
-    return res.redirect(url.format({
-      protocol: 'dissonantvoices',
-      slashes: true,
-      pathname: 'auth/redirect',
-      query: parsedUrl.query,
-    }));
+    return res.status(200).json({
+      message: "success",
+    }).end();
   }));
-  app.post("/token", asyncHandler(async (req, res) => {
-    const { type } = req.query;
-    const { code } = req.body;
+  app.post("/api/token", asyncHandler(async (req, res) => {
+    const { client_id, code } = req.body;
     let accessToken: AccessToken;
     try {
-      accessToken = await services.patreon.getAccessToken(code as string, type as string);
+      accessToken = await services.patreon.getAccessToken(code as string, client_id as string);
     } catch (e) {
       console.error(e);
       return res.status(401).json({
@@ -53,7 +55,53 @@ export default async ({
     const isPatron = await services.patreon.getPatronStatus(accessToken);
     const userId = services.user.createUser(accessToken.token, isPatron);
 
-    return res.send(services.jwt.encodeAuthToken(userId)).end();
+    return res.json({
+      token: services.jwt.encodeAuthToken(userId),
+      user_id: userId,
+      is_patron: isPatron,
+    }).end();
+  }));
+  app.post("/api/verify", checkAuthToken, asyncHandler(async (req: any, res) => {
+    let payload;
+    try {
+      payload = services.jwt.decodeToken(req.token);
+    } catch (e) {
+      console.error(e);
+      return res.sendStatus(400).end();
+    }
+
+    if (payload.admin_id === config.adminId) {
+      return res.json({
+        user_id: payload.user_id,
+        is_patron: true,
+      }).end();
+    }
+
+    const user = services.user.getUserById(payload.user_id);
+    if (user === null) return res.sendStatus(403).end();
+
+    let accessToken = services.patreon.client.createToken(user.token);
+    if (
+      accessToken.expired() ||
+      !user.isPatron ||
+      user.lastChecked.plus({ days: 1 }) < DateTime.utc()
+    ) {
+      if (accessToken.expired()) {
+        accessToken = await accessToken.refresh();
+      }
+      const isPatron = await services.patreon.getPatronStatus(accessToken);
+      services.user.updateUser(user.id, accessToken.token, isPatron);
+
+      return res.json({
+        user_id: user.id,
+        is_patron: isPatron,
+      }).end();
+    }
+
+    return res.json({
+      user_id: user.id,
+      is_patron: user.isPatron,
+    }).end();
   }));
   app.get("/api/campaign", (_req, res) => {
     return res.json(services.campaign.listCampaign()).end();
@@ -171,7 +219,7 @@ export default async ({
   }
 
   app.use(express.static(path.join(process.cwd(), '/public/')));
-  app.get('*', (req,res) =>{
+  app.get('*', (_req, res) =>{
       res.sendFile(path.join(process.cwd(), '/public/index.html'));
   });
 };

@@ -14,7 +14,7 @@ interface UserMembership {
       };
     };
   };
-  included: {
+  included?: {
     id: string;
     type: string;
     attributes: {
@@ -52,17 +52,17 @@ export default class PatreonService {
     this.client = new AuthorizationCode<"patreon">(PATREON_CREDENTIALS);
   }
 
-  getPatreonRedirectUrl(state: string, type: string) {
+  getPatreonRedirectUrl(state: string, clientId: string) {
     return this.client.authorizeURL({
-      redirect_uri: config.patreon.redirectUrl + (type ? `?type=${type}` : '' ),
+      redirect_uri: config.patreon.redirectUrl + (clientId ? `?client_id=${clientId}` : '' ),
       scope: this.scope,
       state,
     });
   }
 
-  getAccessToken(code: string, type: string) {
+  getAccessToken(code: string, clientId: string) {
     return this.client.getToken({
-      redirect_uri: config.patreon.redirectUrl + (type ? `?type=${type}` : '' ),
+      redirect_uri: config.patreon.redirectUrl + (clientId ? `?client_id=${clientId}` : '' ),
       scope: this.scope,
       code,
     });
@@ -88,12 +88,12 @@ export default class PatreonService {
     const result: UserMembership = JSON.parse(
       await PatreonRequest(CreatePatreonTokenFromOAuthToken(accessToken), query)
     );
-    const isPatron = result.included.some(
+    const isPatron = (result.included?.some(
       (rel) =>
         rel.type === "member" &&
         rel.attributes.patron_status === "active_patron" &&
         rel.relationships.campaign.data.id === config.patreon.campaignId
-    ) || result.data.relationships.campaign?.data?.id === config.patreon.campaignId;
+    ) ?? false) || result.data.relationships.campaign?.data?.id === config.patreon.campaignId;
     return isPatron;
   }
 }
