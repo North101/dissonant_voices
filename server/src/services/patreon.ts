@@ -6,6 +6,10 @@ import config from "../config";
 
 interface UserMembership {
   data: {
+    id: string;
+    attributes: {
+      full_name: string;
+    },
     relationships: {
       campaign?: {
         data: {
@@ -68,8 +72,11 @@ export default class PatreonService {
     });
   }
 
-  async getPatronStatus(accessToken: AccessToken) {
+  async getPatronInfo(accessToken: AccessToken) {
     const UserQueryObject = new Schemas.UserSchema({
+      attributes: {
+        full_name: Schemas.user_constants.attributes.full_name,
+      },
       relationships: {
         memberships: Schemas.user_constants.relationships?.memberships,
         "memberships.campaign": "memberships.campaign",
@@ -88,12 +95,18 @@ export default class PatreonService {
     const result: UserMembership = JSON.parse(
       await PatreonRequest(CreatePatreonTokenFromOAuthToken(accessToken), query)
     );
+    const patreonUserId = result.data.id;
+    const name = result.data.attributes.full_name;
     const isPatron = (result.included?.some(
       (rel) =>
         rel.type === "member" &&
         rel.attributes.patron_status === "active_patron" &&
         rel.relationships.campaign.data.id === config.patreon.campaignId
     ) ?? false) || result.data.relationships.campaign?.data?.id === config.patreon.campaignId;
-    return isPatron;
+    return {
+      patreonUserId,
+      name,
+      isPatron,
+    };
   }
 }

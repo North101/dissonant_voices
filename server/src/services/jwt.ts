@@ -2,34 +2,21 @@ import jwt from "jwt-simple";
 import { DateTime } from "luxon";
 import config from "../config";
 
-export interface AuthToken {
+export interface JwtPayload {
   user_id: string;
   issued: number;
 }
 
-export interface AdminToken {
-  admin_id: string;
-  issued: number;
-}
-
 export default class JwtService {
-  encodeAuthToken(userId: string) {
-    const payload: AuthToken = {
+  encodeToken(userId: string) {
+    const payload: JwtPayload = {
       user_id: userId,
       issued: DateTime.utc().toMillis(),
     };
     return jwt.encode(payload, config.jwt.secret, config.jwt.algorithm);
   }
 
-  decodeToken(token: string) {
+  decodeToken(token: string): JwtPayload {
     return jwt.decode(token, config.jwt.secret, false, config.jwt.algorithm);
-  }
-
-  encodeAdminToken(adminId: string) {
-    const payload: AdminToken = {
-      admin_id: adminId,
-      issued: DateTime.utc().toMillis(),
-    };
-    return jwt.encode(payload, config.jwt.secret, config.jwt.algorithm);
   }
 }

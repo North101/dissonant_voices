@@ -1,4 +1,16 @@
-import { mapToScenario, Scenario } from "./scenario";
+import { mapToScenario, Scenario, ScenarioResult } from "./scenario";
+
+export interface SceneTable {
+  id: string;
+  name: string;
+  ext: string;
+  index: number;
+  scenario_id: string;
+}
+
+export interface SceneResult extends ScenarioResult {
+  scene: SceneTable;
+}
 
 export interface Scene {
   id: string;
@@ -8,7 +20,7 @@ export interface Scene {
   scenario: Scenario;
 }
 
-export const mapToScene = (result: { [key: string]: any }) => ({
+export const mapToScene = (result: SceneResult): Scene => ({
   id: result.scene.id,
   name: result.scene.name,
   ext: result.scene.ext,

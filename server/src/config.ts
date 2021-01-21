@@ -48,7 +48,6 @@ const env = from(process.env, {
 
 const config = {
   env: env.get("NODE_ENV").required().asEnum(["production", "staging"]),
-  adminId: env.get("ADMIN_ID").required().asUUID(),
   db: {
     path: env.get("DB_PATH").asPath({ isAbsolute: true, isFile: true, }),
   },

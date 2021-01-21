@@ -1,13 +1,41 @@
-import express, { NextFunction, Response } from "express";
+import cookieParser from 'cookie-parser';
 import cors from "cors";
+import express, { NextFunction, Response } from "express";
 import asyncHandler from 'express-async-handler';
+import { Validator } from 'express-json-validator-middleware';
+import { JSONSchema7 } from "json-schema";
 import { DateTime } from "luxon";
 import path from 'path';
 import { AccessToken } from "simple-oauth2";
 import url from 'url';
-import config from "../config";
+
+import { checkIsAdmin, checkIsPatron, Token } from "../models/token";
+import * as jwt from '../services/jwt';
 import { Services } from "./services";
-import cookieParser from 'cookie-parser';
+
+const token: JSONSchema7 = {
+  type: 'object',
+  properties: {
+    client_id: {
+      type: 'string',
+    },
+    code: {
+      type: 'string',
+    },
+  },
+}
+
+const createGrant: JSONSchema7 = {
+  type: 'object',
+  properties: {
+    is_admin: {
+      type: 'boolean',
+    },
+    override_patron_status: {
+      type: 'boolean',
+    },
+  },
+}
 
 export default async ({
   app,
@@ -16,6 +44,9 @@ export default async ({
   app: express.Application;
   services: Services;
 }) => {
+  const validator = new Validator({allErrors: true});
+  const validate = validator.validate;
+
   app.use(cors());
   app.use(cookieParser());
   app.use(express.json());
@@ -41,28 +72,33 @@ export default async ({
       message: "success",
     }).end();
   }));
-  app.post("/api/token", asyncHandler(async (req, res) => {
-    const { client_id, code } = req.body;
+  app.post("/api/token", validate({body: token}), asyncHandler(async (req, res) => {
+    const { client_id, code }: { client_id: string; code: string; } = req.body;
     let accessToken: AccessToken;
     try {
-      accessToken = await services.patreon.getAccessToken(code as string, client_id as string);
+      accessToken = await services.patreon.getAccessToken(code, client_id);
     } catch (e) {
       console.error(e);
       return res.status(401).json({
         message: 'Invalid code',
       }).end();
     }
-    const isPatron = await services.patreon.getPatronStatus(accessToken);
-    const userId = services.user.createUser(accessToken.token, isPatron);
+    const { patreonUserId, isPatron } = await services.patreon.getPatronInfo(accessToken);
+    const userId = services.token.createToken(accessToken.token, patreonUserId, isPatron);
+    const user = services.token.getTokenById(userId);
+    if (user === null) {
+      return res.status(500).end();
+    }
 
     return res.json({
-      token: services.jwt.encodeAuthToken(userId),
-      user_id: userId,
-      is_patron: isPatron,
+      token: services.jwt.encodeToken(userId),
+      user_id: user.id,
+      is_admin: checkIsAdmin(user),
+      is_patron: checkIsPatron(user),
     }).end();
   }));
-  app.post("/api/verify", checkAuthToken, asyncHandler(async (req: any, res) => {
-    let payload;
+  app.get("/api/verify", checkToken, asyncHandler(async (req: any, res) => {
+    let payload: jwt.JwtPayload;
     try {
       payload = services.jwt.decodeToken(req.token);
     } catch (e) {
@@ -70,37 +106,122 @@ export default async ({
       return res.sendStatus(400).end();
     }
 
-    if (payload.admin_id === config.adminId) {
-      return res.json({
-        user_id: payload.user_id,
-        is_patron: true,
-      }).end();
-    }
-
-    const user = services.user.getUserById(payload.user_id);
+    const user = await getAuthUser(services, payload);
     if (user === null) return res.sendStatus(403).end();
-
-    let accessToken = services.patreon.client.createToken(user.token);
-    if (
-      accessToken.expired() ||
-      !user.isPatron ||
-      user.lastChecked.plus({ days: 1 }) < DateTime.utc()
-    ) {
-      if (accessToken.expired()) {
-        accessToken = await accessToken.refresh();
-      }
-      const isPatron = await services.patreon.getPatronStatus(accessToken);
-      services.user.updateUser(user.id, accessToken.token, isPatron);
-
-      return res.json({
-        user_id: user.id,
-        is_patron: isPatron,
-      }).end();
-    }
 
     return res.json({
       user_id: user.id,
-      is_patron: user.isPatron,
+      is_admin: checkIsAdmin(user),
+      is_patron: checkIsPatron(user),
+    }).end();
+  }));
+  app.post("/api/grant", [checkToken, validate({body: createGrant})], asyncHandler(async (req: any, res) => {
+    let payload: jwt.JwtPayload;
+    try {
+      payload = services.jwt.decodeToken(req.token);
+    } catch (e) {
+      console.error(e);
+      return res.sendStatus(400).end();
+    }
+
+    const user = await getAuthUser(services, payload);
+    if (!checkIsAdmin(user)) return res.status(403).end();
+
+    const {
+      is_admin,
+      override_patron_status,
+    }: {
+      is_admin?: boolean;
+      override_patron_status?: boolean;
+    } = req.body;
+
+    const grantId = services.grant.createGrant(is_admin ?? null, override_patron_status ?? null);
+    const grant = services.grant.getGrantById(grantId);
+    if (grant === null) return res.status(500).end();
+
+    return res.json({
+      id: grant.id,
+      expires: grant.expires,
+      is_admin: grant.isAdmin,
+      override_patron_status: grant.overridePatronStatus,
+    }).end();
+  }));
+  app.get("/api/grant/:grantId", checkToken, asyncHandler(async (req: any, res) => {
+    let payload: jwt.JwtPayload;
+    try {
+      payload = services.jwt.decodeToken(req.token);
+    } catch (e) {
+      console.error(e);
+      return res.sendStatus(400).end();
+    }
+
+    let user = await getAuthUser(services, payload);
+    if (user === null) return res.status(403).end();
+
+    const grantId = req.params.grantId;
+    const grant = services.grant.getGrantById(grantId);
+    if (grant === null) return res.status(404).end();
+
+    return res.json({
+      id: grant.id,
+      expires: grant.expires,
+      is_admin: grant.isAdmin,
+      override_patron_status: grant.overridePatronStatus,
+    }).end();
+  }));
+  app.get("/api/grant/:grantId/accept", checkToken, asyncHandler(async (req: any, res) => {
+    let payload: jwt.JwtPayload;
+    try {
+      payload = services.jwt.decodeToken(req.token);
+    } catch (e) {
+      console.error(e);
+      return res.sendStatus(400).end();
+    }
+
+    let user = await getAuthUser(services, payload);
+    if (user === null) return res.status(403).end();
+
+    const grantId = req.params.grantId;
+    const grant = services.grant.getGrantById(grantId);
+    if (grant === null || grant.expires < DateTime.utc()) return res.status(403).end();
+
+    services.grant.deleteGrantById(grantId);
+    if (user.user === null) {
+      const { accessToken } = await getAccessToken(services, user);
+      const { patreonUserId, name, isPatron } = await services.patreon.getPatronInfo(accessToken);
+
+      if (user.userId === null) {
+        // this really shouldn't happen but just in case
+        services.token.updateToken(
+          user.id,
+          user.token,
+          patreonUserId,
+          isPatron,
+        );
+      }
+  
+      services.user.createUser(
+        patreonUserId,
+        name,
+        grant.isAdmin ?? false,
+        grant.overridePatronStatus ?? false,
+      );
+    } else {
+      services.user.updateUser(
+        user.user.id,
+        user.user.name,
+        grant.isAdmin ?? user.user.isAdmin,
+        grant.overridePatronStatus ?? user.user.overridePatronStatus,
+      );
+    }
+
+    user = await getAuthUser(services, payload);
+    if (user === null) return res.status(500).end();
+
+    return res.json({
+      user_id: user.id,
+      is_admin: checkIsAdmin(user),
+      is_patron: checkIsPatron(user),
     }).end();
   }));
   app.get("/api/campaign", (_req, res) => {
@@ -158,35 +279,18 @@ export default async ({
   }));
   app.get(
     "/api/scene/:sceneId/listen",
-    checkAuthToken,
+    checkToken,
     asyncHandler(async (req: any, res) => {
-      let payload;
+      let payload: jwt.JwtPayload;
       try {
         payload = services.jwt.decodeToken(req.token);
       } catch (e) {
         console.error(e);
         return res.sendStatus(400).end();
       }
-
-      if (payload.admin_id !== config.adminId) {
-        const user = services.user.getUserById(payload.user_id);
-        if (user === null) return res.sendStatus(403).end();
-
-        let accessToken = services.patreon.client.createToken(user.token);
-        if (
-          accessToken.expired() ||
-          !user.isPatron ||
-          user.lastChecked.plus({ days: 1 }) < DateTime.utc()
-        ) {
-          if (accessToken.expired()) {
-            accessToken = await accessToken.refresh();
-          }
-          const isPatron = await services.patreon.getPatronStatus(accessToken);
-          services.user.updateUser(user.id, accessToken.token, isPatron);
-
-          if (!isPatron) return res.sendStatus(403).end();
-        }
-      }
+  
+      const user = await getAuthUser(services, payload);
+      if (user === null || !checkIsPatron(user)) return res.sendStatus(403).end();
 
       const sceneId = req.params.sceneId;
       const scene = services.scene.getSceneById(sceneId);
@@ -198,9 +302,9 @@ export default async ({
         .set("accept-ranges", "bytes")
         .sendFile(filepath);
     }
-  ));
+    ));
 
-  function checkAuthToken(req: any, res: Response, next: NextFunction) {
+  function checkToken(req: any, res: Response, next: NextFunction) {
     const { authorization } = req.headers;
     let token: string;
     if (authorization !== undefined) {
@@ -208,7 +312,7 @@ export default async ({
     } else {
       token = req.cookies.token;
     }
-  
+
     if (token) {
       req.token = token;
       next();
@@ -219,7 +323,39 @@ export default async ({
   }
 
   app.use(express.static(path.join(process.cwd(), '/public/')));
-  app.get('*', (_req, res) =>{
-      res.sendFile(path.join(process.cwd(), '/public/index.html'));
+  app.get('*', (_req, res) => {
+    res.sendFile(path.join(process.cwd(), '/public/index.html'));
   });
 };
+
+const getAuthUser = async (services: Services, payload: jwt.JwtPayload): Promise<Token | null> => {
+  const user = services.token.getTokenById(payload.user_id);
+  if (user === null) return null;
+
+  const { accessToken, refreshed } = await getAccessToken(services, user);
+  if (
+    !refreshed &&
+    user.isPatron &&
+    user.lastChecked.plus({ days: 1 }) >= DateTime.utc() &&
+    user.userId !== null
+  ) return user;
+
+  const { patreonUserId, isPatron } = await services.patreon.getPatronInfo(accessToken);
+  services.token.updateToken(user.id, accessToken.token, patreonUserId, isPatron);
+  return services.token.getTokenById(user.id);
+}
+
+const getAccessToken = async(services: Services, user: Token) => {
+  const accessToken = services.patreon.client.createToken(user.token);
+  if (!accessToken.expired()) {
+    return {
+      accessToken,
+      refreshed: false,
+    };
+  }
+
+  return {
+    accessToken: await accessToken.refresh(),
+    refreshed: true,
+  };
+}

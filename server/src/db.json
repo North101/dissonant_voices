@@ -2662,28 +2662,246 @@
     ]
   },
   {
-    "id": "the_innsmouth_conspiricy",
-    "name": "The Innsmouth Conspiricy",
+    "id": "the_innsmouth_conspiracy",
+    "name": "The Innsmouth Conspiracy",
     "scenarios": [
-      {
-        "id": "setup",
-        "name": "Campaign Setup",
-        "scenes": []
-      },
       {
         "id": "the_pit_of_despair",
         "name": "The Pit of Despair",
-        "scenes": []
+        "scenes": [
+          {
+            "id": "intro",
+            "name": "Intro"
+          },
+          {
+            "id": "flashback_1",
+            "name": "Flashback 1"
+          },
+          {
+            "id": "flashback_2",
+            "name": "Flashback 2"
+          },
+          {
+            "id": "flashback_3",
+            "name": "Flashback 3"
+          },
+          {
+            "id": "flashback_4",
+            "name": "Flashback 4"
+          },
+          {
+            "id": "no_resolution",
+            "name": "No Resolution"
+          },
+          {
+            "id": "resolution_1",
+            "name": "Resolution 1"
+          }
+        ]
+      },
+      {
+        "id": "interlude_1",
+        "name": "Interlude 1",
+        "scenes": [
+          {
+            "id": "intro",
+            "name": "Intro"
+          },
+          {
+            "id": "meeting_with_thomas_dawson",
+            "name": "Meeting with Thomas Dawson"
+          },
+          {
+            "id": "nothing_is_listed",
+            "name": "Nothing is listed"
+          },
+          {
+            "id": "battle_with_a_horrifying_devil",
+            "name": "Battle with a horrifying devil"
+          },
+          {
+            "id": "decision_to_stick_together",
+            "name": "Decision to stick together"
+          },
+          {
+            "id": "encounter_with_a_secret_cult",
+            "name": "Encounter with a secret cult"
+          },
+          {
+            "id": "outro",
+            "name": "Outro"
+          }
+        ]
       },
       {
         "id": "the_vanishing_of_elina_harper",
         "name": "The Vanishing of Elina Harper",
-        "scenes": []
+        "scenes": [
+          {
+            "id": "intro",
+            "name": "Intro"
+          },
+          {
+            "id": "the_accusation",
+            "name": "The Accusation"
+          },
+          {
+            "id": "no_resolution",
+            "name": "No Resolution"
+          },
+          {
+            "id": "resolution_1",
+            "name": "Resolution 1"
+          },
+          {
+            "id": "resolution_2",
+            "name": "Resolution 2"
+          },
+          {
+            "id": "resolution_3",
+            "name": "Resolution 3"
+          },
+          {
+            "id": "resolution_4",
+            "name": "Resolution 4"
+          },
+          {
+            "id": "resolution_5",
+            "name": "Resolution 5"
+          },
+          {
+            "id": "resolution_6",
+            "name": "Resolution 6"
+          },
+          {
+            "id": "resolution_7",
+            "name": "Resolution 7"
+          }
+        ]
+      },
+      {
+        "id": "interlude_2",
+        "name": "Interlude 2",
+        "scenes": [
+          {
+            "id": "the_syzygy_1",
+            "name": "The Syzygy 1"
+          },
+          {
+            "id": "the_syzygy_2",
+            "name": "The Syzygy 2"
+          },
+          {
+            "id": "the_syzygy_3",
+            "name": "The Syzygy 3"
+          },
+          {
+            "id": "the_syzygy_4",
+            "name": "The Syzygy 4"
+          }
+        ]
       },
       {
         "id": "in_too_deep",
         "name": "In Too Deep",
-        "scenes": []
+        "scenes": [
+          {
+            "id": "intro",
+            "name": "Intro"
+          },
+          {
+            "id": "flashback_5",
+            "name": "Flashback 5"
+          },
+          {
+            "id": "flashback_6",
+            "name": "Flashback 6"
+          },
+          {
+            "id": "flashback_7",
+            "name": "Flashback 7"
+          },
+          {
+            "id": "flashback_8",
+            "name": "Flashback 8"
+          },
+          {
+            "id": "no_resolution",
+            "name": "No Resolution"
+          },
+          {
+            "id": "resolution_1",
+            "name": "Resolution 1"
+          }
+        ]
+      },
+      {
+        "id": "devil_reef",
+        "name": "Devil Reef",
+        "scenes": [
+          {
+            "id": "intro_1",
+            "name": "Intro 1"
+          },
+          {
+            "id": "intro_2",
+            "name": "Intro 2"
+          },
+          {
+            "id": "intro_3",
+            "name": "Intro 3"
+          },
+          {
+            "id": "flashback_9",
+            "name": "Flashback 9"
+          },
+          {
+            "id": "flashback_10",
+            "name": "Flashback 10"
+          },
+          {
+            "id": "flashback_11",
+            "name": "Flashback 11"
+          },
+          {
+            "id": "no_resolution",
+            "name": "No Resolution"
+          },
+          {
+            "id": "resolution_1",
+            "name": "Resolution 1"
+          }
+        ]
+      },
+      {
+        "id": "interlude_3",
+        "name": "Interlude 3",
+        "scenes": [
+          {
+            "id": "intro",
+            "name": "Intro"
+          },
+          {
+            "id": "purple_key",
+            "name": "Purple Key"
+          },
+          {
+            "id": "white_key",
+            "name": "White Key"
+          },
+          {
+            "id": "black_key",
+            "name": "Black Key"
+          },
+          {
+            "id": "no_keys",
+            "name": "No Keys"
+          },
+          {
+            "id": "outro",
+            "name": "Outro"
+          }
+        ]
       }
     ]
   }

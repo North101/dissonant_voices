@@ -105,5 +105,5 @@ dist
 
 .DS_Store
 app.db
-audio/
+audio
 client/build
