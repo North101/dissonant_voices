@@ -2902,6 +2902,24 @@
             "name": "Outro"
           }
         ]
+      },
+      {
+        "id": "the_innsmouth_conspiracy.horror_in_high_gear",
+        "name": "Horror in High Gear",
+        "scenes": [
+          {
+            "id": "intro",
+            "name": "Intro"
+          },
+          {
+            "id": "no_resolution",
+            "name": "No Resolution"
+          },
+          {
+            "id": "resolution_1",
+            "name": "Resolution 1"
+          }
+        ]
       }
     ]
   }
