@@ -2742,6 +2742,18 @@
             "name": "Intro"
           },
           {
+            "id": "intro_1",
+            "name": "Intro 1"
+          },
+          {
+            "id": "info_summary",
+            "name": "Info Summary"
+          },
+          {
+            "id": "intro_2",
+            "name": "Intro 2"
+          },
+          {
             "id": "the_accusation",
             "name": "The Accusation"
           },
