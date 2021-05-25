@@ -2932,6 +2932,44 @@
             "name": "Resolution 1"
           }
         ]
+      },
+      {
+        "id": "a_light_in_the_fog",
+        "name": "A Light In The Fog",
+        "scenes": [
+          {
+            "id": "intro",
+            "name": "Intro"
+          },
+          {
+            "id": "flashback_12",
+            "name": "Flashback 12"
+          },
+          {
+            "id": "flashback_13",
+            "name": "Flashback 13"
+          },
+          {
+            "id": "no_resolution",
+            "name": "No Resolution"
+          },
+          {
+            "id": "resolution_1",
+            "name": "Resolution 1"
+          },
+          {
+            "id": "resolution_2",
+            "name": "Resolution 2"
+          },
+          {
+            "id": "resolution_3",
+            "name": "Resolution 3"
+          },
+          {
+            "id": "resolution_4",
+            "name": "Resolution 4"
+          }
+        ]
       }
     ]
   }
