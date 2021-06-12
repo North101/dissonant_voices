@@ -2970,6 +2970,74 @@
             "name": "Resolution 4"
           }
         ]
+      },
+      {
+        "id": "the_lair_of_dagon",
+        "name": "The Lair of Dagon",
+        "scenes": [
+          {
+            "id": "intro_1",
+            "name": "Intro 1"
+          },
+          {
+            "id": "intro_2",
+            "name": "Intro 2"
+          },
+          {
+            "id": "intro_3",
+            "name": "Intro 3"
+          },
+          {
+            "id": "intro_4",
+            "name": "Intro 4"
+          },
+          {
+            "id": "intro_5",
+            "name": "Intro 5"
+          },
+          {
+            "id": "no_resolution",
+            "name": "No Resolution"
+          },
+          {
+            "id": "resolution_1",
+            "name": "Resolution 1"
+          },
+          {
+            "id": "resolution_2",
+            "name": "Resolution 2"
+          },
+          {
+            "id": "resolution_3",
+            "name": "Resolution 3"
+          },
+          {
+            "id": "resolution_4",
+            "name": "Resolution 4"
+          }
+        ]
+      },
+      {
+        "id": "interlude_4",
+        "name": "Interlude 4",
+        "scenes": [
+          {
+            "id": "intro",
+            "name": "Intro"
+          },
+          {
+            "id": "the_terror_of_devil_reef_is_dead_and_the_lifecycle_of_a_deep_one",
+            "name": "The Terror of Devil Reef is Dead and The Lifecycle of a Deep One"
+          },
+          {
+            "id": "gatekeeper_defeated",
+            "name": "Gatekeeper defeated"
+          },
+          {
+            "id": "Outro",
+            "name": "outro"
+          }
+        ]
       }
     ]
   }
