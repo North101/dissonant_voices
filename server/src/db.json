@@ -3038,6 +3038,74 @@
             "name": "outro"
           }
         ]
+      },
+      {
+        "id": "into_the_maelstrom",
+        "name": "Into The Maelstrom",
+        "scenes": [
+          {
+            "id": "intro",
+            "name": "Intro"
+          },
+          {
+            "id": "flashback_14",
+            "name": "Flashback 14"
+          },
+          {
+            "id": "no_resolution",
+            "name": "No Resolution"
+          },
+          {
+            "id": "resolution_1",
+            "name": "Resolution 1"
+          },
+          {
+            "id": "resolution_2",
+            "name": "Resolution 2"
+          },
+          {
+            "id": "resolution_3",
+            "name": "Resolution 3"
+          },
+          {
+            "id": "resolution_4",
+            "name": "Resolution 4"
+          },
+          {
+            "id": "resolution_5",
+            "name": "Resolution 5"
+          },
+          {
+            "id": "resolution_6",
+            "name": "Resolution 6"
+          },
+          {
+            "id": "resolution_7",
+            "name": "Resolution 7"
+          },
+          {
+            "id": "resolution_8",
+            "name": "Resolution 8"
+          }
+        ]
+      },
+      {
+        "id": "epilogue",
+        "name": "Epilogue",
+        "scenes": [
+          {
+            "id": "epilogue_1",
+            "name": "Epilogue 1"
+          },
+          {
+            "id": "epilogue_2",
+            "name": "Epilogue 2"
+          },
+          {
+            "id": "flashback_15",
+            "name": "Flashback 15"
+          }
+        ]
       }
     ]
   }
