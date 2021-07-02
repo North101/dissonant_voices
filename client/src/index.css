@@ -46,10 +46,13 @@ ol li {
   line-height: 1.5;
 }
 ol li:before {
+  display: inline-block;
   content: counters(my-counter, ".") ".";
   font-weight: 700;
   text-transform: uppercase;
-  padding-right: 3px;
+  padding-right: 0.5em;
+  text-align: end;
+  width: 2em;
 }
 h1 {
   font-family: "Fjalla One", sans-serif;
