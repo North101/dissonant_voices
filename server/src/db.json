@@ -3108,5 +3108,121 @@
         ]
       }
     ]
+  },
+  {
+    "id": "standalones",
+    "name": "Standalones",
+    "scenarios": [
+      {
+        "id": "murder_at_the_excelsior_hotel",
+        "name": "Murder At The Excelsior Hotel",
+        "scenes": [
+          {
+            "id": "intro_1",
+            "name": "Intro 1"
+          },
+          {
+            "id": "intro_2",
+            "name": "Intro 2"
+          },
+          {
+            "id": "intro_3",
+            "name": "Intro 3"
+          },
+          {
+            "id": "intro_4",
+            "name": "Intro 4"
+          },
+          {
+            "id": "the_truth_1",
+            "name": "The Truth 1"
+          },
+          {
+            "id": "the_truth_2",
+            "name": "The Truth 2"
+          },
+          {
+            "id": "the_truth_3",
+            "name": "The Truth 3"
+          },
+          {
+            "id": "the_truth_4",
+            "name": "The Truth 4"
+          },
+          {
+            "id": "the_truth_5",
+            "name": "The Truth 5"
+          },
+          {
+            "id": "the_truth_6",
+            "name": "The Truth 6"
+          },
+          {
+            "id": "the_truth_7",
+            "name": "The Truth 7"
+          },
+          {
+            "id": "alien_device_timeworn_locket",
+            "name": "Alien Device & Timeworn Locket"
+          },
+          {
+            "id": "alien_device_sinister_solution",
+            "name": "Alien Device & Sinister Solution"
+          },
+          {
+            "id": "alien_device_managers_key",
+            "name": "Alien Device & Manager's Key"
+          },
+          {
+            "id": "alien_device_tome_of_rituals",
+            "name": "Alien Device & Tome of Rituals"
+          },
+          {
+            "id": "timeworn_locket_sinister_solution",
+            "name": "Timeworn Locket & Sinister Solution"
+          },
+          {
+            "id": "timeworn_locket_managers_key",
+            "name": "Timeworn Locket & Manager's Key"
+          },
+          {
+            "id": "timeworn_locket_tome_of_rituals",
+            "name": "Timeworn Locket & Tome of Rituals"
+          },
+          {
+            "id": "sinister_solution_managers_key",
+            "name": "Sinister Solution & Manager's Key"
+          },
+          {
+            "id": "sinister_solution_tome_of_rituals",
+            "name": "Sinister Solution & Tome of Rituals"
+          },
+          {
+            "id": "managers_key_tome_of_rituals",
+            "name": "Manager's Key & Tome of Rituals"
+          },
+          {
+            "id": "no_resolution_defeated",
+            "name": "No Resolution (Defeated)"
+          },
+          {
+            "id": "no_resolution_resigned",
+            "name": "No resolution (Resigned)"
+          },
+          {
+            "id": "resolution_1",
+            "name": "Resolution 1"
+          },
+          {
+            "id": "resolution_2",
+            "name": "Resolution 2"
+          },
+          {
+            "id": "resolution_3",
+            "name": "Resolution 3"
+          }
+        ]
+      }
+    ]
   }
 ]
