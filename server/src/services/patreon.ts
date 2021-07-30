@@ -97,7 +97,6 @@ export default class PatreonService {
     );
     const patreonUserId = result.data.id;
     const name = result.data.attributes.full_name;
-    console.log(result);
     const isPatron = (result.included?.some(
       (rel) =>
         rel.type === "member" &&
