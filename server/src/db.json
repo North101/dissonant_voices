@@ -3114,6 +3114,28 @@
     "name": "Standalones",
     "scenarios": [
       {
+        "id": "curse_of_the_rougarou",
+        "name": "Curse of the Rougarou",
+        "scenes": [
+          {
+            "id": "intro",
+            "name": "Intro"
+          },
+          {
+            "id": "resolution_1",
+            "name": "Resolution 1"
+          },
+          {
+            "id": "resolution_2",
+            "name": "Resolution 2"
+          },
+          {
+            "id": "resolution_3",
+            "name": "Resolution 3"
+          }
+        ]
+      },
+      {
         "id": "carnevale_of_horrors",
         "name": "Carnevale of Horrors",
         "scenes": [
@@ -3254,6 +3276,82 @@
           {
             "id": "resolution_3",
             "name": "Resolution 3"
+          }
+        ]
+      },
+      {
+        "id": "war_of_the_outer_gods",
+        "name": "War of the Outer Gods",
+        "scenes": [
+          {
+            "id": "intro",
+            "name": "Intro"
+          },
+          {
+            "id": "no_resolution",
+            "name": "No Resolution"
+          },
+          {
+            "id": "resolution_1",
+            "name": "Resolution 1"
+          },
+          {
+            "id": "resolution_2",
+            "name": "Resolution 2"
+          },
+          {
+            "id": "resolution_3",
+            "name": "Resolution 3"
+          },
+          {
+            "id": "resolution_4",
+            "name": "Resolution 4"
+          },
+          {
+            "id": "resolution_5",
+            "name": "Resolution 5"
+          },
+          {
+            "id": "resolution_6",
+            "name": "Resolution 6"
+          },
+          {
+            "id": "resolution_7",
+            "name": "Resolution 7"
+          }
+        ]
+      },
+      {
+        "id": "consternation_on_the_constellation",
+        "name": "Consternation on the Constellation",
+        "scenes": [
+          {
+            "id": "intro",
+            "name": "Intro"
+          },
+          {
+            "id": "no_resolution",
+            "name": "No Resolution"
+          },
+          {
+            "id": "resolution_1",
+            "name": "Resolution 1"
+          },
+          {
+            "id": "resolution_2",
+            "name": "Resolution 2"
+          },
+          {
+            "id": "resolution_3",
+            "name": "Resolution 3"
+          },
+          {
+            "id": "additional_rewards",
+            "name": "Additional Rewards"
+          },
+          {
+            "id": "trust_earned",
+            "name": "Trust Earned"
           }
         ]
       }
