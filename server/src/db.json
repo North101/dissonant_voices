@@ -1549,6 +1549,10 @@
           {
             "id": "resolution_4",
             "name": "Resolution 4"
+          },
+          {
+            "id": "resolution_5_return_to",
+            "name": "Resolution 5 (Return to)"
           }
         ]
       },
@@ -1723,6 +1727,10 @@
           {
             "id": "resolution_2",
             "name": "Resolution 2"
+          },
+          {
+            "id": "resolution_3_return_to",
+            "name": "Resolution 3 (Return to)"
           }
         ]
       },
@@ -1835,6 +1843,10 @@
             "name": "Intro"
           },
           {
+            "id": "additional_intro_return_to",
+            "name": "Additional Intro (Return to)"
+          },
+          {
             "id": "no_resolution",
             "name": "No Resolution"
           },
@@ -1855,6 +1867,10 @@
             "name": "Resolution 4"
           },
           {
+            "id": "resolution_4_return_to",
+            "name": "Resolution 4 (Return to)"
+          },
+          {
             "id": "resolution_5",
             "name": "Resolution 5"
           },
@@ -1869,6 +1885,14 @@
           {
             "id": "resolution_8",
             "name": "Resolution 8"
+          },
+          {
+            "id": "resolution_9_return_to",
+            "name": "Resolution 9 (Return to)"
+          },
+          {
+            "id": "resolution_10_return_to",
+            "name": "Resolution 10 (Return to)"
           }
         ]
       },
@@ -1954,6 +1978,22 @@
             "name": "If doom draws ever closer"
           },
           {
+            "id": "if_the_investigators_arrested_anette_return_to",
+            "name": "If the investigators arrested Anette (Return to)"
+          },
+          {
+            "id": "if_anette_taught_you_the_spells_of_old_return_to",
+            "name": "If Anette taught you the spells of old (Return to)"
+          },
+          {
+            "id": "if_the_investigators_arrested_sanford_return_to",
+            "name": "If the investigators arrested Sanford (Return to)"
+          },
+          {
+            "id": "if_the_investigators_assumed_control_of_the_silver_twilight_lodge_return_to",
+            "name": "If the investigators assumed control of the Silver Twilight Lodge (Return to)"
+          },
+          {
             "id": "twist_of_fate_2",
             "name": "Twist of Fate 2"
           }
@@ -1990,6 +2030,10 @@
           {
             "id": "resolution_5",
             "name": "Resolution 5"
+          },
+          {
+            "id": "resolution_6_return_to",
+            "name": "Resolution 6 (Return to)"
           }
         ]
       },
