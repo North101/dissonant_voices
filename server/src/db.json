@@ -3180,13 +3180,19 @@
         ]
       },
       {
-        "id": "ice_and_death_1",
-        "name": "Ice and Death Part 1",
+        "id": "ice_and_death",
+        "name": "Ice and Death",
         "scenes": [
           {
             "id": "intro",
             "name": "Intro"
-          },
+          }
+        ]
+      },
+      {
+        "id": "ice_and_death_1",
+        "name": "Ice and Death Part 1",
+        "scenes": [
           {
             "id": "intro_1",
             "name": "Intro 1"
