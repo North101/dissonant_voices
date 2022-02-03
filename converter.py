@@ -8,9 +8,9 @@ def filter_title(str):
 
 def convert_time(str):
     values = str.split(':', 3)
-    value = float(values.pop())
-    while values:
-        value += int(values.pop()) * 60
+    value = 0
+    for i, v in enumerate(reversed(values)):
+        value += float(v) * (60 ** i)
     
     return value
 
