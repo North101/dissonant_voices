@@ -3154,15 +3154,15 @@
     ]
   },
   {
-    "id": "edge_of_the_earth",
-    "name": "Edge of the Earth",
+    "id": "the_edge_of_the_earth",
+    "name": "The Edge of the Earth",
     "scenarios": [
       {
         "id": "prologue",
         "name": "Prologue",
         "scenes": [
           {
-            "id": "prologue_1_",
+            "id": "prologue_1",
             "name": "Prologue 1 "
           },
           {
