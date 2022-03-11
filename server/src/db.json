@@ -3690,8 +3690,8 @@
             "name": "Endless Night 3"
           },
           {
-            "id": "endless_night_4_",
-            "name": "Endless night 4 "
+            "id": "endless_night_4",
+            "name": "Endless night 4"
           }
         ]
       },
@@ -3700,8 +3700,8 @@
         "name": "City of the Elder Things",
         "scenes": [
           {
-            "id": "intro",
-            "name": "Intro"
+            "id": "intro_1",
+            "name": "Intro 1"
           },
           {
             "id": "dr_sinha_alive",
@@ -3712,8 +3712,8 @@
             "name": "Dr. Sinha alive otherwise"
           },
           {
-            "id": "intro_continued_1",
-            "name": "Intro continued 1"
+            "id": "intro_2",
+            "name": "Intro 2"
           },
           {
             "id": "if_investigators_scouted_city_outskirts",
@@ -3732,8 +3732,8 @@
             "name": "Dyer alive otherwise"
           },
           {
-            "id": "intro_continued_2",
-            "name": "Intro continued 2"
+            "id": "intro_3",
+            "name": "Intro 3"
           },
           {
             "id": "cookie_alive_dynamite_recovered",
@@ -3744,20 +3744,20 @@
             "name": "Cookie alive, dynamite recovered otherwise"
           },
           {
-            "id": "intro_continued_3_",
-            "name": "Intro continued 3 "
+            "id": "intro_4",
+            "name": "Intro 4"
           },
           {
-            "id": "gaze_into_madness",
-            "name": "Gaze into Madness"
+            "id": "gaze_into_madness_1",
+            "name": "Gaze into Madness 1"
           },
           {
             "id": "if_victim_is_danforth",
             "name": "If victim is Danforth"
           },
           {
-            "id": "gaze_into_madness_continued",
-            "name": "Gaze into Madness continued"
+            "id": "gaze_into_madness_2",
+            "name": "Gaze into Madness 2"
           },
           {
             "id": "no_resolution",
@@ -3876,7 +3876,7 @@
         "name": "Heart of Madness Part 1",
         "scenes": [
           {
-            "id": "intro_",
+            "id": "intro",
             "name": "Intro "
           },
           {
