@@ -3592,6 +3592,540 @@
             "name": "Resolution 2"
           }
         ]
+      },
+      {
+        "id": "interlude_2",
+        "name": "Interlude 2",
+        "scenes": [
+          {
+            "id": "endless_night_1",
+            "name": "Endless Night 1"
+          },
+          {
+            "id": "dyer_alive",
+            "name": "Dyer alive"
+          },
+          {
+            "id": "dyer_crossed_out",
+            "name": "Dyer crossed out"
+          },
+          {
+            "id": "danforth_alive",
+            "name": "Danforth alive"
+          },
+          {
+            "id": "danforth_crossed_out",
+            "name": "Danforth crossed out"
+          },
+          {
+            "id": "dr_kensler_aliveis_sharing_her_research",
+            "name": "Dr. Kensler alive/is sharing her research"
+          },
+          {
+            "id": "dr_kensler_alivenot_sharing_research",
+            "name": "Dr. Kensler alive/not sharing research"
+          },
+          {
+            "id": "dr_kensler_crossed_out",
+            "name": "Dr. Kensler crossed out"
+          },
+          {
+            "id": "dr_sinha_alive",
+            "name": "Dr. Sinha alive"
+          },
+          {
+            "id": "dr_sinha_crossed_out",
+            "name": "Dr. Sinha crossed out"
+          },
+          {
+            "id": "cookie_alive",
+            "name": "Cookie alive"
+          },
+          {
+            "id": "cookie_crossed_out",
+            "name": "Cookie crossed out"
+          },
+          {
+            "id": "claypool_alive",
+            "name": "Claypool alive"
+          },
+          {
+            "id": "claypool_crossed_out",
+            "name": "Claypool crossed out"
+          },
+          {
+            "id": "ellsworth_alive",
+            "name": "Ellsworth alive"
+          },
+          {
+            "id": "claypool_also_alive",
+            "name": "Claypool also alive"
+          },
+          {
+            "id": "ellsworth_crossed_out",
+            "name": "Ellsworth crossed out"
+          },
+          {
+            "id": "takada_alive",
+            "name": "Takada alive"
+          },
+          {
+            "id": "takada_crossed_out",
+            "name": "Takada crossed out"
+          },
+          {
+            "id": "eliyah_alive",
+            "name": "Eliyah alive"
+          },
+          {
+            "id": "eliyah_crossed_out",
+            "name": "Eliyah crossed out"
+          },
+          {
+            "id": "endless_night_2",
+            "name": "Endless Night 2"
+          },
+          {
+            "id": "endless_night_3",
+            "name": "Endless Night 3"
+          },
+          {
+            "id": "endless_night_4_",
+            "name": "Endless night 4 "
+          }
+        ]
+      },
+      {
+        "id": "city_of_the_elder_things",
+        "name": "City of the Elder Things",
+        "scenes": [
+          {
+            "id": "intro",
+            "name": "Intro"
+          },
+          {
+            "id": "dr_sinha_alive",
+            "name": "Dr. Sinha alive"
+          },
+          {
+            "id": "dr_sinha_alive_otherwise",
+            "name": "Dr. Sinha alive otherwise"
+          },
+          {
+            "id": "intro_continued_1",
+            "name": "Intro continued 1"
+          },
+          {
+            "id": "if_investigators_scouted_city_outskirts",
+            "name": "If investigators scouted city outskirts"
+          },
+          {
+            "id": "if_investigators_scouted_city_outskirts_otherwise",
+            "name": "If investigators scouted city outskirts otherwise"
+          },
+          {
+            "id": "dyer_alive",
+            "name": "Dyer alive"
+          },
+          {
+            "id": "dyer_alive_otherwise",
+            "name": "Dyer alive otherwise"
+          },
+          {
+            "id": "intro_continued_2",
+            "name": "Intro continued 2"
+          },
+          {
+            "id": "cookie_alive_dynamite_recovered",
+            "name": "Cookie alive, dynamite recovered"
+          },
+          {
+            "id": "cookie_alive_dynamite_recovered_otherwise",
+            "name": "Cookie alive, dynamite recovered otherwise"
+          },
+          {
+            "id": "intro_continued_3_",
+            "name": "Intro continued 3 "
+          },
+          {
+            "id": "gaze_into_madness",
+            "name": "Gaze into Madness"
+          },
+          {
+            "id": "if_victim_is_danforth",
+            "name": "If victim is Danforth"
+          },
+          {
+            "id": "gaze_into_madness_continued",
+            "name": "Gaze into Madness continued"
+          },
+          {
+            "id": "no_resolution",
+            "name": "No Resolution"
+          },
+          {
+            "id": "resolution_1",
+            "name": "Resolution 1"
+          },
+          {
+            "id": "resolution_2",
+            "name": "Resolution 2"
+          }
+        ]
+      },
+      {
+        "id": "interlude_3",
+        "name": "Interlude 3",
+        "scenes": [
+          {
+            "id": "final_night_1",
+            "name": "Final Night 1"
+          },
+          {
+            "id": "dyer_alive",
+            "name": "Dyer alive"
+          },
+          {
+            "id": "dyer_crossed_out",
+            "name": "Dyer crossed out"
+          },
+          {
+            "id": "danforth_alive",
+            "name": "Danforth alive"
+          },
+          {
+            "id": "danforth_crossed_out",
+            "name": "Danforth crossed out"
+          },
+          {
+            "id": "dr_kensler_aliveis_on_the_verge_of_understanding",
+            "name": "Dr. Kensler alive/is on the verge of understanding"
+          },
+          {
+            "id": "dr_kensler_alivenot_not_on_the_verge",
+            "name": "Dr. Kensler alive/not not on the verge"
+          },
+          {
+            "id": "dr_kensler_crossed_out",
+            "name": "Dr. Kensler crossed out"
+          },
+          {
+            "id": "dr_sinha_alive",
+            "name": "Dr. Sinha alive"
+          },
+          {
+            "id": "dr_sinha_crossed_out",
+            "name": "Dr. Sinha crossed out"
+          },
+          {
+            "id": "cookie_alive",
+            "name": "Cookie alive"
+          },
+          {
+            "id": "cookie_crossed_out",
+            "name": "Cookie crossed out"
+          },
+          {
+            "id": "claypool_alive",
+            "name": "Claypool alive"
+          },
+          {
+            "id": "claypool_crossed_out",
+            "name": "Claypool crossed out"
+          },
+          {
+            "id": "ellsworth_alive",
+            "name": "Ellsworth alive"
+          },
+          {
+            "id": "ellsworth_crossed_out",
+            "name": "Ellsworth crossed out"
+          },
+          {
+            "id": "takada_alive",
+            "name": "Takada alive"
+          },
+          {
+            "id": "takada_crossed_out",
+            "name": "Takada crossed out"
+          },
+          {
+            "id": "eliyah_alive",
+            "name": "Eliyah alive"
+          },
+          {
+            "id": "eliyah_crossed_out",
+            "name": "Eliyah crossed out"
+          },
+          {
+            "id": "final_night_2",
+            "name": "Final Night 2"
+          },
+          {
+            "id": "final_night_3",
+            "name": "Final Night 3"
+          },
+          {
+            "id": "final_night_4",
+            "name": "Final Night 4"
+          }
+        ]
+      },
+      {
+        "id": "heart_of_madness_part_1",
+        "name": "Heart of Madness Part 1",
+        "scenes": [
+          {
+            "id": "intro_",
+            "name": "Intro "
+          },
+          {
+            "id": "dr_kensler_alive",
+            "name": "Dr. Kensler alive"
+          },
+          {
+            "id": "dr_kensler_alive_otherwise",
+            "name": "Dr. Kensler alive otherwise"
+          },
+          {
+            "id": "investigators_scouted_the_forked_passage",
+            "name": "Investigators scouted the forked passage"
+          },
+          {
+            "id": "investigators_scouted_the_forked_passage_otherwise",
+            "name": "Investigators scouted the forked passage otherwise"
+          },
+          {
+            "id": "danforth_is_alive",
+            "name": "Danforth is alive"
+          },
+          {
+            "id": "danforth_is_alive_otherwise",
+            "name": "Danforth is alive otherwise"
+          },
+          {
+            "id": "miasmic_crystal_recovered",
+            "name": "Miasmic Crystal recovered"
+          },
+          {
+            "id": "miasmic_crystal_recovered_otherwise",
+            "name": "Miasmic Crystal recovered otherwise"
+          },
+          {
+            "id": "intro_continued",
+            "name": "Intro continued"
+          },
+          {
+            "id": "part_i_intro",
+            "name": "Part I Intro"
+          },
+          {
+            "id": "the_final_straw",
+            "name": "The Final Straw"
+          },
+          {
+            "id": "victim_is_dr_kensler",
+            "name": "Victim is Dr. Kensler"
+          },
+          {
+            "id": "dr_sinha_still_alive",
+            "name": "Dr. Sinha still alive"
+          },
+          {
+            "id": "dr_sinha_still_alive_otherwise",
+            "name": "Dr. Sinha still alive otherwise"
+          },
+          {
+            "id": "victim_is_dyer",
+            "name": "Victim is Dyer"
+          },
+          {
+            "id": "dr_kensler_still_alive",
+            "name": "Dr. Kensler still alive"
+          },
+          {
+            "id": "dr_kensler_still_alive_otherwise",
+            "name": "Dr. Kensler still alive otherwise"
+          },
+          {
+            "id": "victim_is_danforth",
+            "name": "Victim is Danforth"
+          },
+          {
+            "id": "dyer_still_alive",
+            "name": "Dyer still alive"
+          },
+          {
+            "id": "dyer_still_alive_otherwise",
+            "name": "Dyer still alive otherwise"
+          },
+          {
+            "id": "victim_is_claypool",
+            "name": "Victim is Claypool"
+          },
+          {
+            "id": "ellsworth_still_alive",
+            "name": "Ellsworth still alive"
+          },
+          {
+            "id": "ellsworth_still_alive_otherwise",
+            "name": "Ellsworth still alive otherwise"
+          },
+          {
+            "id": "victim_is_takada",
+            "name": "Victim is Takada"
+          },
+          {
+            "id": "eliyah_still_alive",
+            "name": "Eliyah still alive"
+          },
+          {
+            "id": "eliyah_still_alive_otherwise",
+            "name": "Eliyah still alive otherwise"
+          },
+          {
+            "id": "victim_is_ellsworth",
+            "name": "Victim is Ellsworth"
+          },
+          {
+            "id": "cookie_still_alive",
+            "name": "Cookie still alive"
+          },
+          {
+            "id": "cookie_still_alive_otherwise",
+            "name": "Cookie still alive otherwise"
+          },
+          {
+            "id": "victim_is_eliyah",
+            "name": "Victim is Eliyah"
+          },
+          {
+            "id": "claypool_still_alive",
+            "name": "Claypool still alive"
+          },
+          {
+            "id": "claypool_still_alive_otherwise",
+            "name": "Claypool still alive otherwise"
+          },
+          {
+            "id": "victim_is_dr_sinha",
+            "name": "Victim is Dr. Sinha"
+          },
+          {
+            "id": "danforth_still_alive",
+            "name": "Danforth still alive"
+          },
+          {
+            "id": "danforth_still_alive_otherwise",
+            "name": "Danforth still alive otherwise"
+          },
+          {
+            "id": "victim_is_cookie",
+            "name": "Victim is Cookie"
+          },
+          {
+            "id": "takada_still_alive",
+            "name": "Takada still alive"
+          },
+          {
+            "id": "takada_still_alive_otherwise",
+            "name": "Takada still alive otherwise"
+          },
+          {
+            "id": "no_resolution",
+            "name": "No resolution"
+          },
+          {
+            "id": "resolution_1",
+            "name": "Resolution 1"
+          },
+          {
+            "id": "resolution_2",
+            "name": "Resolution 2"
+          },
+          {
+            "id": "resolution_3",
+            "name": "Resolution 3"
+          }
+        ]
+      },
+      {
+        "id": "checkpoint_3",
+        "name": "Checkpoint 3",
+        "scenes": [
+          {
+            "id": "the_other_side_1",
+            "name": "The Other Side 1"
+          },
+          {
+            "id": "the_other_side_2",
+            "name": "The Other Side 2"
+          },
+          {
+            "id": "the_other_side_3",
+            "name": "The Other Side 3"
+          }
+        ]
+      },
+      {
+        "id": "heart_of_madness_part_2",
+        "name": "Heart of Madness Part 2",
+        "scenes": [
+          {
+            "id": "intro_1",
+            "name": "Intro 1"
+          },
+          {
+            "id": "intro_2",
+            "name": "Intro 2"
+          },
+          {
+            "id": "intro_3",
+            "name": "Intro 3"
+          },
+          {
+            "id": "no_resolution",
+            "name": "No Resolution"
+          },
+          {
+            "id": "resolution_1",
+            "name": "Resolution 1"
+          },
+          {
+            "id": "resolution_2",
+            "name": "Resolution 2"
+          },
+          {
+            "id": "resolution_3",
+            "name": "Resolution 3"
+          }
+        ]
+      },
+      {
+        "id": "epilogue",
+        "name": "Epilogue",
+        "scenes": [
+          {
+            "id": "if_both_ellsworth_and_claypool_survived",
+            "name": "If both Ellsworth and Claypool survived"
+          },
+          {
+            "id": "if_both_dr_kensler_and_dr_sinha_survived",
+            "name": "If both Dr. Kensler and Dr. Sinha survived"
+          },
+          {
+            "id": "if_both_dyer_and_danforth_survived",
+            "name": "If both Dyer and Danforth survived"
+          },
+          {
+            "id": "if_both_takada_and_cookie_survived",
+            "name": "If both Takada and Cookie survived"
+          },
+          {
+            "id": "if_only_eliyah_survived",
+            "name": "If only Eliyah survived"
+          }
+        ]
       }
     ]
   },
