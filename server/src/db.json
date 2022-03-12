@@ -3802,8 +3802,8 @@
             "name": "Dr. Kensler alive/is on the verge of understanding"
           },
           {
-            "id": "dr_kensler_alivenot_not_on_the_verge",
-            "name": "Dr. Kensler alive/not not on the verge"
+            "id": "dr_kensler_alivenot_on_the_verge",
+            "name": "Dr. Kensler alive/not on the verge"
           },
           {
             "id": "dr_kensler_crossed_out",
@@ -3872,12 +3872,12 @@
         ]
       },
       {
-        "id": "heart_of_madness_part_1",
-        "name": "Heart of Madness Part 1",
+        "id": "the_heart_of_madness",
+        "name": "The Heart of Madness",
         "scenes": [
           {
-            "id": "intro",
-            "name": "Intro "
+            "id": "intro_1",
+            "name": "Intro 1"
           },
           {
             "id": "dr_kensler_alive",
@@ -3912,12 +3912,18 @@
             "name": "Miasmic Crystal recovered otherwise"
           },
           {
-            "id": "intro_continued",
-            "name": "Intro continued"
-          },
+            "id": "intro_3",
+            "name": "Intro 3"
+          }
+        ]
+      },
+      {
+        "id": "the_heart_of_madness_part_1",
+        "name": "The Heart of Madness Part 1",
+        "scenes": [
           {
-            "id": "part_i_intro",
-            "name": "Part I Intro"
+            "id": "intro",
+            "name": "Intro"
           },
           {
             "id": "the_final_straw",
@@ -4033,7 +4039,7 @@
           },
           {
             "id": "no_resolution",
-            "name": "No resolution"
+            "name": "No Resolution"
           },
           {
             "id": "resolution_1",
@@ -4068,8 +4074,8 @@
         ]
       },
       {
-        "id": "heart_of_madness_part_2",
-        "name": "Heart of Madness Part 2",
+        "id": "the_heart_of_madness_part_2",
+        "name": "The Heart of Madness Part 2",
         "scenes": [
           {
             "id": "intro_1",
