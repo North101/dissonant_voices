@@ -4196,6 +4196,54 @@
         ]
       },
       {
+        "id": "the_eternal_slumber",
+        "name": "The Eternal Slumber",
+        "scenes": [
+          {
+            "id": "intro",
+            "name": "Intro"
+          },
+          {
+            "id": "no_resolution",
+            "name": "No Resolution"
+          },
+          {
+            "id": "resolution_1",
+            "name": "Resolution 1"
+          },
+          {
+            "id": "resolution_2",
+            "name": "Resolution 2"
+          }
+        ]
+      },
+      {
+        "id": "the_nights_usurper",
+        "name": "The Night's Usurper",
+        "scenes": [
+          {
+            "id": "intro",
+            "name": "Intro"
+          },
+          {
+            "id": "no_resolution",
+            "name": "No Resolution"
+          },
+          {
+            "id": "resolution_1",
+            "name": "Resolution 1"
+          },
+          {
+            "id": "resolution_2",
+            "name": "Resolution 2"
+          },
+          {
+            "id": "resolution_3",
+            "name": "Resolution 3"
+          }
+        ]
+      },
+      {
         "id": "the_blob_that_ate_everything",
         "name": "The Blob That Ate Everything",
         "scenes": [
