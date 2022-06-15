@@ -2156,6 +2156,22 @@
             "name": "The Black Cat 2"
           },
           {
+            "id": "the_black_cat_sent_news",
+            "name": "The Black Cat sent_news"
+          },
+          {
+            "id": "the_black_cat_shared_knowledge_of_the_dreamlands",
+            "name": "The Black Cat Shared Knowledge of The Dreamlands"
+          },
+          {
+            "id": "the_black_cat_warned_the_others",
+            "name": "The Black Cat Warned The Others"
+          },
+          {
+            "id": "threaten_the_black_cat",
+            "name": "Threaten The Black Cat"
+          },
+          {
             "id": "the_black_cat_3",
             "name": "The Black Cat 3"
           },
@@ -2306,6 +2322,26 @@
             "name": "The Oneironauts 1, continued."
           },
           {
+            "id": "the_black_cat_wanders_off",
+            "name": "The Black Cat Wanders Off"
+          },
+          {
+            "id": "the_black_cat_decision",
+            "name": "The Black Cat's Offer"
+          },
+          {
+            "id": "the_black_cat_requested_aid",
+            "name": "The Black Cat Requested Aid"
+          },
+          {
+            "id": "the_black_cat_shared_knowledge_of_the_underworld",
+            "name": "The Black Cat Shared Knowledge of the Underworld"
+          },
+          {
+            "id": "the_black_cat_warned_the_others",
+            "name": "The Black Cat Warned the Others"
+          },
+          {
             "id": "the_oneironauts_2",
             "name": "The Oneironauts 2"
           },
@@ -2410,6 +2446,22 @@
           {
             "id": "the_great_ones_1_continued",
             "name": "The Great Ones 1, continued."
+          },
+          {
+            "id": "the_black_cat_decision",
+            "name": "The Black Cat's Offer"
+          },
+          {
+            "id": "the_black_cat_bounds_off",
+            "name": "The Black Cat Bounds Off"
+          },
+          {
+            "id": "the_black_cat_spoke_of_nyarlathotep",
+            "name": "The Black Cat Spoke of Nyarlathotep"
+          },
+          {
+            "id": "the_black_cat_spoke_of_atlach_nacha",
+            "name": "The Black Cat spoke of Atlach-Nacha"
           },
           {
             "id": "the_great_ones_2",
