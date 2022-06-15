@@ -3860,6 +3860,10 @@
             "name": "Investigators scouted the forked passage otherwise"
           },
           {
+            "id": "intro_2",
+            "name": "Intro 2"
+          },
+          {
             "id": "danforth_is_alive",
             "name": "Danforth is alive"
           },

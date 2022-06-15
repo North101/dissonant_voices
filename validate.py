@@ -118,4 +118,4 @@ if __name__ == '__main__':
 
     print(narration)
     for type, found in exists.items():
-      print(f'  {type}: {"✔️" if found else "❌"}')
+      print(f'  {type}: {"✅" if found else "❌"}')
