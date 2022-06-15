@@ -44,10 +44,6 @@
         "name": "Midnight Masks",
         "scenes": [
           {
-            "id": "intro",
-            "name": "Intro"
-          },
-          {
             "id": "intro_1",
             "name": "Intro 1"
           },
@@ -180,10 +176,6 @@
         "name": "Interlude 1",
         "scenes": [
           {
-            "id": "intro",
-            "name": "Intro"
-          },
-          {
             "id": "armitages_fate_1",
             "name": "Armitage's Fate 1"
           },
@@ -230,10 +222,6 @@
           {
             "id": "intro",
             "name": "Intro"
-          },
-          {
-            "id": "resolutions",
-            "name": "Resolutions"
           },
           {
             "id": "investigator_defeat",
@@ -348,10 +336,6 @@
             "name": "Part 1"
           },
           {
-            "id": "resolutions",
-            "name": "Resolutions"
-          },
-          {
             "id": "resolution_1",
             "name": "Resolution 1"
           },
@@ -368,10 +352,6 @@
           {
             "id": "intro",
             "name": "Intro"
-          },
-          {
-            "id": "resolutions",
-            "name": "Resolutions"
           },
           {
             "id": "no_resolution",
@@ -399,10 +379,6 @@
         "id": "epilogue",
         "name": "Epilogue",
         "scenes": [
-          {
-            "id": "epilogue",
-            "name": "Epilogue"
-          },
           {
             "id": "epilogue_1",
             "name": "Epilogue 1"
@@ -462,10 +438,6 @@
           {
             "id": "intro",
             "name": "Intro"
-          },
-          {
-            "id": "resolutions",
-            "name": "Resolutions"
           },
           {
             "id": "resolution_1",
@@ -542,10 +514,6 @@
         "name": "The Unspeakable Oath",
         "scenes": [
           {
-            "id": "intro",
-            "name": "Intro"
-          },
-          {
             "id": "intro_1",
             "name": "Intro 1"
           },
@@ -582,10 +550,6 @@
         "id": "interlude_2",
         "name": "Interlude 2",
         "scenes": [
-          {
-            "id": "intro",
-            "name": "Intro"
-          },
           {
             "id": "daniel_survived",
             "name": "Daniel Survived"
@@ -703,10 +667,6 @@
         "name": "The Pallid Mask",
         "scenes": [
           {
-            "id": "intro",
-            "name": "Intro"
-          },
-          {
             "id": "intro_1",
             "name": "Intro 1"
           },
@@ -766,10 +726,6 @@
         "id": "dim_carcosa",
         "name": "Dim Carcosa",
         "scenes": [
-          {
-            "id": "intro",
-            "name": "Intro"
-          },
           {
             "id": "intro_1",
             "name": "Intro 1"
@@ -857,10 +813,6 @@
         "name": "Interlude 1",
         "scenes": [
           {
-            "id": "intro",
-            "name": "Intro"
-          },
-          {
             "id": "blanket_check",
             "name": "Blanket Check"
           },
@@ -907,10 +859,6 @@
         "name": "The Doom of Eztli",
         "scenes": [
           {
-            "id": "intro",
-            "name": "Intro"
-          },
-          {
             "id": "intro_1",
             "name": "Intro 1"
           },
@@ -948,10 +896,6 @@
         "id": "interlude_2",
         "name": "Interlude 2",
         "scenes": [
-          {
-            "id": "intro",
-            "name": "Intro"
-          },
           {
             "id": "expeditions_end_1",
             "name": "Expedition's End 1"
@@ -1223,10 +1167,6 @@
         "name": "Interlude 4",
         "scenes": [
           {
-            "id": "intro",
-            "name": "Intro"
-          },
-          {
             "id": "process_backfired_section",
             "name": "Process Backfired Section"
           },
@@ -1327,10 +1267,6 @@
         "name": "Interlude 5",
         "scenes": [
           {
-            "id": "intro",
-            "name": "Intro"
-          },
-          {
             "id": "the_darkness_1",
             "name": "The Darkness 1"
           },
@@ -1384,10 +1320,6 @@
         "id": "shattered_aeons",
         "name": "Shattered Aeons",
         "scenes": [
-          {
-            "id": "intro",
-            "name": "Intro"
-          },
           {
             "id": "intro_1",
             "name": "Intro 1"
@@ -1446,12 +1378,8 @@
       },
       {
         "id": "turn_back_time",
-        "name": "turn_back_time",
+        "name": "Turn Back Time",
         "scenes": [
-          {
-            "id": "intro",
-            "name": "Intro"
-          },
           {
             "id": "intro_1",
             "name": "Intro 1"
@@ -1617,10 +1545,6 @@
         "name": "Interlude 2",
         "scenes": [
           {
-            "id": "the_price_of_progress",
-            "name": "Interlude 2: The Price of Progress"
-          },
-          {
             "id": "the_price_of_progress_1",
             "name": "The Price of Progress 1"
           },
@@ -1667,10 +1591,6 @@
         "name": "The Secret Name",
         "scenes": [
           {
-            "id": "intro",
-            "name": "Intro"
-          },
-          {
             "id": "intro_1",
             "name": "Intro 1"
           },
@@ -1681,6 +1601,14 @@
           {
             "id": "intro_3",
             "name": "Intro 3"
+          },
+          {
+            "id": "intro_3_mystic",
+            "name": "Intro 3 (Mystic)"
+          },
+          {
+            "id": "intro_3_continued",
+            "name": "Intro 3, continued "
           },
           {
             "id": "intro_4",
@@ -1717,8 +1645,12 @@
             "name": "Intro"
           },
           {
-            "id": "no_resolution",
-            "name": "No Resolution"
+            "id": "no_resolution_resigned",
+            "name": "No Resolution (Resigned)"
+          },
+          {
+            "id": "no_resolution_defeated",
+            "name": "No Resolution (Defeated)"
           },
           {
             "id": "resolution_1",
@@ -2042,10 +1974,6 @@
         "name": "Epilogue",
         "scenes": [
           {
-            "id": "epilogue",
-            "name": "Epilogue"
-          },
-          {
             "id": "arrested_anette",
             "name": "Arrested Anette"
           },
@@ -2212,12 +2140,16 @@
         "name": "Interlude 1",
         "scenes": [
           {
-            "id": "the_black_cat",
-            "name": "The Black Cat"
-          },
-          {
             "id": "the_black_cat_1",
             "name": "The Black Cat 1"
+          },
+          {
+            "id": "campaign_branch",
+            "name": "Campaign Branch"
+          },
+          {
+            "id": "the_black_cat_vanishes",
+            "name": "The Black Cat Vanishes"
           },
           {
             "id": "the_black_cat_2",
@@ -2246,10 +2178,6 @@
           {
             "id": "okay_fine",
             "name": "Okay, Fine"
-          },
-          {
-            "id": "end",
-            "name": "End"
           }
         ]
       },
@@ -2300,10 +2228,6 @@
           {
             "id": "intro_11",
             "name": "Intro 11"
-          },
-          {
-            "id": "resolutions",
-            "name": "Resolutions"
           },
           {
             "id": "investigator_defeat",
@@ -2518,10 +2442,6 @@
         "name": "Where the Gods Dwell",
         "scenes": [
           {
-            "id": "prologue",
-            "name": "Prologue"
-          },
-          {
             "id": "intro_1",
             "name": "Intro 1"
           },
@@ -2629,10 +2549,6 @@
         "id": "epilogue",
         "name": "Epilogue",
         "scenes": [
-          {
-            "id": "epilogue",
-            "name": "Epilogue"
-          },
           {
             "id": "epilogue_1",
             "name": "Epilogue 1"
@@ -2781,10 +2697,6 @@
         "id": "the_vanishing_of_elina_harper",
         "name": "The Vanishing of Elina Harper",
         "scenes": [
-          {
-            "id": "intro",
-            "name": "Intro"
-          },
           {
             "id": "intro_1",
             "name": "Intro 1"
@@ -3720,8 +3632,8 @@
             "name": "If investigators scouted city outskirts"
           },
           {
-            "id": "if_investigators_scouted_city_outskirts_otherwise",
-            "name": "If investigators scouted city outskirts otherwise"
+            "id": "no_ill_effects",
+            "name": "No ill effects"
           },
           {
             "id": "dyer_alive",
@@ -3930,6 +3842,14 @@
             "name": "The Final Straw"
           },
           {
+            "id": "kill_male",
+            "name": "He reaches out"
+          },
+          {
+            "id": "kill_female",
+            "name": "She reaches out"
+          },
+          {
             "id": "victim_is_dr_kensler",
             "name": "Victim is Dr. Kensler"
           },
@@ -3938,8 +3858,8 @@
             "name": "Dr. Sinha still alive"
           },
           {
-            "id": "dr_sinha_still_alive_otherwise",
-            "name": "Dr. Sinha still alive otherwise"
+            "id": "cross_off_dr_sinha",
+            "name": "Cross off Dr. Sinha"
           },
           {
             "id": "victim_is_dyer",
@@ -3950,8 +3870,8 @@
             "name": "Dr. Kensler still alive"
           },
           {
-            "id": "dr_kensler_still_alive_otherwise",
-            "name": "Dr. Kensler still alive otherwise"
+            "id": "cross_off_dr_kensler",
+            "name": "Cross off Dr. Kensler"
           },
           {
             "id": "victim_is_danforth",
@@ -3962,8 +3882,8 @@
             "name": "Dyer still alive"
           },
           {
-            "id": "dyer_still_alive_otherwise",
-            "name": "Dyer still alive otherwise"
+            "id": "cross_off_dyer",
+            "name": "Cross off Dyer"
           },
           {
             "id": "victim_is_claypool",
@@ -3974,8 +3894,8 @@
             "name": "Ellsworth still alive"
           },
           {
-            "id": "ellsworth_still_alive_otherwise",
-            "name": "Ellsworth still alive otherwise"
+            "id": "cross_off_ellsworth",
+            "name": "Cross off Ellsworth"
           },
           {
             "id": "victim_is_takada",
@@ -3986,8 +3906,8 @@
             "name": "Eliyah still alive"
           },
           {
-            "id": "eliyah_still_alive_otherwise",
-            "name": "Eliyah still alive otherwise"
+            "id": "cross_off_eliyah",
+            "name": "Cross off Eliyah"
           },
           {
             "id": "victim_is_ellsworth",
@@ -3998,8 +3918,8 @@
             "name": "Cookie still alive"
           },
           {
-            "id": "cookie_still_alive_otherwise",
-            "name": "Cookie still alive otherwise"
+            "id": "cross_off_cookie",
+            "name": "Cross off Cookie"
           },
           {
             "id": "victim_is_eliyah",
@@ -4010,8 +3930,8 @@
             "name": "Claypool still alive"
           },
           {
-            "id": "claypool_still_alive_otherwise",
-            "name": "Claypool still alive otherwise"
+            "id": "cross_off_claypool",
+            "name": "Cross off Claypool"
           },
           {
             "id": "victim_is_dr_sinha",
@@ -4022,8 +3942,8 @@
             "name": "Danforth still alive"
           },
           {
-            "id": "danforth_still_alive_otherwise",
-            "name": "Danforth still alive otherwise"
+            "id": "cross_off_danforth",
+            "name": "Cross off Danforth"
           },
           {
             "id": "victim_is_cookie",
@@ -4034,8 +3954,8 @@
             "name": "Takada still alive"
           },
           {
-            "id": "takada_still_alive_otherwise",
-            "name": "Takada still alive otherwise"
+            "id": "cross_off_takada",
+            "name": "Cross off Takada"
           },
           {
             "id": "no_resolution",
@@ -4146,6 +4066,10 @@
           {
             "id": "intro",
             "name": "Intro"
+          },
+          {
+            "id": "no_resolution",
+            "name": "No Resolution"
           },
           {
             "id": "resolution_1",
