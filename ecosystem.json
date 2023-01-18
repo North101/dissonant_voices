@@ -5,7 +5,8 @@
       "script": "dist/index.js",
       "cwd": "server",
       "env_production": {
-        "NODE_ENV": "production"
+        "NODE_ENV": "production",
+        "NODE_OPTIONS": "--openssl-legacy-provider"
       }
     }
   ]
