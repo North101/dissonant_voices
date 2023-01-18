@@ -1,8 +1,8 @@
-import { Migration } from "@blackglory/better-sqlite3-migrations";
+import { IMigration } from "@blackglory/better-sqlite3-migrations";
 
-const migration1: Migration = {
+const migration1: IMigration = {
   version: 1,
-  up: (db) => {
+  up: (db: any) => {
     db.exec(`
       CREATE TABLE user(
         id TEXT PRIMARY KEY,
@@ -34,7 +34,7 @@ const migration1: Migration = {
       );
     `);
   },
-  down: (db) => {
+  down: (db: any) => {
     db.exec(`
       DROP TABLE user;
 
@@ -47,9 +47,9 @@ const migration1: Migration = {
   },
 }
 
-const migration2: Migration = {
+const migration2: IMigration = {
   version: 2,
-  up: (db) => {
+  up: (db: any) => {
     db.exec(`
       CREATE TABLE token(
         id TEXT PRIMARY KEY,
@@ -81,7 +81,7 @@ const migration2: Migration = {
       );
     `);
   },
-  down: (db) => {
+  down: (db: any) => {
     db.exec(`
       DROP TABLE grant;
 
@@ -104,7 +104,7 @@ const migration2: Migration = {
   },
 }
 
-export default <Migration[]>[
+export default <IMigration[]>[
   migration1,
   migration2,
 ];

@@ -11,7 +11,7 @@ import {
 import { singletonHook } from 'react-singleton-hook';
 import { CookieSetOptions } from 'universal-cookie';
 
-let globalSetAuthToken: (name: string, value: any, options?: CookieSetOptions | undefined) => void = () => {
+let globalSetAuthToken: (name: "token", value: any, options?: CookieSetOptions | undefined) => void = () => {
   throw new Error('you must useAuthToken before setting its state');
 };
 

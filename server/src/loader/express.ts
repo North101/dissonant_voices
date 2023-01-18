@@ -60,15 +60,16 @@ export default async ({
     if (parsedUrl.query.client_id === 'arkhamcards') {
       parsedUrl.query.access_token = parsedUrl.query.code;
       delete parsedUrl.query.code;
-      return res.redirect(url.format({
+      res.redirect(url.format({
         protocol: 'arkhamcards',
         slashes: true,
         host: 'dissonantvoices',
         pathname: 'redirect',
         query: parsedUrl.query,
       }));
+      return;
     }
-    return res.status(200).json({
+    res.status(200).json({
       message: "success",
     }).end();
   }));
@@ -79,18 +80,20 @@ export default async ({
       accessToken = await services.patreon.getAccessToken(code, client_id);
     } catch (e) {
       console.error(e);
-      return res.status(401).json({
+      res.status(401).json({
         message: 'Invalid code',
       }).end();
+      return;
     }
     const { patreonUserId, isPatron } = await services.patreon.getPatronInfo(accessToken);
     const userId = services.token.createToken(accessToken.token, patreonUserId, isPatron);
     const user = services.token.getTokenById(userId);
     if (user === null) {
-      return res.status(500).end();
+      res.status(500).end();
+      return;
     }
 
-    return res.json({
+    res.json({
       token: services.jwt.encodeToken(userId),
       user_id: user.id,
       is_admin: checkIsAdmin(user),
@@ -103,13 +106,17 @@ export default async ({
       payload = services.jwt.decodeToken(req.token);
     } catch (e) {
       console.error(e);
-      return res.sendStatus(400).end();
+      res.sendStatus(400).end();
+      return;
     }
 
     const user = await getAuthUser(services, payload);
-    if (user === null) return res.sendStatus(403).end();
+    if (user === null) {
+      res.sendStatus(403).end();
+      return;
+    }
 
-    return res.json({
+    res.json({
       user_id: user.id,
       is_admin: checkIsAdmin(user),
       is_patron: checkIsPatron(user),
@@ -121,11 +128,15 @@ export default async ({
       payload = services.jwt.decodeToken(req.token);
     } catch (e) {
       console.error(e);
-      return res.sendStatus(400).end();
+      res.sendStatus(400).end();
+      return;
     }
 
     const user = await getAuthUser(services, payload);
-    if (!checkIsAdmin(user)) return res.status(403).end();
+    if (!checkIsAdmin(user)) {
+      res.status(403).end();
+      return;
+    }
 
     const {
       is_admin,
@@ -137,9 +148,12 @@ export default async ({
 
     const grantId = services.grant.createGrant(is_admin ?? null, override_patron_status ?? null);
     const grant = services.grant.getGrantById(grantId);
-    if (grant === null) return res.status(500).end();
+    if (grant === null) {
+      res.status(500).end();
+      return;
+    }
 
-    return res.json({
+    res.json({
       id: grant.id,
       expires: grant.expires,
       is_admin: grant.isAdmin,
@@ -152,17 +166,24 @@ export default async ({
       payload = services.jwt.decodeToken(req.token);
     } catch (e) {
       console.error(e);
-      return res.sendStatus(400).end();
+      res.sendStatus(400).end();
+      return;
     }
 
     let user = await getAuthUser(services, payload);
-    if (user === null) return res.status(403).end();
+    if (user === null) {
+      res.status(403).end();
+      return;
+    }
 
     const grantId = req.params.grantId;
     const grant = services.grant.getGrantById(grantId);
-    if (grant === null) return res.status(404).end();
+    if (grant === null) {
+      res.status(404).end();
+      return;
+    }
 
-    return res.json({
+    res.json({
       id: grant.id,
       expires: grant.expires,
       is_admin: grant.isAdmin,
@@ -175,15 +196,22 @@ export default async ({
       payload = services.jwt.decodeToken(req.token);
     } catch (e) {
       console.error(e);
-      return res.sendStatus(400).end();
+      res.sendStatus(400).end();
+      return;
     }
 
     let user = await getAuthUser(services, payload);
-    if (user === null) return res.status(403).end();
+    if (user === null) {
+      res.status(403).end();
+      return;
+    }
 
     const grantId = req.params.grantId;
     const grant = services.grant.getGrantById(grantId);
-    if (grant === null || grant.expires < DateTime.utc()) return res.status(403).end();
+    if (grant === null || grant.expires < DateTime.utc()) {
+      res.status(403).end();
+      return;
+    }
 
     services.grant.deleteGrantById(grantId);
     if (user.user === null) {
@@ -216,9 +244,12 @@ export default async ({
     }
 
     user = await getAuthUser(services, payload);
-    if (user === null) return res.status(500).end();
+    if (user === null) {
+      res.status(500).end();
+      return;
+    }
 
-    return res.json({
+    res.json({
       user_id: user.id,
       is_admin: checkIsAdmin(user),
       is_patron: checkIsPatron(user),
@@ -273,9 +304,12 @@ export default async ({
   app.get("/api/scene/:sceneId", asyncHandler(async (req: any, res) => {
     const sceneId = req.params.sceneId;
     const scene = services.scene.getSceneById(sceneId);
-    if (scene === null) return res.sendStatus(404).end();
+    if (scene === null) {
+      res.sendStatus(404).end();
+      return;
+    }
 
-    return res.json(scene).end();
+    res.json(scene).end();
   }));
   app.get(
     "/api/scene/:sceneId/listen",
@@ -286,18 +320,25 @@ export default async ({
         payload = services.jwt.decodeToken(req.token);
       } catch (e) {
         console.error(e);
-        return res.sendStatus(400).end();
+        res.sendStatus(400).end();
+        return;
       }
   
       const user = await getAuthUser(services, payload);
-      if (user === null || !checkIsPatron(user)) return res.sendStatus(403).end();
+      if (user === null || !checkIsPatron(user)) {
+        res.sendStatus(403).end();
+        return;
+      }
 
       const sceneId = req.params.sceneId;
       const scene = services.scene.getSceneById(sceneId);
-      if (scene === null) return res.sendStatus(404).end();
+      if (scene === null) {
+        res.sendStatus(404).end();
+        return;
+      }
 
       const filepath = services.scene.getSceneFilepath(scene);
-      return res
+      res
         .set("content-type", `audio/${scene.ext}`)
         .set("accept-ranges", "bytes")
         .sendFile(filepath);

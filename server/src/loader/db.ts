@@ -70,7 +70,7 @@ export default () => {
     for (const scene of scenes) {
       try {
         sceneService.getSceneFilepath(scene);
-      } catch (e) {
+      } catch (e: any) {
         console.error(e.message);
       }
     }
