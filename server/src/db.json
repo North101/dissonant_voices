@@ -4112,6 +4112,96 @@
     ]
   },
   {
+    "id": "the_scarlet_keys",
+    "name": "The Scarlet Keys",
+    "scenarios": [
+      {
+        "id": "riddles_and_rain",
+        "name": "File 5-A: Riddles and Rain",
+        "scenes": [
+          {
+            "id": "intro_1",
+            "name": "Intro 1"
+          },
+          {
+            "id": "intro_2",
+            "name": "Intro 2"
+          },
+          {
+            "id": "intro_3",
+            "name": "Intro 3"
+          },
+          {
+            "id": "intro_4",
+            "name": "Intro 4"
+          },
+          {
+            "id": "intro_5",
+            "name": "Intro 5"
+          },
+          {
+            "id": "intro_6",
+            "name": "Intro 6"
+          },
+          {
+            "id": "intro_7",
+            "name": "Intro 7"
+          },
+          {
+            "id": "no_resolution",
+            "name": "No Resolution"
+          },
+          {
+            "id": "resolution_1",
+            "name": "Resolution 1"
+          },
+          {
+            "id": "resolution_2",
+            "name": "Resolution 2"
+          },
+          {
+            "id": "resolution_3",
+            "name": "Resolution 3"
+          },
+          {
+            "id": "resolution_4",
+            "name": "Resolution 4"
+          }
+        ]
+      },
+      {
+        "id": "the_foundation",
+        "name": "The Foundation",
+        "scenes": [
+          {
+            "id": "foundation_1",
+            "name": "Foundation 1"
+          },
+          {
+            "id": "foundation_2",
+            "name": "Foundation 2"
+          },
+          {
+            "id": "foundation_3",
+            "name": "Foundation 3"
+          },
+          {
+            "id": "foundation_4",
+            "name": "Foundation 4"
+          },
+          {
+            "id": "leads",
+            "name": "Leads"
+          },
+          {
+            "id": "embark_rules",
+            "name": "Embark Rules"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "standalones",
     "name": "Standalones",
     "scenarios": [

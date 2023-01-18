@@ -7,7 +7,7 @@
         "build-client": "yarn --cwd client run build && ln -sfn ../client/build/ server/public",
         "start": "yarn --cwd server run start",
         "deploy": "pm2 deploy --env production deploy.json update",
-        "compare-audio": "rsync -avnc --progress ./ north101@north101.co.uk:/home/north101/dissonant_voices_audio/",
-        "update-audio": "rsync -a --progress ./ north101@north101.co.uk:/home/north101/dissonant_voices_audio/"
+        "compare-audio": "cd ./audio && rsync -avnc --progress ./ north101@north101.co.uk:/home/north101/dissonant_voices_audio/",
+        "update-audio": "cd ./audio && rsync -a --progress ./ north101@north101.co.uk:/home/north101/dissonant_voices_audio/"
     }
 }
