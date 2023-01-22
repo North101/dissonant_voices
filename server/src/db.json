@@ -4198,6 +4198,64 @@
             "name": "Embark Rules"
           }
         ]
+      },
+      {
+        "id": "dead_heat",
+        "name": "Dead Heat",
+        "scenes": [
+          {
+            "id": "intro_1",
+            "name": "Intro 1"
+          },
+          {
+            "id": "time_fewer_than_15",
+            "name": "Fewer than 15 time has passed"
+          },
+          {
+            "id": "time_15_to_24",
+            "name": "If 15 to 24 time has passed"
+          },
+          {
+            "id": "time_25_or_more",
+            "name": "If 25 or more time has passed"
+          },
+          {
+            "id": "intro_2",
+            "name": "Intro 2"
+          },
+          {
+            "id": "intro_3",
+            "name": "Intro 3"
+          },
+          {
+            "id": "intro_4",
+            "name": "Intro 4"
+          },
+          {
+            "id": "no_resolution",
+            "name": "No Resolution"
+          },
+          {
+            "id": "resolution_1",
+            "name": "Resolution 1"
+          },
+          {
+            "id": "resolution_2",
+            "name": "Resolution 2"
+          },
+          {
+            "id": "resolution_3",
+            "name": "Resolution 3"
+          },
+          {
+            "id": "resolution_4",
+            "name": "Resolution 4"
+          },
+          {
+            "id": "resolution_5",
+            "name": "Resolution 5"
+          }
+        ]
       }
     ]
   },
