@@ -4256,6 +4256,64 @@
             "name": "Resolution 5"
           }
         ]
+      },
+      {
+        "id": "ruses_and_reclamation",
+        "name": "Ruses and Reclamation",
+        "scenes": [
+          {
+            "id": "determine_resolution",
+            "name": "Determine Resolution"
+          },
+          {
+            "id": "ruses_and_reclamation_1",
+            "name": "Ruses and Reclamation 1"
+          },
+          {
+            "id": "ruses_and_reclamation_2",
+            "name": "Ruses and Reclamation 2"
+          },
+          {
+            "id": "if_red_gloved_man_stole_keys",
+            "name": "If Red Gloved Man Stole Keys"
+          },
+          {
+            "id": "if_claret_knight_stole_keys",
+            "name": "If Claret Knight Stole Keys"
+          },
+          {
+            "id": "if_beast_in_the_cc_stole_keys",
+            "name": "If Beast in the CC Stole Keys"
+          },
+          {
+            "id": "if_la_chica_roja_stole_keys",
+            "name": "If La Chica Roja Stole Keys"
+          },
+          {
+            "id": "if_sanguine_watcher_stole_keys",
+            "name": "If Sanguine Watcher Stole Keys"
+          },
+          {
+            "id": "if_amaranth_stole_keys",
+            "name": "If Amaranth Stole Keys"
+          },
+          {
+            "id": "if_aliki_zoni_uperetria_stole_keys",
+            "name": "If Aliki Zoni Uperetria Stole Keys"
+          },
+          {
+            "id": "if_thorne_stole_keys",
+            "name": "If Thorne Stole Keys"
+          },
+          {
+            "id": "if_desi_stole_keys",
+            "name": "If Desi Stole Keys"
+          },
+          {
+            "id": "if_tzu_san_niang_stole_keys",
+            "name": "If Tzu San Niang Stole Keys"
+          }
+        ]
       }
     ]
   },
