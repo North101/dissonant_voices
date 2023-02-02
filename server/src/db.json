@@ -4314,6 +4314,90 @@
             "name": "If Tzu San Niang Stole Keys"
           }
         ]
+      },
+      {
+        "id": "sanguine_shadows",
+        "name": "Sanguine Shadows",
+        "scenes": [
+          {
+            "id": "intro_1",
+            "name": "Intro 1"
+          },
+          {
+            "id": "intro_2",
+            "name": "Intro 2"
+          },
+          {
+            "id": "intro_2_criminal",
+            "name": "Intro 2: Criminal"
+          },
+          {
+            "id": "intro_2_continued",
+            "name": "Intro 2, continued"
+          },
+          {
+            "id": "intro_3",
+            "name": "Intro 3"
+          },
+          {
+            "id": "intro_4",
+            "name": "Intro 4"
+          },
+          {
+            "id": "no_resolution",
+            "name": "No Resolution"
+          },
+          {
+            "id": "no_resolution_seeing_red",
+            "name": "No Resolution: Seeing Red"
+          },
+          {
+            "id": "resolution_1",
+            "name": "Resolution 1"
+          },
+          {
+            "id": "resolution_2",
+            "name": "Resolution 2"
+          },
+          {
+            "id": "resolution_3",
+            "name": "Resolution 3"
+          }
+        ]
+      },
+      {
+        "id": "cast_a_light",
+        "name": "Cast a Light",
+        "scenes": [
+          {
+            "id": "cast_a_light_1",
+            "name": "Cast a Light 1"
+          },
+          {
+            "id": "cast_a_light_2",
+            "name": "Cast a Light 2"
+          },
+          {
+            "id": "cast_a_light_3",
+            "name": "Cast a Light 3"
+          },
+          {
+            "id": "cast_a_light_4",
+            "name": "Cast a Light 4"
+          },
+          {
+            "id": "cast_a_light_5",
+            "name": "Cast a Light 5"
+          },
+          {
+            "id": "cast_a_light_6",
+            "name": "Cast a Light 6"
+          },
+          {
+            "id": "cast_a_light_7",
+            "name": "Cast a Light 7"
+          }
+        ]
       }
     ]
   },
