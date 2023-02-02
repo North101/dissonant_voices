@@ -4117,7 +4117,7 @@
     "scenarios": [
       {
         "id": "riddles_and_rain",
-        "name": "File 5-A: Riddles and Rain",
+        "name": "File #5-A: Riddles and Rain",
         "scenes": [
           {
             "id": "intro_1",
@@ -4171,7 +4171,7 @@
       },
       {
         "id": "the_foundation",
-        "name": "The Foundation",
+        "name": "Interlude: The Foundation",
         "scenes": [
           {
             "id": "foundation_1",
@@ -4201,7 +4201,7 @@
       },
       {
         "id": "dead_heat",
-        "name": "Dead Heat",
+        "name": "File #11-B: Dead Heat",
         "scenes": [
           {
             "id": "intro_1",
@@ -4259,7 +4259,7 @@
       },
       {
         "id": "ruses_and_reclamation",
-        "name": "Ruses and Reclamation",
+        "name": "File #14-C: Ruses and Reclamation",
         "scenes": [
           {
             "id": "determine_resolution",
@@ -4317,7 +4317,7 @@
       },
       {
         "id": "sanguine_shadows",
-        "name": "Sanguine Shadows",
+        "name": "File #16-D: Sanguine Shadows",
         "scenes": [
           {
             "id": "intro_1",
@@ -4367,7 +4367,7 @@
       },
       {
         "id": "cast_a_light",
-        "name": "Cast a Light",
+        "name": "Interlude: Cast a Light",
         "scenes": [
           {
             "id": "cast_a_light_1",
