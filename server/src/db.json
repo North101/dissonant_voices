@@ -4398,6 +4398,32 @@
             "name": "Cast a Light 7"
           }
         ]
+      },
+      {
+        "id": "the_great_work",
+        "name": "File #20-E: The Great Work",
+        "scenes": [
+          {
+            "id": "the_great_work_1",
+            "name": "The Great Work 1"
+          },
+          {
+            "id": "the_great_work_2",
+            "name": "The Great Work 2"
+          },
+          {
+            "id": "the_great_work_3",
+            "name": "The Great Work 3"
+          },
+          {
+            "id": "the_great_work_4",
+            "name": "The Great Work 4"
+          },
+          {
+            "id": "the_great_work_5",
+            "name": "The Great Work 5"
+          }
+        ]
       }
     ]
   },
