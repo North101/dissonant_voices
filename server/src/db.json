@@ -4424,6 +4424,166 @@
             "name": "The Great Work 5"
           }
         ]
+      },
+      {
+        "id": "dealings_in_the_dark",
+        "name": "File #21-F: Dealings in the Dark",
+        "scenes": [
+          {
+            "id": "intro_1a",
+            "name": "Intro 1a"
+          },
+          {
+            "id": "intro_1b",
+            "name": "Intro 1b"
+          },
+          {
+            "id": "intro_1c",
+            "name": "Intro 1c"
+          },
+          {
+            "id": "intro_2",
+            "name": "Intro 2"
+          },
+          {
+            "id": "intro_3",
+            "name": "Intro 3"
+          },
+          {
+            "id": "intro_4",
+            "name": "Intro 4"
+          },
+          {
+            "id": "no_resolution_act_1-2",
+            "name": "No Resolution: Act 1/2"
+          },
+          {
+            "id": "no_resolution_act_3",
+            "name": "No Resolution: Act 3"
+          },
+          {
+            "id": "resolution_1",
+            "name": "Resolution 1"
+          },
+          {
+            "id": "resolution_2",
+            "name": "Resolution 2"
+          },
+          {
+            "id": "resolution_3",
+            "name": "Resolution 3"
+          },
+          {
+            "id": "resolution_4",
+            "name": "Resolution 4"
+          },
+          {
+            "id": "resolution_5",
+            "name": "Resolution 5"
+          },
+          {
+            "id": "resolution_6",
+            "name": "Resolution 6"
+          }
+        ]
+      },
+      {
+        "id": "quid_pro_quo",
+        "name": "File #26-G: Quid Pro Quo",
+        "scenes": [
+          {
+            "id": "quid_pro_quo_1",
+            "name": "Quid Pro Quo 1"
+          },
+          {
+            "id": "quid_pro_quo_2",
+            "name": "Quid Pro Quo 2"
+          },
+          {
+            "id": "quid_pro_quo_3",
+            "name": "Quid Pro Quo 3"
+          },
+          {
+            "id": "quid_pro_quo_4",
+            "name": "Quid Pro Quo 4"
+          }
+        ]
+      },
+      {
+        "id": "dead_and_gone",
+        "name": "File #27-H: Dead and Gone",
+        "scenes": [
+          {
+            "id": "dead_and_gone_1",
+            "name": "Dead and Gone 1"
+          },
+          {
+            "id": "dead_and_gone_2",
+            "name": "Dead and Gone 2"
+          },
+          {
+            "id": "dead_and_gone_3",
+            "name": "Dead and Gone 3"
+          },
+          {
+            "id": "dead_and_gone_4",
+            "name": "Dead and Gone 4"
+          },
+          {
+            "id": "dead_and_gone_5",
+            "name": "Dead and Gone 5"
+          },
+          {
+            "id": "dead_and_gone_6",
+            "name": "Dead and Gone 6"
+          },
+          {
+            "id": "dead_and_gone_7",
+            "name": "Dead and Gone 7"
+          }
+        ]
+      },
+      {
+        "id": "dancing_mad",
+        "name": "File #28-I: Dancing Mad",
+        "scenes": [
+          {
+            "id": "intro_1",
+            "name": "Intro 1"
+          },
+          {
+            "id": "intro_1_police_or_detective",
+            "name": "Intro 1: Police or Detective"
+          },
+          {
+            "id": "intro_1_continued",
+            "name": "Intro 1, continued"
+          },
+          {
+            "id": "intro_2",
+            "name": "Intro 2"
+          },
+          {
+            "id": "intro_3",
+            "name": "Intro 3"
+          },
+          {
+            "id": "intro_4",
+            "name": "Intro 4"
+          },
+          {
+            "id": "no_resolution",
+            "name": "No Resolution"
+          },
+          {
+            "id": "resolution_1",
+            "name": "Resolution 1"
+          },
+          {
+            "id": "resolution_2",
+            "name": "Resolution 2"
+          }
+        ]
       }
     ]
   },
