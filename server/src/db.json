@@ -4584,6 +4584,36 @@
             "name": "Resolution 2"
           }
         ]
+      },
+      {
+        "id": "the_coiled_serpent",
+        "name": "File #32-J: The Coiled Serpent",
+        "scenes": [
+          {
+            "id": "the_coiled_serpent_1",
+            "name": "The Coiled Serpent 1"
+          },
+          {
+            "id": "the_coiled_serpent_2",
+            "name": "The Coiled Serpent 2"
+          },
+          {
+            "id": "the_coiled_serpent_3",
+            "name": "The Coiled Serpent 3"
+          },
+          {
+            "id": "the_coiled_serpent_4",
+            "name": "The Coiled Serpent 4"
+          },
+          {
+            "id": "the_coiled_serpent_5",
+            "name": "The Coiled Serpent 5"
+          },
+          {
+            "id": "the_coiled_serpent_6",
+            "name": "The Coiled Serpent 6"
+          }
+        ]
       }
     ]
   },
