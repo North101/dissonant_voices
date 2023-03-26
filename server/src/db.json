@@ -4614,6 +4614,114 @@
             "name": "The Coiled Serpent 6"
           }
         ]
+      },
+      {
+        "id": "on_thin_ice",
+        "name": "File #33-K: On Thin Ice",
+        "scenes": [
+          {
+            "id": "intro",
+            "name": "Intro"
+          },
+          {
+            "id": "intro_wayfarer",
+            "name": "Intro: Wayfarer"
+          },
+          {
+            "id": "intro_continued",
+            "name": "Intro, continued"
+          },
+          {
+            "id": "no_resolution",
+            "name": "No Resolution"
+          },
+          {
+            "id": "resolution_1",
+            "name": "Resolution 1"
+          },
+          {
+            "id": "resolution_2",
+            "name": "Resolution 2"
+          }
+        ]
+      },
+      {
+        "id": "raw_deal",
+        "name": "Interlude: Raw Deal",
+        "scenes": [
+          {
+            "id": "raw_deal_1",
+            "name": "Raw Deal 1"
+          },
+          {
+            "id": "raw_deal_2",
+            "name": "Raw Deal 2"
+          },
+          {
+            "id": "raw_deal_3",
+            "name": "Raw Deal 3"
+          },
+          {
+            "id": "raw_deal_4",
+            "name": "Raw Deal 4"
+          },
+          {
+            "id": "raw_deal_5",
+            "name": "Raw Deal 5"
+          }
+        ]
+      },
+      {
+        "id": "strange_architecture",
+        "name": "File #36-L: Strange Architecture",
+        "scenes": [
+          {
+            "id": "strange_architecture_1",
+            "name": "Strange Architecture 1"
+          },
+          {
+            "id": "strange_architecture_2",
+            "name": "Strange Architecture 2"
+          },
+          {
+            "id": "strange_architecture_3",
+            "name": "Strange Architecture 3"
+          },
+          {
+            "id": "strange_architecture_4",
+            "name": "Strange Architecture 4"
+          },
+          {
+            "id": "strange_architecture_5",
+            "name": "Strange Architecture 5"
+          },
+          {
+            "id": "strange_architecture_6",
+            "name": "Strange Architecture 6"
+          }
+        ]
+      },
+      {
+        "id": "special_delivery",
+        "name": "File #37-M: Special Delivery",
+        "scenes": [
+          {
+            "id": "special_delivery_1",
+            "name": "Special Delivery 1"
+          },
+          {
+            "id": "special_delivery_2",
+            "name": "Special Delivery 2"
+          },
+          {
+            "id": "special_delivery_3",
+            "name": "Special Delivery 3"
+          },
+          {
+            "id": "special_delivery_4",
+            "name": "Special Delivery 4"
+          }
+        ]
       }
     ]
   },
