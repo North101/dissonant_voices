@@ -4642,6 +4642,14 @@
           {
             "id": "resolution_2",
             "name": "Resolution 2"
+          },
+          {
+            "id": "resolution_3",
+            "name": "Resolution 3"
+          },
+          {
+            "id": "resolution_4",
+            "name": "Resolution 4"
           }
         ]
       },
