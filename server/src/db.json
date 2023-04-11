@@ -4730,6 +4730,84 @@
             "name": "Special Delivery 4"
           }
         ]
+      },
+      {
+        "id": "dogs_of_war",
+        "name": "File #38-N: Dogs of War",
+        "scenes": [
+          {
+            "id": "intro_1",
+            "name": "Intro 1"
+          },
+          {
+            "id": "intro_2",
+            "name": "Intro 2"
+          },
+          {
+            "id": "intro_2_miskatonic_or_scholar",
+            "name": "Intro 2: Miskatonic or Scholar"
+          },
+          {
+            "id": "intro_2_continued",
+            "name": "Intro 2, continued"
+          },
+          {
+            "id": "intro_3",
+            "name": "Intro 3"
+          },
+          {
+            "id": "intro_4",
+            "name": "Intro 4"
+          },
+          {
+            "id": "intro_5",
+            "name": "Intro 5"
+          },
+          {
+            "id": "intro_6",
+            "name": "Intro 6"
+          },
+          {
+            "id": "intro_7",
+            "name": "Intro 7"
+          },
+          {
+            "id": "resolutions",
+            "name": "Resolutions"
+          },
+          {
+            "id": "resolution_1",
+            "name": "Resolution 1"
+          },
+          {
+            "id": "resolution_2",
+            "name": "Resolution 2"
+          },
+          {
+            "id": "resolution_3",
+            "name": "Resolution 3"
+          },
+          {
+            "id": "resolution_4",
+            "name": "Resolution 4"
+          },
+          {
+            "id": "resolution_5",
+            "name": "Resolution 5"
+          },
+          {
+            "id": "resolution_6",
+            "name": "Resolution 6"
+          },
+          {
+            "id": "resolution_7",
+            "name": "Resolution 7"
+          },
+          {
+            "id": "resolution_8",
+            "name": "Resolution 8"
+          }
+        ]
       }
     ]
   },
