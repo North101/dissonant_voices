@@ -4808,6 +4808,28 @@
             "name": "Resolution 8"
           }
         ]
+      },
+      {
+        "id": "theory_of_annihilation",
+        "name": "File #44-O: Theory of Annihilation",
+        "scenes": [
+          {
+            "id": "theory_of_annihilation_1",
+            "name": "Theory Of Annihilation 1"
+          },
+          {
+            "id": "theory_of_annihilation_2",
+            "name": "Theory Of Annihilation 2"
+          },
+          {
+            "id": "theory_of_annihilation_3",
+            "name": "Theory Of Annihilation 3"
+          },
+          {
+            "id": "theory_of_annihilation_4",
+            "name": "Theory Of Annihilation 4"
+          }
+        ]
       }
     ]
   },
