@@ -4830,6 +4830,24 @@
             "name": "Theory Of Annihilation 4"
           }
         ]
+      },
+      {
+        "id": "metamorphosis",
+        "name": "File #45-P: Metamorphosis",
+        "scenes": [
+          {
+            "id": "metamorphosis_1",
+            "name": "Metamorphosis 1"
+          },
+          {
+            "id": "metamorphosis_2",
+            "name": "Metamorphosis 2"
+          },
+          {
+            "id": "metamorphosis_3",
+            "name": "Metamorphosis 3"
+          }
+        ]
       }
     ]
   },
