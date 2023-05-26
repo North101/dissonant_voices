@@ -4116,6 +4116,44 @@
     "name": "The Scarlet Keys",
     "scenarios": [
       {
+        "id": "status_reports",
+        "name": "Status Reports",
+        "scenes": [
+          {
+            "id": "alpha",
+            "name": "Alpha"
+          },
+          {
+            "id": "beta",
+            "name": "Beta"
+          },
+          {
+            "id": "epsilon",
+            "name": "Epsilon"
+          },
+          {
+            "id": "gamma",
+            "name": "Gamma"
+          },
+          {
+            "id": "zeta",
+            "name": "Zeta"
+          },
+          {
+            "id": "theta",
+            "name": "Theta"
+          },
+          {
+            "id": "psi",
+            "name": "Psi"
+          },
+          {
+            "id": "omega",
+            "name": "Omega"
+          }
+        ]
+      },
+      {
         "id": "riddles_and_rain",
         "name": "File #5-A: Riddles and Rain",
         "scenes": [
@@ -5102,6 +5140,254 @@
           {
             "id": "resolution_4",
             "name": "Resolution 4"
+          }
+        ]
+      },
+      {
+        "id": "congress_of_the_keys",
+        "name": "File #59-Z: Congress of the Keys",
+        "scenes": [
+          {
+            "id": "how_you_got_here",
+            "name": "How you got here"
+          },
+          {
+            "id": "intro_1",
+            "name": "Intro 1"
+          },
+          {
+            "id": "intro_2",
+            "name": "Intro 2"
+          },
+          {
+            "id": "the_trial_1",
+            "name": "The Trial 1"
+          },
+          {
+            "id": "knight_nay",
+            "name": "Knight Nay"
+          },
+          {
+            "id": "beast_yay",
+            "name": "Beast Yay"
+          },
+          {
+            "id": "knight_yay",
+            "name": "Knight Yay"
+          },
+          {
+            "id": "dogs_at_war",
+            "name": "Dogs at War"
+          },
+          {
+            "id": "alexandria_other",
+            "name": "Alexandria Other"
+          },
+          {
+            "id": "ece_nay",
+            "name": "Ece Nay"
+          },
+          {
+            "id": "ece_abstain",
+            "name": "Ece Abstain"
+          },
+          {
+            "id": "ece_unknown",
+            "name": "Ece Unknown"
+          },
+          {
+            "id": "amaranth_yay",
+            "name": "Amaranth Yay"
+          },
+          {
+            "id": "lovers_reunited",
+            "name": "Lovers Reunited"
+          },
+          {
+            "id": "amaranth_left",
+            "name": "Amaranth left"
+          },
+          {
+            "id": "amaranth_unknown",
+            "name": "Amaranth Unknown"
+          },
+          {
+            "id": "thorne_yay",
+            "name": "Thorne Yay"
+          },
+          {
+            "id": "thorne_nay",
+            "name": "Thorne Nay"
+          },
+          {
+            "id": "thorne_disappeared",
+            "name": "Thorne Disappeared"
+          },
+          {
+            "id": "thorne_unknown",
+            "name": "Thorne Unknown"
+          },
+          {
+            "id": "aliki_nay",
+            "name": "Aliki Nay"
+          },
+          {
+            "id": "aliki_silent",
+            "name": "Aliki Silent"
+          },
+          {
+            "id": "aliki_unknown",
+            "name": "Aliki Unknown"
+          },
+          {
+            "id": "desi_debt",
+            "name": "Desi Debt"
+          },
+          {
+            "id": "desi_nay",
+            "name": "Desi Nay"
+          },
+          {
+            "id": "desi_eerily_silent",
+            "name": "Desi Eerily Silent"
+          },
+          {
+            "id": "desi_unknown",
+            "name": "Desi Unknown"
+          },
+          {
+            "id": "abarran_yay",
+            "name": "Abarran Yay"
+          },
+          {
+            "id": "abarran_unknown",
+            "name": "Abarran Unknown"
+          },
+          {
+            "id": "red_gloved_man",
+            "name": "Red Gloved Man"
+          },
+          {
+            "id": "chica_abstain",
+            "name": "Chica Abstain"
+          },
+          {
+            "id": "chica_nay",
+            "name": "Chica Nay"
+          },
+          {
+            "id": "torment",
+            "name": "Torment"
+          },
+          {
+            "id": "chica_unknown",
+            "name": "Chica Unknown"
+          },
+          {
+            "id": "masai_nay",
+            "name": "Masai Nay"
+          },
+          {
+            "id": "masai_unknown",
+            "name": "Masai Unknown"
+          },
+          {
+            "id": "niang_yay",
+            "name": "Niang Yay"
+          },
+          {
+            "id": "you_yay",
+            "name": "You Yay"
+          },
+          {
+            "id": "niang_abstain",
+            "name": "Niang Abstain"
+          },
+          {
+            "id": "niang_unknown",
+            "name": "Niang Unknown"
+          },
+          {
+            "id": "tie_or_yay",
+            "name": "Tie or Yay"
+          },
+          {
+            "id": "nay_overthrow",
+            "name": "Nay Overthrow"
+          },
+          {
+            "id": "nay_join",
+            "name": "Nay Join"
+          },
+          {
+            "id": "nay_other",
+            "name": "Nay Other"
+          },
+          {
+            "id": "the_trial_2",
+            "name": "The Trial 2"
+          },
+          {
+            "id": "the_trial_3",
+            "name": "The Trial 3"
+          },
+          {
+            "id": "the_trial_4",
+            "name": "The Trial 4"
+          },
+          {
+            "id": "the_trial_5",
+            "name": "The Trial 5"
+          },
+          {
+            "id": "the_trial_6",
+            "name": "The Trial 6"
+          },
+          {
+            "id": "the_trial_7",
+            "name": "The Trial 7"
+          },
+          {
+            "id": "the_trial_8",
+            "name": "The Trial 8"
+          },
+          {
+            "id": "no_resolution",
+            "name": "No Resolution"
+          },
+          {
+            "id": "resolution_1",
+            "name": "Resolution 1"
+          },
+          {
+            "id": "resolution_2",
+            "name": "Resolution 2"
+          }
+        ]
+      },
+      {
+        "id": "epilogue",
+        "name": "Epilogue",
+        "scenes": [
+          {
+            "id": "epilogue_1",
+            "name": "Epilogue 1"
+          },
+          {
+            "id": "epilogue_2",
+            "name": "Epilogue 2"
+          },
+          {
+            "id": "epilogue_3",
+            "name": "Epilogue 3"
+          },
+          {
+            "id": "epilogue_4",
+            "name": "Epilogue 4"
+          },
+          {
+            "id": "epilogue_5",
+            "name": "Epilogue 5"
           }
         ]
       }
