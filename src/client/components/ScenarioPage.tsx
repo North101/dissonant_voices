@@ -1,30 +1,11 @@
 import Breadcrumb from 'react-bootstrap/esm/Breadcrumb'
-import Button from 'react-bootstrap/esm/Button'
-import ListGroup from 'react-bootstrap/esm/ListGroup'
-import { Result, Scene } from '../types'
+import Stack from 'react-bootstrap/esm/Stack'
 import { AppContainer } from './AppContainer'
-import { useScenario, useScenarioSceneList } from './Data'
+import { useScenario } from './Data'
 import { ResultView } from './ResultView'
-
-interface SceneListProps {
-  data: Result<Scene[]>
-}
-
-const SceneList = ({ data }: SceneListProps) => {
-  return (
-    <ResultView result={data}>
-      {(result) => (
-        <ListGroup>
-          {result.map(item => (
-            <ListGroup.Item key={item.id}>
-              <Button href={`/scene/${item.id.replaceAll('.', '-')}`} variant='link'>{item.name}</Button>
-            </ListGroup.Item>
-          ))}
-        </ListGroup>
-      )}
-    </ResultView>
-  )
-}
+import { ScenarioList } from './ScenarioList'
+import { SceneList } from './SceneList'
+import Navbar from 'react-bootstrap/esm/Navbar'
 
 interface ScenarioPageProps {
   scenarioId: string
@@ -32,7 +13,6 @@ interface ScenarioPageProps {
 
 export const ScenarioPage = ({ scenarioId }: ScenarioPageProps) => {
   const [scenario] = useScenario(scenarioId)
-  const [sceneList] = useScenarioSceneList(scenarioId)
   return (
     <AppContainer>
       <ResultView result={scenario}>
@@ -41,9 +21,21 @@ export const ScenarioPage = ({ scenarioId }: ScenarioPageProps) => {
             <Breadcrumb>
               <Breadcrumb.Item href='/'>Home</Breadcrumb.Item>
               <Breadcrumb.Item href={`/campaign/${scenario.campaign.id.replaceAll('.', '-')}`}>{scenario.campaign.name}</Breadcrumb.Item>
-              <Breadcrumb.Item href={`/scenario/${scenario.id.replaceAll('.', '-')}`}>{scenario.name}</Breadcrumb.Item>
+              <Breadcrumb.Item active>{scenario.name}</Breadcrumb.Item>
             </Breadcrumb>
-            <SceneList data={sceneList} />
+            <Navbar expand="lg" >
+              <Stack gap={2} className='d-flex flex-lg-row' >
+                <Navbar.Toggle />
+                <Navbar.Collapse className='align-items-start' style={{ flex: 1 }}>
+                  <div style={{ flex: 1 }}>
+                    <ScenarioList campaignId={scenario.campaign.id} scenarioId={scenario.id} />
+                  </div>
+                </Navbar.Collapse>
+                <div style={{ flex: 2 }}>
+                  <SceneList scenarioId={scenario.id} />
+                </div>
+              </Stack>
+            </Navbar>
           </>
         )}
       </ResultView>

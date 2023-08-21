@@ -33,7 +33,7 @@ export const AuthButton = () => {
     const data = await result.json()
     setAuthToken(data.token)
   }
-  const onClose = () => {}
+  const onClose = () => { }
 
   if (token) {
     const onLogout = () => {
