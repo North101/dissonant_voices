@@ -1,4 +1,3 @@
-import Button from 'react-bootstrap/esm/Button'
 import ListGroup from 'react-bootstrap/esm/ListGroup'
 import { useCampaignScenarioList } from './Data'
 import { ResultView } from './ResultView'
@@ -13,16 +12,19 @@ export const ScenarioList = ({ campaignId, scenarioId }: ScenarioListProps) => {
   return (
     <ResultView result={scenarioList}>
       {(result) => (
-        <ListGroup style={{flex: 2}}>
+        <ListGroup style={{ flex: 1 }}>
           {result.map(item => (
-            <ListGroup.Item key={item.id}>
-              <Button
-                href={`/scenario/${item.id.replaceAll('.', '-')}`}
-                variant='link'
-                disabled={item.id == scenarioId}
-              >
-                {item.name}
-              </Button>
+            <ListGroup.Item
+              key={item.id}
+              href={`/scenario/${item.id.replaceAll('.', '-')}`}
+              action
+              className='text-align-start'
+              style={{
+                background: item.id == scenarioId ? 'rgba(var(--bs-secondary-rgb), var(--bs-text-opacity))' : undefined,
+                '--bs-text-opacity': 1,
+              } as {}}
+            >
+              {item.name}
             </ListGroup.Item>
           ))}
         </ListGroup>

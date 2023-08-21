@@ -16,9 +16,20 @@ export const useAuthToken = () => {
 
 const setAuthToken = (token: string | null) => globalSetAuthToken('token', token, { path: '/' })
 
-export const AuthButton = () => {
-  const token = useAuthToken()
+const LogoutButton = () => {
+  const onClick = () => {
+    setAuthToken('')
+    window.close()
+  }
 
+  return (
+    <Button variant='outline-link' href='#logout' onClick={onClick}>
+      <Person />
+    </Button>
+  )
+}
+
+const LoginButton = () => {
   const onCode = async (code: string) => {
     const result = await fetch(`/api/token`, {
       method: 'POST',
@@ -35,18 +46,8 @@ export const AuthButton = () => {
   }
   const onClose = () => { }
 
-  if (token) {
-    const onLogout = () => {
-      setAuthToken('')
-      window.close()
-    }
-    return (
-      <Button variant='outline-link' href='#logout' onClick={onLogout}>
-        <Person />
-      </Button>
-    )
-  } else {
-    return <OauthPopup
+  return (
+    <OauthPopup
       title='Dissonant Voices'
       url='/api/authorize?client_id=web'
       width={500}
@@ -58,5 +59,10 @@ export const AuthButton = () => {
         <PersonLock />
       </Button>
     </OauthPopup>
-  }
+  )
+}
+
+export const AuthButton = () => {
+  const token = useAuthToken()
+  return token ? <LogoutButton /> : <LoginButton />
 }

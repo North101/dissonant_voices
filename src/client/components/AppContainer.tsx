@@ -22,16 +22,14 @@ const Header = () => (
 
 interface AppContainerProps extends React.PropsWithChildren { }
 
-export const AppContainer = ({ children }: AppContainerProps) => {
-  return (
-    <Stack gap={2} className='d-flex h-100'>
-      <Header />
-      <div className='d-flex flex-fill overflow-auto'>
-        <Container>
-          {children}
-        </Container>
-      </div>
-      <div />
-    </Stack>
-  )
-}
+export const AppContainer = ({ children }: AppContainerProps) => (
+  <Stack gap={2} className='d-flex h-100'>
+    <Header />
+    <div className='d-flex flex-fill overflow-auto'>
+      <Container>
+        {children}
+      </Container>
+    </div>
+    <div />
+  </Stack>
+)
