@@ -1,4 +1,4 @@
-import { Person, PersonLock } from 'react-bootstrap-icons'
+import { BoxArrowDownRight, BoxArrowInRight, BoxArrowLeft, Person, PersonLock } from 'react-bootstrap-icons'
 import Button from 'react-bootstrap/esm/Button'
 import { useCookies } from 'react-cookie'
 import OauthPopup from 'react-oauth-popup'
@@ -24,7 +24,7 @@ const LogoutButton = () => {
 
   return (
     <Button variant='outline-link' href='#logout' onClick={onClick}>
-      <Person />
+      <BoxArrowLeft size={24} />
     </Button>
   )
 }
@@ -56,7 +56,7 @@ const LoginButton = () => {
       onClose={onClose}
     >
       <Button variant='outline-link' href='#login'>
-        <PersonLock />
+        <BoxArrowInRight size={24} />
       </Button>
     </OauthPopup>
   )
