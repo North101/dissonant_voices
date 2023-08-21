@@ -1,0 +1,11 @@
+{
+  "apps": [
+    {
+      "name": "Dissonant Voices",
+      "script": "dist/server/main.js",
+      "env_production": {
+        "NODE_ENV": "production"
+      }
+    }
+  ]
+}

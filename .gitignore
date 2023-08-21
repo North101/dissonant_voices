@@ -109,3 +109,4 @@ audio
 client/build
 deploy.json
 *.mp3
+*.db
