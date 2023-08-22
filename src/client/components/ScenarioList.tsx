@@ -1,6 +1,6 @@
-import ListGroup from 'react-bootstrap/esm/ListGroup'
+import { scenarioUrl } from '../types'
 import { useCampaignScenarioList } from './Data'
-import { ResultView } from './ResultView'
+import { ResultListItem, ResultListView } from './ResultView'
 
 interface ScenarioListProps {
   campaignId: string
@@ -10,25 +10,16 @@ interface ScenarioListProps {
 export const ScenarioList = ({ campaignId, scenarioId }: ScenarioListProps) => {
   const [scenarioList] = useCampaignScenarioList(campaignId)
   return (
-    <ResultView result={scenarioList}>
-      {(result) => (
-        <ListGroup style={{ flex: 1 }}>
-          {result.map(item => (
-            <ListGroup.Item
-              key={item.id}
-              href={`/scenario/${item.id.replaceAll('.', '-')}`}
-              action
-              className='text-align-start'
-              style={{
-                background: item.id == scenarioId ? 'rgba(var(--bs-secondary-rgb), var(--bs-text-opacity))' : undefined,
-                '--bs-text-opacity': 1,
-              } as {}}
-            >
-              {item.name}
-            </ListGroup.Item>
-          ))}
-        </ListGroup>
+    <ResultListView list={scenarioList}>
+      {item => (
+        <ResultListItem
+          key={item.id}
+          href={scenarioUrl(item)}
+          active={item.id == scenarioId}
+        >
+          {item.name}
+        </ResultListItem>
       )}
-    </ResultView>
+    </ResultListView>
   )
 }

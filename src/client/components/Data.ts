@@ -13,7 +13,7 @@ export const useFetch = <T>(url: string): [Result<T>, Dispatch<SetStateAction<Re
         if (result.ok) {
           setData({
             state: 'success',
-            result: await result.json(),
+            value: await result.json(),
           })
         } else {
           setData({

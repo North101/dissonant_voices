@@ -1,4 +1,4 @@
-import { BoxArrowDownRight, BoxArrowInRight, BoxArrowLeft, Person, PersonLock } from 'react-bootstrap-icons'
+import { BoxArrowInRight, BoxArrowLeft } from 'react-bootstrap-icons'
 import Button from 'react-bootstrap/esm/Button'
 import { useCookies } from 'react-cookie'
 import OauthPopup from 'react-oauth-popup'

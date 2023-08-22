@@ -1,6 +1,6 @@
-import ListGroup from 'react-bootstrap/esm/ListGroup'
+import { campaignUrl } from '../types'
 import { useCampaignList } from './Data'
-import { ResultView } from './ResultView'
+import { ResultListItem, ResultListView } from './ResultView'
 
 interface CampaignListProps {
   campaignId?: string
@@ -9,25 +9,16 @@ interface CampaignListProps {
 export const CampaignList = ({ campaignId }: CampaignListProps) => {
   const [campaignList] = useCampaignList()
   return (
-    <ResultView result={campaignList}>
-      {(result) => (
-        <ListGroup>
-          {result.map(item => (
-            <ListGroup.Item
-              key={item.id}
-              action
-              href={`/campaign/${item.id.replaceAll('.', '-')}`}
-              className='text-align-start'
-              style={{
-                background: item.id == campaignId ? 'rgba(var(--bs-secondary-rgb), var(--bs-text-opacity))' : undefined,
-                '--bs-text-opacity': 1,
-              } as {}}
-            >
-              {item.name}
-            </ListGroup.Item>
-          ))}
-        </ListGroup>
+    <ResultListView list={campaignList}>
+      {item => (
+        <ResultListItem
+          key={item.id}
+          href={campaignUrl(item)}
+          active={item.id == campaignId}
+        >
+          {item.name}
+        </ResultListItem>
       )}
-    </ResultView>
+    </ResultListView>
   )
 }
