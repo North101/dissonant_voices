@@ -5,14 +5,14 @@ import react from '@vitejs/plugin-react'
 import rollup from 'rollup'
 import { PluginOption, defineConfig } from 'vite'
 
-interface ViteExpressBuilderProps {
+interface ViteExpressBuilder extends Omit<rollup.RollupOptions, 'external'> {
   output?: rollup.OutputOptions
   exclude?: FilterPattern
-  external?: rollup.ExternalOption[]
-  plugins?: rollup.InputPluginOption[]
+  external?: (string | RegExp)[] | string | RegExp
 }
 
 const viteExpressBuilder = ({
+  input = './src/server/main.ts',
   output = {
     dir: './dist/server',
     format: 'cjs',
@@ -20,24 +20,26 @@ const viteExpressBuilder = ({
   exclude = './src/client/**',
   external = [],
   plugins = [],
-}: ViteExpressBuilderProps = {}): PluginOption => {
+  ...rest
+}: ViteExpressBuilder = {}): PluginOption => {
   return {
     name: 'Vite Express Builder',
     async writeBundle() {
       const config = await rollup.rollup({
-        input: './src/server/main.ts',
+        input: input,
         external: [
-          ...external,
           'express',
           'vite-express',
+          ...Array.isArray(external) ? external : [external],
         ],
         plugins: [
-          ...plugins,
           typescript({
             module: 'ESNext',
             exclude: exclude,
           }),
+          ...Array.isArray(plugins) ? plugins : [plugins],
         ],
+        ...rest,
       })
       await config.write(output)
     }
