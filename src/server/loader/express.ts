@@ -333,7 +333,7 @@ export default async ({
         return
       }
 
-      const sceneId = req.params.sceneId
+      const sceneId = req.params.sceneId.replaceAll('-', '.')
       const scene = services.scene.getSceneById(sceneId)
       if (scene === null) {
         res.sendStatus(404).end()
