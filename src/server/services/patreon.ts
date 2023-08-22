@@ -1,6 +1,6 @@
 import { Endpoints, PatreonRequest, Schemas } from 'patreon-ts'
 import { UserRelationships } from 'patreon-ts/dist/schemas/user'
-import { CreatePatreonTokenFromOAuthToken } from 'patreon-ts/dist/types'
+import { CreatePatreonTokenFromOAuthToken } from 'patreon-ts/dist/types/token'
 import { AccessToken, AuthorizationCode, ModuleOptions } from 'simple-oauth2'
 import config from '../config'
 
