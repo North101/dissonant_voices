@@ -1,15 +1,8 @@
-import * as dotenv from 'dotenv'
+import 'dotenv/config'
 import envVar from 'env-var'
 import fs from 'fs'
 import path from 'path'
 import { validate } from 'uuid'
-
-process.env = {...process.env}
-if (process.env.NODE_ENV === 'production') {
-  dotenv.config({ path: `${process.env.HOME}/dissonant_voices.env` })
-} else {
-  dotenv.config({ path: './.env' })
-}
 
 const env = envVar.from(process.env, {
   asPath: (
