@@ -3140,6 +3140,10 @@
           {
             "id": "prologue_4",
             "name": "Prologue 4"
+          },
+          {
+            "id": "prologue_4_cont",
+            "name": "Prologue 4, continued"
           }
         ]
       },
@@ -5240,67 +5244,67 @@
             "name": "Desi Debt"
           },
           {
-            "id": "desi_nay",
+            "id": "desi_nay_story",
             "name": "Desi Nay"
           },
           {
-            "id": "desi_eerily_silent",
+            "id": "desi_eerily_silent_story",
             "name": "Desi Eerily Silent"
           },
           {
-            "id": "desi_unknown",
+            "id": "desi_unknown_story",
             "name": "Desi Unknown"
           },
           {
-            "id": "abarran_yay",
+            "id": "abarran_yay_story",
             "name": "Abarran Yay"
           },
           {
-            "id": "abarran_unknown",
+            "id": "abarran_unknown_story",
             "name": "Abarran Unknown"
           },
           {
-            "id": "red_gloved_man",
+            "id": "red_gloved_man_story",
             "name": "Red Gloved Man"
           },
           {
-            "id": "chica_abstain",
+            "id": "chica_abstain_story",
             "name": "Chica Abstain"
           },
           {
-            "id": "chica_nay",
+            "id": "chica_nay_story",
             "name": "Chica Nay"
           },
           {
-            "id": "torment",
+            "id": "torment_story",
             "name": "Torment"
           },
           {
-            "id": "chica_unknown",
+            "id": "chica_unknown_story",
             "name": "Chica Unknown"
           },
           {
-            "id": "masai_nay",
+            "id": "masai_nay_story",
             "name": "Masai Nay"
           },
           {
-            "id": "masai_unknown",
+            "id": "masai_unknown_story",
             "name": "Masai Unknown"
           },
           {
-            "id": "niang_yay",
+            "id": "niang_yay_story",
             "name": "Niang Yay"
           },
           {
-            "id": "you_yay",
+            "id": "you_yay_story",
             "name": "You Yay"
           },
           {
-            "id": "niang_abstain",
+            "id": "niang_abstain_story",
             "name": "Niang Abstain"
           },
           {
-            "id": "niang_unknown",
+            "id": "niang_unknown_story",
             "name": "Niang Unknown"
           },
           {
@@ -5308,52 +5312,44 @@
             "name": "Tie or Yay"
           },
           {
-            "id": "nay_overthrow",
-            "name": "Nay Overthrow"
-          },
-          {
-            "id": "nay_join",
-            "name": "Nay Join"
-          },
-          {
-            "id": "nay_other",
-            "name": "Nay Other"
-          },
-          {
-            "id": "the_trial_2",
+            "id": "trial_2",
             "name": "The Trial 2"
           },
           {
-            "id": "the_trial_3",
+            "id": "trial_3",
             "name": "The Trial 3"
           },
           {
-            "id": "the_trial_4",
+            "id": "trial_4",
             "name": "The Trial 4"
           },
           {
-            "id": "the_trial_5",
+            "id": "trial_5",
             "name": "The Trial 5"
           },
           {
-            "id": "the_trial_6",
+            "id": "trial_6",
             "name": "The Trial 6"
           },
           {
-            "id": "the_trial_7",
+            "id": "trial_7",
             "name": "The Trial 7"
           },
           {
-            "id": "the_trial_8",
+            "id": "trial_8",
             "name": "The Trial 8"
           },
           {
-            "id": "no_resolution",
-            "name": "No Resolution"
+            "id": "investigator_defeat",
+            "name": "Investigator Defeat"
           },
           {
             "id": "resolution_1",
             "name": "Resolution 1"
+          },
+          {
+            "id": "regroup",
+            "name": "Regroup"
           },
           {
             "id": "resolution_2",
