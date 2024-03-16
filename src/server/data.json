@@ -5386,6 +5386,184 @@
     ]
   },
   {
+    "id": "the_feast_of_hemlock_vale",
+    "name": "The Feast of Hemlock Vale",
+    "scenarios": [
+      {
+        "id": "prologue",
+        "name": "Prologue",
+        "scenes": [
+          {
+            "id": "intro_1",
+            "name": "Intro 1"
+          },
+          {
+            "id": "intro_2",
+            "name": "Intro 2"
+          },
+          {
+            "id": "intro_3",
+            "name": "Intro 3"
+          },
+          {
+            "id": "intro_4",
+            "name": "Intro 4"
+          },
+          {
+            "id": "codex_1_mother_rachel",
+            "name": "Codex 1: Mother Rachel"
+          },
+          {
+            "id": "codex_2_leah_atwood",
+            "name": "Codex 2: Leah Atwood"
+          },
+          {
+            "id": "codex_3_simeon_atwood",
+            "name": "Codex 3: Simeon Atwood"
+          },
+          {
+            "id": "codex_4_william_hemlock",
+            "name": "Codex 4: William Hemlock"
+          },
+          {
+            "id": "codex_5_river_hawthorne",
+            "name": "Codex 5: River Hawthorne"
+          },
+          {
+            "id": "codex_6_gideon_mizrah",
+            "name": "Codex 6: Gideon Mizrah"
+          },
+          {
+            "id": "codex_7_judith_park",
+            "name": "Codex 7: Judith Park"
+          },
+          {
+            "id": "codex_8_theo_peters",
+            "name": "Codex 8: Theo Peters"
+          },
+          {
+            "id": "codex_9_boarding_house",
+            "name": "Codex 9: Boarding House"
+          },
+          {
+            "id": "codex_10_the_crossroads",
+            "name": "Codex 10: The Crossroads"
+          },
+          {
+            "id": "codex_11_hemlock_chapel",
+            "name": "Codex 11: Hemlock Chapel"
+          },
+          {
+            "id": "codex_12_the_old_mill",
+            "name": "Codex 12: The Old Mill"
+          },
+          {
+            "id": "codex_13_the_atwood_house",
+            "name": "Codex 13: The Atwood House"
+          },
+          {
+            "id": "codex_14_tads_general_store",
+            "name": "Codex 14: Tad's General Store"
+          },
+          {
+            "id": "codex_15_vale_schoolhouse",
+            "name": "Codex 15: Vale Schoolhouse"
+          },
+          {
+            "id": "codex_16_the_commons",
+            "name": "Codex 16: The Commons"
+          },
+          {
+            "id": "resolution_1",
+            "name": "Resolution 1"
+          }
+        ]
+      },
+      {
+        "id": "written_in_rock",
+        "name": "Written In Rock",
+        "scenes": [
+          {
+            "id": "intro",
+            "name": "Intro"
+          },
+          {
+            "id": "the_cave_in_1",
+            "name": "The Cave-In 1"
+          },
+          {
+            "id": "the_cave_in_2",
+            "name": "The Cave-In 2"
+          },
+          {
+            "id": "the_cave_in_3",
+            "name": "The Cave-In 3"
+          },
+          {
+            "id": "the_cave_in_4",
+            "name": "The Cave-In 4"
+          },
+          {
+            "id": "codex_2_leah_atwood_1",
+            "name": "Codex 2: Leah Atwood 1"
+          },
+          {
+            "id": "codex_2_leah_atwood_2",
+            "name": "Codex 2: Leah Atwood 2"
+          },
+          {
+            "id": "codex_3_simeon_atwood_1",
+            "name": "Codex 3: Simeon Atwood 1"
+          },
+          {
+            "id": "codex_3_simeon_atwood_2",
+            "name": "Codex 3: Simeon Atwood 2"
+          },
+          {
+            "id": "codex_5_river_hawthorne",
+            "name": "Codex 5: River Hawthorne"
+          },
+          {
+            "id": "codex_theta_dr_rosa_marquez_1",
+            "name": "Codex Theta: Dr. Rosa Marquez 1"
+          },
+          {
+            "id": "codex_theta_dr_rosa_marquez_2",
+            "name": "Codex Theta: Dr. Rosa Marquez 2"
+          },
+          {
+            "id": "no_resolution",
+            "name": "No Resolution"
+          },
+          {
+            "id": "resolution_1",
+            "name": "Resolution 1"
+          },
+          {
+            "id": "resolution_2",
+            "name": "Resolution 2"
+          },
+          {
+            "id": "resolution_3",
+            "name": "Resolution 3"
+          },
+          {
+            "id": "resolution_4",
+            "name": "Resolution 4"
+          },
+          {
+            "id": "resolution_5",
+            "name": "Resolution 5"
+          },
+          {
+            "id": "resolution_6",
+            "name": "Resolution 6"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "standalones",
     "name": "Standalones",
     "scenarios": [

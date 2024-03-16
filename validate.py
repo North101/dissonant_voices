@@ -60,7 +60,7 @@ def list_arkham_cards_narration(path: Path) -> set[str]:
 def list_audio(path: Path) -> set[str]:
   return {
       audio
-      for root, dirs, files in os.walk(path)
+      for _, _, files in os.walk(path)
       for audio in files
       if audio.endswith('.mp3')
   }
@@ -86,19 +86,16 @@ def main():
   parser.add_argument(
       dest='narration',
       help='input file',
-      metavar='FILE',
       type=lambda x: is_valid_file(parser, x),
   )
   parser.add_argument(
       dest='dv',
       help='input file',
-      metavar='FILE',
       type=lambda x: is_valid_file(parser, x),
   )
   parser.add_argument(
       dest='audio',
       help='input file',
-      metavar='FILE',
       type=lambda x: is_valid_file(parser, x),
   )
 
@@ -117,8 +114,6 @@ def main():
   }
   for narration, exists in narration.items():
     if all(exists.values()):
-      continue
-    elif not exists['arkham_cards']:
       continue
 
     print(narration)
