@@ -5560,6 +5560,100 @@
             "name": "Resolution 6"
           }
         ]
+      },
+      {
+        "id": "hemlock_house",
+        "name": "Hemlock House",
+        "scenes": [
+          {
+            "id": "intro",
+            "name": "Intro"
+          },
+          {
+            "id": "intro_1",
+            "name": "Intro 1"
+          },
+          {
+            "id": "intro_2",
+            "name": "Intro 2"
+          },
+          {
+            "id": "intro_3",
+            "name": "Intro 3"
+          },
+          {
+            "id": "intro_4",
+            "name": "Intro 4"
+          },
+          {
+            "id": "codex_4_william_hemlock_1",
+            "name": "Codex 4: William Hemlock 1"
+          },
+          {
+            "id": "codex_4_william_hemlock_2",
+            "name": "Codex 4: William Hemlock 2"
+          },
+          {
+            "id": "codex_4_william_hemlock_3",
+            "name": "Codex 4: William Hemlock 3"
+          },
+          {
+            "id": "codex_4_william_hemlock_4",
+            "name": "Codex 4: William Hemlock 4"
+          },
+          {
+            "id": "codex_6_gideon_mizrah_1",
+            "name": "Codex 6: Gideon Mizrah 1"
+          },
+          {
+            "id": "codex_6_gideon_mizrah_2",
+            "name": "Codex 6: Gideon Mizrah 2"
+          },
+          {
+            "id": "codex_7_judith_park_1",
+            "name": "Codex 7: Judith Park 1"
+          },
+          {
+            "id": "codex_7_judith_park_judith_2",
+            "name": "Codex 7: Judith Park Judith 2"
+          },
+          {
+            "id": "codex_7_judith_park_judith_3",
+            "name": "Codex 7: Judith Park Judith 3"
+          },
+          {
+            "id": "codex_8_theo_peters",
+            "name": "Codex 8: Theo Peters"
+          },
+          {
+            "id": "codex_sigma_the_argument_1",
+            "name": "Codex Sigma: The Argument 1"
+          },
+          {
+            "id": "codex_sigma_the_argument_2",
+            "name": "Codex Sigma: The Argument 2"
+          },
+          {
+            "id": "codex_sigma_the_argument_3",
+            "name": "Codex Sigma: The Argument 3"
+          },
+          {
+            "id": "codex_theta_dr_rosa_marquez",
+            "name": "Codex Theta: Dr. Rosa Marquez"
+          },
+          {
+            "id": "no_resolution",
+            "name": "No Resolution"
+          },
+          {
+            "id": "resolution_1",
+            "name": "Resolution 1"
+          },
+          {
+            "id": "resolution_2",
+            "name": "Resolution 2"
+          }
+        ]
       }
     ]
   },
