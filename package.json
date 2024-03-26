@@ -4,9 +4,8 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "NODE_ENV=staging nodemon src/server/main.ts -w src/server",
-    "start": "NODE_ENV=production ts-node src/server/main.ts",
-    "build": "vite build",
-    "deploy": "pm2 deploy --env production deploy.json update"
+    "start": "node dist/server/main.js",
+    "build": "vite build"
   },
   "dependencies": {
     "@blackglory/better-sqlite3-migrations": "^0.1.18",

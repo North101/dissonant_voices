@@ -1,0 +1,13 @@
+services:
+  app:
+    build:
+      context: .
+    env_file:
+      - .env
+    environment:
+      NODE_ENV: production
+    ports:
+      - 3000:3000
+    volumes:
+      - ./audio:/usr/src/app/audio
+      - ./dissonant_voices.db:/usr/src/app/dissonant_voices.db
