@@ -1,3 +1,5 @@
+ARG BUILD=production
+
 # syntax=docker/dockerfile:1
 
 # Comments are provided throughout this file to help you get started.
@@ -11,12 +13,14 @@
 FROM node:lts-alpine3.19 as base
 
 # Set working directory for all build stages.
-WORKDIR /usr/src/app
+WORKDIR /app
 
 
 ################################################################################
 # Create a stage for installing production dependecies.
 FROM base as deps
+
+ARG BUILD
 
 RUN apk add git
 
@@ -27,7 +31,7 @@ RUN apk add git
 RUN --mount=type=bind,source=package.json,target=package.json \
     --mount=type=bind,source=yarn.lock,target=yarn.lock \
     --mount=type=cache,target=/root/.yarn \
-    yarn install --production --frozen-lockfile
+    yarn install $(if [[ $BUILD == "production" ]]; then echo "--production"; fi) --frozen-lockfile
 
 ################################################################################
 # Create a stage for building the application.
@@ -42,6 +46,7 @@ RUN --mount=type=bind,source=package.json,target=package.json \
 
 # Copy the rest of the source files into the image.
 COPY . .
+
 # Run the build script.
 RUN yarn run build
 
@@ -50,10 +55,10 @@ RUN yarn run build
 # where the necessary files are copied from the build stage.
 FROM base as final
 
-# Use production node environment by default.
-ENV NODE_ENV production
+ARG BUILD
+ENV NODE_ENV=$BUILD
 
-RUN chown -R node:node .
+RUN chown node:node .
 
 # Run the application as a non-root user.
 USER node
@@ -63,11 +68,8 @@ COPY package.json .
 
 # Copy the production dependencies from the deps stage and also
 # the built application from the build stage into the image.
-COPY --from=deps /usr/src/app/node_modules ./node_modules
-COPY --from=build /usr/src/app/dist ./dist
-
-# Expose the port that the application listens on.
-EXPOSE 3000
+COPY --from=deps --chown=node /app/node_modules ./node_modules
+COPY --from=build /app/dist ./dist
 
 # Run the application.
 CMD yarn start

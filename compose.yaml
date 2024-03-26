@@ -4,10 +4,23 @@ services:
       context: .
     env_file:
       - .env
-    environment:
-      NODE_ENV: production
     ports:
       - 3000:3000
     volumes:
-      - ./audio:/usr/src/app/audio
-      - ./dissonant_voices.db:/usr/src/app/dissonant_voices.db
+      - ./audio:/app/audio
+      - ./dissonant_voices.db:/app/dissonant_voices.db
+
+  dev:
+    extends: app
+    build:
+      args:
+        BUILD: development
+    entrypoint: [ "yarn", "dev" ]
+    volumes:
+      - ./public:/app/public
+      - ./src:/app/src
+      - ./index.html:/app/index.html
+      - ./vite.config.ts:/app/vite.config.ts
+      - ./vite.config.server.ts:/app/vite.config.server.ts
+      - ./tsconfig.json:/app/tsconfig.json
+      - ./tsconfig.node.json:/app/tsconfig.node.json

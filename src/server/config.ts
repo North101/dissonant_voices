@@ -37,7 +37,7 @@ const env = envVar.from(process.env, {
 })
 
 const config = {
-  env: env.get('NODE_ENV').required().asEnum(['production', 'staging']),
+  env: env.get('NODE_ENV').required().asEnum(['production', 'development']),
   db: {
     path: env.get('DB_PATH').asPath({ isAbsolute: true, }),
   },

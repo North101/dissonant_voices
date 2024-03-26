@@ -1,11 +1,14 @@
 {
   "name": "vite-react-typescript-starter",
   "private": true,
+  "type": "module",
   "version": "0.0.0",
   "scripts": {
-    "dev": "NODE_ENV=staging nodemon src/server/main.ts -w src/server",
+    "dev": "tsx --watch-path=src/server src/server/main.ts",
     "start": "node dist/server/main.js",
-    "build": "vite build"
+    "build:client": "vite build",
+    "build:server": "vite build -c vite.config.server.ts",
+    "build": "yarn run build:client && yarn run build:server"
   },
   "dependencies": {
     "@blackglory/better-sqlite3-migrations": "^0.1.18",
@@ -33,8 +36,6 @@
     "wouter": "^3.1.0"
   },
   "devDependencies": {
-    "@rollup/plugin-json": "^6.1.0",
-    "@rollup/plugin-typescript": "^11.1.6",
     "@types/better-sqlite3": "^7.6.9",
     "@types/cookie-parser": "^1.4.7",
     "@types/cors": "^2.8.17",
@@ -52,10 +53,7 @@
     "eslint": "^8.57.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
-    "nodemon": "^3.1.0",
-    "rollup": "^4.13.0",
-    "ts-node": "^10.9.2",
-    "tslib": "^2.6.2",
+    "tsx": "^4.6.2",
     "typescript": "^5.4.2",
     "vite": "^5.1.6"
   }
