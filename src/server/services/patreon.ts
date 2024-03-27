@@ -1,6 +1,7 @@
 import { Endpoints, Schemas, Types } from 'patreon-ts'
 import { AccessToken, AuthorizationCode, ModuleOptions } from 'simple-oauth2'
 import config from '../config'
+import { Cacheable } from 'typescript-cacheable'
 
 const fetchIdentity = Endpoints.identity(new Schemas.UserSchema({
   attributes: {
@@ -55,6 +56,7 @@ export default class PatreonService {
     })
   }
 
+  @Cacheable({ ttl: 5 * 60 * 1000 })
   async getPatronInfo(accessToken: AccessToken) {
     const result = await fetchIdentity(Types.toPatreonToken(accessToken))
     const patreonUserId = result.data.id

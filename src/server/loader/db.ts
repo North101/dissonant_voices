@@ -6,31 +6,13 @@ import SqliteDB from '../db'
 import migrations from '../migrations'
 import SceneService from '../services/scene'
 
-function initDatabase(path: string) {
-  try {
-    return { db: new Database(path, { fileMustExist: true }), exists: true }
-  } catch (e) {
-    if (!(e instanceof Database.SqliteError && e.code == 'SQLITE_CANTOPEN')) {
-      console.error(e)
-    }
-    return { db: new Database(path), exists: false }
-  }
-}
+const initDatabase = () => new Database(':memory:')
 
 export default () => {
-  const { db, exists } = initDatabase(config.db.path ?? ':memory:')
-  const userVersion = exists ? db.pragma('user_version', { simple: true }) : null
-  if (userVersion === 0) {
-    db.pragma('user_version = 1')
-  }
+  const db = initDatabase()
 
   const sqliteDB = db.transaction(() => {
     migrate(db, migrations)
-
-    // purge data from campaign, scenario and scene table
-    db.exec(`DELETE FROM scene`)
-    db.exec(`DELETE FROM scenario`)
-    db.exec(`DELETE FROM campaign`)
 
     const sqliteDB = new SqliteDB(db)
     for (const [campaignIndex, campaign] of dbData.entries()) {

@@ -5,14 +5,6 @@ const migration1: IMigration = {
   version: 1,
   up: (db: Database) => {
     db.exec(`
-      CREATE TABLE user(
-        id TEXT PRIMARY KEY,
-        token TEXT NOT NULL,
-        is_patron INT NOT NULL,
-        created TEXT NOT NULL,
-        last_checked TEXT NOT NULL
-      );
-
       CREATE TABLE campaign(
         id TEXT PRIMARY KEY,
         name TEXT NOT NULL,
@@ -37,8 +29,6 @@ const migration1: IMigration = {
   },
   down: (db: Database) => {
     db.exec(`
-      DROP TABLE user;
-
       DROP TABLE campaign;
 
       DROP TABLE scenario;
@@ -48,64 +38,6 @@ const migration1: IMigration = {
   },
 }
 
-const migration2: IMigration = {
-  version: 2,
-  up: (db: Database) => {
-    db.exec(`
-      CREATE TABLE token(
-        id TEXT PRIMARY KEY,
-        user_id TEXT,
-        token TEXT NOT NULL,
-        is_patron INT NOT NULL,
-        created TEXT NOT NULL,
-        last_checked TEXT NOT NULL
-      );
-
-      INSERT INTO token(id, token, is_patron, created, last_checked, user_id)
-      SELECT user.*, NULL
-      FROM user;
-
-      DROP TABLE user;
-
-      CREATE TABLE user(
-        id TEXT PRIMARY KEY,
-        name TEXT TEXT NOT NULL,
-        is_admin INT NOT NULL,
-        override_patron_status INT NOT NULL
-      );
-
-      CREATE TABLE grant(
-        id TEXT PRIMARY KEY,
-        expires TEXT NOT NULL,
-        is_admin INT,
-        override_patron_status INT
-      );
-    `)
-  },
-  down: (db: Database) => {
-    db.exec(`
-      DROP TABLE grant;
-
-      DROP TABLE user;
-
-      CREATE TABLE user(
-        id TEXT PRIMARY KEY,
-        token TEXT NOT NULL,
-        is_patron INT NOT NULL,
-        created TEXT NOT NULL,
-        last_checked TEXT NOT NULL
-      );
-
-      INSERT INTO user(id, token, is_patron, created, last_checked)
-      SELECT id, token, is_patron, created, last_checked
-      FROM token;
-
-      DROP TABLE token'
-    `)
-  },
-}
-
 export default <IMigration[]>[
   migration1,
-  migration2,
 ]

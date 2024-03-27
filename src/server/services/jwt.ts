@@ -1,16 +1,17 @@
 import jwt from 'jwt-simple'
 import { DateTime } from 'luxon'
+import { Token } from 'simple-oauth2'
 import config from '../config'
 
 export interface JwtPayload {
-  user_id: string
+  token: Token
   issued: number
 }
 
 export default class JwtService {
-  encodeToken(userId: string) {
+  encodeToken(token: Token) {
     const payload: JwtPayload = {
-      user_id: userId,
+      token,
       issued: DateTime.utc().toMillis(),
     }
     return jwt.encode(payload, config.jwt.secret, config.jwt.algorithm)
