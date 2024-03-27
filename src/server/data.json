@@ -5568,10 +5568,6 @@
         "name": "Hemlock House",
         "scenes": [
           {
-            "id": "intro",
-            "name": "Intro"
-          },
-          {
             "id": "intro_1",
             "name": "Intro 1"
           },
@@ -5616,12 +5612,12 @@
             "name": "Codex 7: Judith Park 1"
           },
           {
-            "id": "codex_7_judith_park_judith_2",
-            "name": "Codex 7: Judith Park Judith 2"
+            "id": "codex_7_judith_park_2",
+            "name": "Codex 7: Judith Park 2"
           },
           {
-            "id": "codex_7_judith_park_judith_3",
-            "name": "Codex 7: Judith Park Judith 3"
+            "id": "codex_7_judith_park_3",
+            "name": "Codex 7: Judith Park 3"
           },
           {
             "id": "codex_8_theo_peters",
