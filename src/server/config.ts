@@ -2,7 +2,6 @@ import 'dotenv/config'
 import envVar from 'env-var'
 import fs from 'fs'
 import path from 'path'
-import { validate } from 'uuid'
 
 const env = envVar.from(process.env, {
   asPath: (
@@ -27,20 +26,10 @@ const env = envVar.from(process.env, {
     }
     return pathString
   },
-  asUUID: (value) => {
-    if (!validate(value)) {
-      throw Error(value)
-    }
-
-    return value
-  },
 })
 
 const config = {
   env: env.get('NODE_ENV').required().asEnum(['production', 'development']),
-  db: {
-    path: env.get('DB_PATH').asPath({ isAbsolute: true, }),
-  },
   server: {
     port: env.get('PORT').required().asPortNumber(),
   },
@@ -61,12 +50,6 @@ const config = {
       .asString(),
     redirectUrl: env.get('PATREON_REDIRECT_URL').required().asString(),
     campaignId: env.get('PATREON_CAMPAIGN_ID').required().asString(),
-  },
-  jwt: {
-    secret: env.get('JWT_SECRET').required().asString(),
-    algorithm: env
-      .get('JWT_ALGORITHM')
-      .asEnum(['HS512', 'HS256', 'HS384', 'RS256']),
   },
   assets: {
     sceneAudioPath: env
