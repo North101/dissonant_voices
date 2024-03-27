@@ -546,7 +546,8 @@
             "name": "Resolution 3"
           }
         ]
-      },{
+      },
+      {
         "id": "interlude_2",
         "name": "Interlude 2",
         "scenes": [
@@ -1869,7 +1870,8 @@
             "name": "Resolution 4"
           }
         ]
-      },{
+      },
+      {
         "id": "interlude_4",
         "name": "Interlude 4",
         "scenes": [
@@ -5652,6 +5654,166 @@
           {
             "id": "resolution_2",
             "name": "Resolution 2"
+          }
+        ]
+      },
+      {
+        "id": "the_silent_heath",
+        "name": "The Silent Heath",
+        "scenes": [
+          {
+            "id": "intro",
+            "name": "Intro"
+          },
+          {
+            "id": "intro_1",
+            "name": "Intro 1"
+          },
+          {
+            "id": "intro_2",
+            "name": "Intro 2"
+          },
+          {
+            "id": "intro_3",
+            "name": "Intro 3"
+          },
+          {
+            "id": "intro_4",
+            "name": "Intro 4"
+          },
+          {
+            "id": "intro_5",
+            "name": "Intro 5"
+          },
+          {
+            "id": "codex_1_mother_rachel",
+            "name": "Codex 1: Mother Rachel"
+          },
+          {
+            "id": "codex_2_leah_atwood",
+            "name": "Codex 2: Leah Atwood"
+          },
+          {
+            "id": "codex_theta_dr_rosa_marquez_1",
+            "name": "Codex Theta: Dr. Rosa Marquez 1"
+          },
+          {
+            "id": "codex_theta_dr_rosa_marquez_2",
+            "name": "Codex Theta: Dr. Rosa Marquez 2"
+          },
+          {
+            "id": "codex_psi_larval_tunnel",
+            "name": "Codex Psi: Larval Tunnel"
+          },
+          {
+            "id": "codex_omega_salt_chamber",
+            "name": "Codex Omega: Salt Chamber"
+          },
+          {
+            "id": "codex_phi_crystal_nursery",
+            "name": "Codex Phi: Crystal Nursery"
+          },
+          {
+            "id": "codex_sigma_brood_queen",
+            "name": "Codex Sigma: Brood Queen"
+          },
+          {
+            "id": "no_resolution",
+            "name": "No Resolution"
+          },
+          {
+            "id": "resolution_1",
+            "name": "Resolution 1"
+          },
+          {
+            "id": "resolution_2",
+            "name": "Resolution 2"
+          },
+          {
+            "id": "resolution_3",
+            "name": "Resolution 3"
+          },
+          {
+            "id": "resolution_4",
+            "name": "Resolution 4"
+          }
+        ]
+      },
+      {
+        "id": "the_lost_sister",
+        "name": "The Lost Sister",
+        "scenes": [
+          {
+            "id": "intro_1",
+            "name": "Intro 1"
+          },
+          {
+            "id": "intro_2",
+            "name": "Intro 2"
+          },
+          {
+            "id": "intro_3",
+            "name": "Intro 3"
+          },
+          {
+            "id": "intro_4",
+            "name": "Intro 4"
+          },
+          {
+            "id": "intro_5",
+            "name": "Intro 5"
+          },
+          {
+            "id": "codex_4_william_hemlock",
+            "name": "Codex 4: William Hemlock"
+          },
+          {
+            "id": "codex_6_gideon_mizrah",
+            "name": "Codex 6: Gideon Mizrah"
+          },
+          {
+            "id": "codex_sigma_the_lobstrosity_1",
+            "name": "Codex Sigma: The Lobstrosity 1"
+          },
+          {
+            "id": "codex_sigma_the_lobstrosity_2",
+            "name": "Codex Sigma: The Lobstrosity 2"
+          },
+          {
+            "id": "codex_8_theo_peters_1",
+            "name": "Codex 8: Theo Peters 1"
+          },
+          {
+            "id": "codex_8_theo_peters_2",
+            "name": "Codex 8: Theo Peters 2"
+          },
+          {
+            "id": "codex_8_theo_peters_3",
+            "name": "Codex 8: Theo Peters 3"
+          },
+          {
+            "id": "codex_theta_dr_rosa_marquez",
+            "name": "Codex Theta: Dr. Rosa Marquez"
+          },
+          {
+            "id": "no_resolution",
+            "name": "No Resolution"
+          },
+          {
+            "id": "resolution_1",
+            "name": "Resolution 1"
+          },
+          {
+            "id": "resolution_2",
+            "name": "Resolution 2"
+          },
+          {
+            "id": "resolution_3",
+            "name": "Resolution 3"
+          },
+          {
+            "id": "resolution_4",
+            "name": "Resolution 4"
           }
         ]
       }
