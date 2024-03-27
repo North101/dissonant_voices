@@ -157,10 +157,13 @@ export default async ({
       return
     }
 
+    console.log(token)
+    console.log(JSON.parse(token))
     try {
       req.token = services.patreon.client.createToken(JSON.parse(token) as Token)
       next()
-    } catch {
+    } catch (e) {
+      console.error(e)
       // If header is undefined return Forbidden (403)
       res.sendStatus(403).end()
     }
