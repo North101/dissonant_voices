@@ -59,7 +59,7 @@ const config = {
   },
   assets: {
     sceneAudioPath: env
-      .get('SCENE_AUDIO_PATH')
+      .get('AUDIO_PATH')
       .required()
       .asPath({ isAbsolute: true, isDirectory: true, exists: true }),
     verifySceneAudioExists: env

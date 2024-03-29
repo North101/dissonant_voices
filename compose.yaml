@@ -17,3 +17,4 @@ services:
       - ./public:/app/public
       - ./src:/app/src
       - ./index.html:/app/index.html
+      - ./vite.config.ts:/app/vite.config.ts
