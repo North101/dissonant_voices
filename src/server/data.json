@@ -5658,10 +5658,6 @@
         "name": "The Silent Heath",
         "scenes": [
           {
-            "id": "intro",
-            "name": "Intro"
-          },
-          {
             "id": "intro_1",
             "name": "Intro 1"
           },
