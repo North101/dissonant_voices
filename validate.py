@@ -16,9 +16,9 @@ def parse_dv(file: Path) -> Generator[str, None, None]:
 
 
 def iter_arkham_cards_value(value) -> Generator[str, None, None]:
-  if type(value) is dict:
+  if isinstance(value, dict):
     yield from iter_arkham_cards_obj(value)
-  elif type(value) is list:
+  elif isinstance(value, list):
     yield from iter_arkham_cards_list(value)
 
 
@@ -117,8 +117,8 @@ def main():
       continue
 
     print(narration)
-    for type, found in exists.items():
-      print(f'  {type}: {"✅" if found else "❌"}')
+    for src, found in exists.items():
+      print(f'  {src}: {"✅" if found else "❌"}')
 
 
 if __name__ == '__main__':
