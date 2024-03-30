@@ -122,6 +122,7 @@ export default async ({
     '/api/scene/:sceneId/listen',
     checkToken,
     asyncHandler(async (req, res) => {
+      console.log(req.params.sceneId, req.token)
       const { isPatron } = await services.patreon.getPatronInfo(req.token)
       if (!isPatron) {
         res.sendStatus(403).end()
@@ -159,9 +160,7 @@ export default async ({
 
     try {
       const jwt = services.jwt.decodeToken(token)
-      console.log(jwt)
       req.token = services.patreon.client.createToken(jwt.token)
-      console.log(req.token)
       next()
     } catch (e) {
       console.error(e)
