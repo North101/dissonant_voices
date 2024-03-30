@@ -4,9 +4,6 @@ import config from '../config'
 import { Cacheable } from 'typescript-cacheable'
 
 const fetchIdentity = Endpoints.identity(new Schemas.UserSchema({
-  attributes: {
-    full_name: true,
-  },
   relationships: {
     memberships: new Schemas.MemberSchema({
       attributes: {
@@ -61,7 +58,6 @@ export default class PatreonService {
     const result = await fetchIdentity(Types.toPatreonToken(accessToken))
     console.log(result)
     const patreonUserId = result.data?.id
-    const name = result.data.attributes?.full_name!
     const isPatron = (result.included.some(
       (rel) =>
         rel.type === 'member' &&
@@ -70,7 +66,6 @@ export default class PatreonService {
     ) ?? false) || result.data.relationships?.campaign?.data.id === config.patreon.campaignId
     return {
       patreonUserId,
-      name,
       isPatron,
     }
   }
