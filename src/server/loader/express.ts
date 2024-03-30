@@ -165,12 +165,7 @@ export default async ({
 
     try {
       const jwt = services.jwt.decodeToken(token)
-      const accessToken = services.patreon.client.createToken(jwt.token)
-      if (accessToken.expired()) {
-        req.token = await accessToken.refresh()
-      } else {
-        req.token = accessToken
-      }
+      req.token = services.patreon.client.createToken(jwt.token)
       next()
     } catch (e) {
       console.error(e)

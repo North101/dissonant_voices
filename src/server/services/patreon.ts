@@ -30,7 +30,7 @@ const PATREON_CREDENTIALS: ModuleOptions<'patreon'> = {
 
 export default class PatreonService {
   client: AuthorizationCode<'patreon'>
-  scope = ['identity', 'identity.memberships', 'campaigns']
+  scope = ['identity', 'identity[email]', 'identity.memberships', 'campaigns']
 
   constructor() {
     // Build the OAuth2 client.
