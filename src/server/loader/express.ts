@@ -123,13 +123,13 @@ export default async ({
     checkToken,
     asyncHandler(async (req, res) => {
       try {
-        const token = await req.token.refresh()
-        const { isPatron } = await services.patreon.getPatronInfo(token)
+        const { isPatron } = await services.patreon.getPatronInfo(req.token)
         if (!isPatron) {
           res.sendStatus(403).end()
           return
         }
       } catch (e) {
+        console.log(e)
         res.sendStatus(403).end()
         return
       }
@@ -149,7 +149,7 @@ export default async ({
     }),
   )
 
-  function checkToken(req: TokenRequest, res: Response, next: NextFunction) {
+  async function checkToken(req: TokenRequest, res: Response, next: NextFunction) {
     const { authorization } = req.headers
     let token: string
     if (authorization !== undefined) {
@@ -165,7 +165,12 @@ export default async ({
 
     try {
       const jwt = services.jwt.decodeToken(token)
-      req.token = services.patreon.client.createToken(jwt.token)
+      const accessToken = services.patreon.client.createToken(jwt.token)
+      if (accessToken.expired()) {
+        req.token = await accessToken.refresh()
+      } else {
+        req.token = accessToken
+      }
       next()
     } catch (e) {
       console.error(e)
