@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@blackglory/better-sqlite3-migrations": "^0.1.18",
+    "@popperjs/core": "^2.11.8",
     "better-sqlite3": "^9.4.3",
     "bootstrap": "^5.3.3",
     "cookie-parser": "^1.4.6",
@@ -21,7 +22,6 @@
     "express": "^4.18.3",
     "express-async-handler": "^1.2.0",
     "jwt-simple": "^0.5.6",
-    "luxon": "^3.4.4",
     "patreon-ts": "https://github.com/North101/patreon-ts",
     "react": "^18.2.0",
     "react-bootstrap": "^2.10.1",
@@ -38,7 +38,6 @@
     "@types/cookie-parser": "^1.4.7",
     "@types/cors": "^2.8.17",
     "@types/express": "^4.17.21",
-    "@types/luxon": "^3.4.2",
     "@types/react": "^18.2.73",
     "@types/react-dom": "^18.2.22",
     "@types/simple-oauth2": "^5.0.7",
