@@ -159,7 +159,9 @@ export default async ({
 
     try {
       const jwt = services.jwt.decodeToken(token)
+      console.log(jwt)
       req.token = services.patreon.client.createToken(jwt.token)
+      console.log(req.token)
       next()
     } catch (e) {
       console.error(e)

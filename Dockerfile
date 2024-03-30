@@ -24,16 +24,21 @@ COPY . .
 
 RUN yarn run build
 
-FROM base as dev
+FROM base as shared
+
+ENV AUDIO_PATH=/app/audio
+VOLUME /app/audio
+
+COPY package.json .
+
+FROM shared as dev
 
 ENV NODE_ENV=development
-ENV AUDIO_PATH=/app/audio
 
 RUN chown node:node .
 
 USER node
 
-COPY package.json .
 COPY tsconfig.json .
 COPY tsconfig.node.json .
 COPY --from=dev_deps --chown=node /app/node_modules ./node_modules
@@ -45,17 +50,13 @@ VOLUME /app/vite.config.ts
 
 CMD yarn dev
 
-FROM base as prod
+FROM shared as prod
 
 ENV NODE_ENV=production
-ENV AUDIO_PATH=/app/audio
 
 USER node
 
-COPY package.json .
 COPY --from=deps /app/node_modules ./node_modules
 COPY --from=build /app/dist ./dist
-
-VOLUME /app/audio
 
 CMD yarn start
