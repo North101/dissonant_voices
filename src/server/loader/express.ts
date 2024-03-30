@@ -122,9 +122,14 @@ export default async ({
     '/api/scene/:sceneId/listen',
     checkToken,
     asyncHandler(async (req, res) => {
-      console.log(req.params.sceneId, req.token)
-      const { isPatron } = await services.patreon.getPatronInfo(req.token)
-      if (!isPatron) {
+      try {
+        const token = await req.token.refresh()
+        const { isPatron } = await services.patreon.getPatronInfo(token)
+        if (!isPatron) {
+          res.sendStatus(403).end()
+          return
+        }
+      } catch (e) {
         res.sendStatus(403).end()
         return
       }

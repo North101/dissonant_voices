@@ -60,7 +60,7 @@ export default class PatreonService {
   async getPatronInfo(accessToken: AccessToken) {
     const result = await fetchIdentity(Types.toPatreonToken(accessToken))
     console.log(result)
-    const patreonUserId = result.data.id
+    const patreonUserId = result.data?.id
     const name = result.data.attributes?.full_name!
     const isPatron = (result.included.some(
       (rel) =>
