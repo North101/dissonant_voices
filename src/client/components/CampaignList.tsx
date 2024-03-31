@@ -7,9 +7,9 @@ interface CampaignListProps {
 }
 
 export const CampaignList = ({ campaignId }: CampaignListProps) => {
-  const [campaignList] = useCampaignList()
+  const campaign = useCampaignList()
   return (
-    <ResultListView list={campaignList}>
+    <ResultListView list={campaign}>
       {item => (
         <ResultListItem
           key={item.id}

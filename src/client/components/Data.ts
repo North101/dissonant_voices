@@ -1,36 +1,13 @@
-import { Dispatch, SetStateAction, useEffect, useState } from 'react'
-import { Campaign, Result, Scenario, Scene } from '../types'
+import { Campaign, Scenario, Scene } from '../types'
+import { useQuery } from '@tanstack/react-query'
 
-export const useFetch = <T>(url: string): [Result<T>, Dispatch<SetStateAction<Result<T>>>] => {
-  const [data, setData] = useState<Result<T>>({
-    state: 'loading',
+export const useFetch = <T>(url: string) => {
+  return useQuery({
+    queryKey: [url],
+    queryFn: () => fetch(url).then((res) => res.json()),
+    select: (data) => data as unknown as T,
+    staleTime: Infinity,
   })
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const result = await fetch(url)
-        if (result.ok) {
-          setData({
-            state: 'success',
-            value: await result.json(),
-          })
-        } else {
-          setData({
-            state: 'error',
-          })
-        }
-      } catch (error) {
-        setData({
-          state: 'error',
-        })
-      }
-    }
-
-    fetchData()
-  }, [url])
-
-  return [data, setData]
 }
 
 export const useCampaignList = () => {

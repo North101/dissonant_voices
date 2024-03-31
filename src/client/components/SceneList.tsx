@@ -1,4 +1,3 @@
-import { fixUrl, sceneUrl } from '../types'
 import { useAuthToken } from './AuthToken'
 import { useScenarioSceneList } from './Data'
 import { ResultListItem, ResultListView } from './ResultView'
@@ -9,7 +8,7 @@ interface SceneListProps {
 
 export const SceneList = ({ scenarioId }: SceneListProps) => {
   const token = useAuthToken()
-  const [sceneList] = useScenarioSceneList(scenarioId)
+  const sceneList = useScenarioSceneList(scenarioId)
   return (
     <ResultListView list={sceneList}>
       {item => (
@@ -23,7 +22,7 @@ export const SceneList = ({ scenarioId }: SceneListProps) => {
           <audio
             controls
             preload='none'
-            src={token ? fixUrl(`/api/scene/${item.id}/listen`) : undefined}
+            src={token ? `/api/scene/${item.id}/listen` : undefined}
           />
         </ResultListItem>
       )}

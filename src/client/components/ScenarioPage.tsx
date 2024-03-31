@@ -12,7 +12,7 @@ interface ScenarioPageProps {
 }
 
 export const ScenarioPage = ({ scenarioId }: ScenarioPageProps) => {
-  const [scenario] = useScenario(scenarioId)
+  const scenario = useScenario(scenarioId)
   return (
     <AppContainer>
       <ResultView result={scenario}>

@@ -1,24 +1,24 @@
 import ListGroup from 'react-bootstrap/esm/ListGroup'
-import { Result } from '../types'
 import { CircularProgressIndicator } from './CircularProgressIndicator'
+import { UseQueryResult } from '@tanstack/react-query'
 
 interface ResultViewProps<T> {
-  result: Result<T>
+  result: UseQueryResult<T, Error>
   children: (result: T) => React.ReactNode
 }
 
 export const ResultView = function <T>({ result, children }: ResultViewProps<T>): React.ReactNode {
-  if (result.state === 'loading') {
+  if (result.status === 'pending') {
     return <CircularProgressIndicator />
-  } else if (result.state === 'error') {
+  } else if (result.status === 'error') {
     return <>'Error'</>
   }
 
-  return children(result.value)
+  return children(result.data!)
 }
 
 interface ResultListViewProps<T> {
-  list: Result<T[]>
+  list: UseQueryResult<T[], Error>
   children: (item: T) => React.ReactNode
 }
 

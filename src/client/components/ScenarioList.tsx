@@ -8,7 +8,7 @@ interface ScenarioListProps {
 }
 
 export const ScenarioList = ({ campaignId, scenarioId }: ScenarioListProps) => {
-  const [scenarioList] = useCampaignScenarioList(campaignId)
+  const scenarioList = useCampaignScenarioList(campaignId)
   return (
     <ResultListView list={scenarioList}>
       {item => (

@@ -11,7 +11,7 @@ interface CampaignPageProps {
 }
 
 export const CampaignPage = ({ campaignId }: CampaignPageProps) => {
-  const [campaign] = useCampaign(campaignId)
+  const campaign = useCampaign(campaignId)
   return (
     <AppContainer>
       <ResultView result={campaign}>
