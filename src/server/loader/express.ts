@@ -66,14 +66,14 @@ export default async ({
     return res.json(services.campaign.listCampaign()).end()
   })
   app.get('/api/campaign/:campaignId', (req, res) => {
-    const campaignId = req.params.campaignId.replaceAll('-', '.')
+    const campaignId = req.params.campaignId
     const campaign = services.campaign.getCampaignById(campaignId)
     if (campaign === null) return res.sendStatus(404).end()
 
     return res.json(campaign).end()
   })
   app.get('/api/campaign/:campaignId/scenario', (req, res) => {
-    const campaignId = req.params.campaignId.replaceAll('-', '.')
+    const campaignId = req.params.campaignId
     const campaign = services.campaign.getCampaignById(campaignId)
     if (campaign === null) return res.sendStatus(404).end()
 
@@ -82,7 +82,7 @@ export default async ({
     ).end()
   })
   app.get('/api/campaign/:campaignId/scene', (req, res) => {
-    const campaignId = req.params.campaignId.replaceAll('-', '.')
+    const campaignId = req.params.campaignId
     const campaign = services.campaign.getCampaignById(campaignId)
     if (campaign === null) return res.sendStatus(404).end()
 
@@ -92,14 +92,14 @@ export default async ({
     return res.json(services.scenario.listScenario()).end()
   })
   app.get('/api/scenario/:scenarioId', (req, res) => {
-    const scenarioId = req.params.scenarioId.replaceAll('-', '.')
+    const scenarioId = req.params.scenarioId
     const scenario = services.scenario.getScenarioById(scenarioId)
     if (scenario === null) return res.sendStatus(404).end()
 
     return res.json(scenario).end()
   })
   app.get('/api/scenario/:scenarioId/scene', (req, res) => {
-    const scenarioId = req.params.scenarioId.replaceAll('-', '.')
+    const scenarioId = req.params.scenarioId
     const scenario = services.scenario.getScenarioById(scenarioId)
     if (scenario === null) return res.sendStatus(404).end()
 
@@ -109,7 +109,7 @@ export default async ({
     return res.json(services.scene.listScene()).end()
   })
   app.get('/api/scene/:sceneId', asyncHandler(async (req, res) => {
-    const sceneId = req.params.sceneId.replaceAll('-', '.')
+    const sceneId = req.params.sceneId
     const scene = services.scene.getSceneById(sceneId)
     if (scene === null) {
       res.sendStatus(404).end()
@@ -134,7 +134,7 @@ export default async ({
         return
       }
 
-      const sceneId = req.params.sceneId.replaceAll('-', '.')
+      const sceneId = req.params.sceneId
       const scene = services.scene.getSceneById(sceneId)
       if (scene === null) {
         res.sendStatus(404).end()
