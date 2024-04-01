@@ -48,7 +48,7 @@ export default async ({
     const { client_id, code }: { client_id: string, code: string } = req.body
     try {
       const accessToken = await services.patreon.getAccessToken(code, client_id)
-      const { isPatron } = await services.patreon.getPatronInfo(accessToken)
+      const isPatron = await services.patreon.getPatronInfo(accessToken)
       res.json({
         token: services.jwt.encodeToken(accessToken.token),
         is_patron: isPatron,
@@ -123,7 +123,7 @@ export default async ({
     checkToken,
     asyncHandler(async (req, res) => {
       try {
-        const { isPatron } = await services.patreon.getPatronInfo(req.token)
+        const isPatron = await services.patreon.getPatronInfo(req.token)
         if (!isPatron) {
           res.sendStatus(403).end()
           return

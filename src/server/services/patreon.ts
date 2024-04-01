@@ -30,7 +30,7 @@ const PATREON_CREDENTIALS: ModuleOptions<'patreon'> = {
 
 export default class PatreonService {
   client: AuthorizationCode<'patreon'>
-  scope = ['identity', 'identity[email]', 'identity.memberships', 'campaigns']
+  scope = ['identity', 'identity.memberships', 'campaigns']
 
   constructor() {
     // Build the OAuth2 client.
@@ -56,16 +56,13 @@ export default class PatreonService {
   @Cacheable({ ttl: 5 * 60 * 1000 })
   async getPatronInfo(accessToken: AccessToken) {
     const result = await fetchIdentity(Types.toPatreonToken(accessToken))
-    const patreonUserId = result.data?.id
-    const isPatron = (result.included.some(
+    if ('errors' in result) return false
+  
+    return (result.included.some(
       (rel) =>
         rel.type === 'member' &&
         rel.attributes?.patron_status === 'active_patron' &&
         rel.relationships?.campaign?.data.id === config.patreon.campaignId
     ) ?? false) || result.data.relationships?.campaign?.data.id === config.patreon.campaignId
-    return {
-      patreonUserId,
-      isPatron,
-    }
   }
 }
