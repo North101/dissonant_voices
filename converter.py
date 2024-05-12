@@ -22,13 +22,17 @@ def convert_time(value: str) -> float:
   return result
 
 
+def convert_title(value: str) -> str:
+  return re.sub(r'^R(\d+)$', r'Resolution \1', value.replace('\n', '').replace('No R', 'No Resolution'))
+
+
 def convert(filename: Path):
   with filename.open() as f:
     data = [
         Scene(
             start_time=convert_time(start_time),
-            id=convert_to_id(title),
-            title=title.replace('\n', ''),
+            id=convert_to_id(convert_title(title)),
+            title=convert_title(title),
         )
         for start_time, title in (
             line.split(' - ', 1)

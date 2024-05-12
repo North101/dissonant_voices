@@ -108,3 +108,7 @@ audio/
 *.mp3
 *.db
 sync_audio.sh
+
+/*.txt
+/*.json
+/*.label
