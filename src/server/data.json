@@ -5890,7 +5890,84 @@
             "name": "Resolution 5"
           }
         ]
-      }      
+      },{
+        "id": "the_first_evening",
+        "name": "The First Evening",
+        "scenes": [
+          {
+            "id": "the_first_evening",
+            "name": "The First Evening"
+          },
+          {
+            "id": "codex_theta_the_hemlock_legacy_1",
+            "name": "Codex Theta: The Hemlock Legacy 1"
+          },
+          {
+            "id": "codex_theta_the_hemlock_legacy_2",
+            "name": "Codex Theta: The Hemlock Legacy 2"
+          },
+          {
+            "id": "codex_theta_the_hemlock_legacy_3",
+            "name": "Codex Theta: The Hemlock Legacy 3"
+          },
+          {
+            "id": "codex_theta_the_hemlock_legacy_4",
+            "name": "Codex Theta: The Hemlock Legacy 4"
+          },
+          {
+            "id": "codex_delta_best_friends_1",
+            "name": "Codex Delta: Best \"Friends\" 1"
+          },
+          {
+            "id": "codex_delta_best_friends_2",
+            "name": "Codex Delta: Best \"Friends\" 2"
+          },
+          {
+            "id": "codex_delta_best_friends_3",
+            "name": "Codex Delta: Best \"Friends\" 3"
+          },
+          {
+            "id": "codex_sigma_old_blood_1",
+            "name": "Codex Sigma: Old Blood 1"
+          },
+          {
+            "id": "codex_sigma_old_blood_2",
+            "name": "Codex Sigma: Old Blood 2"
+          },
+          {
+            "id": "codex_sigma_old_blood_3",
+            "name": "Codex Sigma: Old Blood 3"
+          },
+          {
+            "id": "codex_sigma_old_blood_4",
+            "name": "Codex Sigma: Old Blood 4"
+          },
+          {
+            "id": "codex_omega_family_matters_1",
+            "name": "Codex Omega: Family Matters 1"
+          },
+          {
+            "id": "codex_omega_family_matters_2",
+            "name": "Codex Omega: Family Matters 2"
+          },
+          {
+            "id": "codex_gamma_the_rabbit_1",
+            "name": "Codex Gamma: The Rabbit 1"
+          },
+          {
+            "id": "codex_gamma_the_rabbit_2",
+            "name": "Codex Gamma: The Rabbit 2"
+          },
+          {
+            "id": "codex_pi_friendly_strangers",
+            "name": "Codex Pi: Friendly Strangers"
+          },
+          {
+            "id": "resolution_1",
+            "name": "Resolution 1"
+          }
+        ]
+      }
     ]
   },
   {
